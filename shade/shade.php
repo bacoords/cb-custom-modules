@@ -36,7 +36,7 @@ FLBuilder::register_module('CBCustomShadeModule', array(
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'general'       => array( // Section
-                'title'         => __('Section Title', 'fl-builder'), // Section Title
+                'title'         => __('General Section', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
                     'my_photo_field' => array(
 												'type'          => 'photo',
@@ -51,7 +51,7 @@ FLBuilder::register_module('CBCustomShadeModule', array(
 										'my_link_field' => array(
 												'type'          => 'link',
 												'label'         => __('Link', 'fl-builder')
-										),
+										)
                 )
             )
         )
