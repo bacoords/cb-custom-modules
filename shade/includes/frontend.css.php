@@ -11,7 +11,7 @@
  * Example: 
  */
 
-<?php if($settings->cb_shade_text_field;) { ?>
+<?php if($settings->cb_shade_text_field) { ?>
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper {
     min-height: <?php echo $settings->cb_shade_text_field; ?>px;
