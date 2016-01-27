@@ -16,7 +16,7 @@ define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
 function fl_load_module_examples() {
 	if ( class_exists( 'FLBuilder' ) ) {
 //			require_once 'grid/grid.php';
-//		require_once 'shade/shade.php';
+		require_once 'shade/shade.php';
 	}
 }
 add_action( 'init', 'fl_load_module_examples' );

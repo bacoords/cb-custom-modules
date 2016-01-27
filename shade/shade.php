@@ -19,7 +19,7 @@ class CBCustomShadeModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Shade (CB Custom)', 'fl-builder'),
             'description'   => __('Throw some custom shade.', 'fl-builder'),
-            'category'		=> __('Advanced Modules', 'fl-builder'),
+            'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'shade/',
             'url'           => CB_CUSTOM_MODULE_URL . 'shade/',
             'editor_export' => true, // Defaults to true and can be omitted.
