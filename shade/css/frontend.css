@@ -35,7 +35,6 @@
     .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay {
       background: rgba(0, 0, 0, 0.3);
       padding: 5px;
-      padding-top: 175px;
       display: block;
       width: 100%;
       min-height: 420px;
@@ -46,9 +45,24 @@
       transition: background 500ms ease;
       overflow: hidden; }
       /* line 60, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+      .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+      /* line 65, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
       .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay:hover {
         background: rgba(0, 0, 0, 0.8); }
-        /* line 62, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+        /* line 67, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
         .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay:hover .cb-shade-box-inner {
           -webkit-animation: pulse 1s;
           animation: pulse 1s; }

@@ -47,7 +47,7 @@
 			
 			background : rgba(0,0,0,0.3);
 			padding:5px;
-			padding-top:175px;
+//			padding-top:175px;
 			display:block;
 			width:100%;
 			min-height:420px;
@@ -57,6 +57,11 @@
 			-o-transition: background 500ms ease;
 			transition: background 500ms ease;
 			overflow:hidden;
+			.cb-shade-box-inner{
+				display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;
+				-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
+				-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;
+			}
 			&:hover {
 				background : rgba(0,0,0,0.8);
 				.cb-shade-box-inner{
