@@ -1,0 +1,30 @@
+.boxes{
+	background:rgba(0,0,0,1);
+	.box-wrapper{
+		min-height:420px;
+
+		a.box-overlay{
+			
+			background : rgba(0,0,0,0.3);
+			padding:5px;
+			padding-top:175px;
+			display:block;
+			width:100%;
+			height:420px;
+			text-decoration:none;
+			 -webkit-transition: background 500ms ease;
+			-moz-transition: background 500ms ease;
+			-o-transition: background 500ms ease;
+			transition: background 500ms ease;
+			&:hover {
+				background : rgba(0,0,0,0.8);
+//				h3{
+//					
+//					-webkit-animation: pulse 1s;
+//					animation: pulse 1s;
+//				}
+			}
+		}
+	}
+}
+		

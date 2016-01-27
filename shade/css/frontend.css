@@ -1,0 +1,24 @@
+/* line 1, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+.boxes {
+  background: black; }
+  /* line 3, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+  .boxes .box-wrapper {
+    min-height: 420px; }
+    /* line 6, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+    .boxes .box-wrapper a.box-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 5px;
+      padding-top: 175px;
+      display: block;
+      width: 100%;
+      height: 420px;
+      text-decoration: none;
+      -webkit-transition: background 500ms ease;
+      -moz-transition: background 500ms ease;
+      -o-transition: background 500ms ease;
+      transition: background 500ms ease; }
+      /* line 19, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+      .boxes .box-wrapper a.box-overlay:hover {
+        background: rgba(0, 0, 0, 0.8); }
+
+/*# sourceMappingURL=frontend.css.map */
