@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: CB Custom Beaver Builder Modules
+ * Plugin Name: CB Custom Beaver Builder Modules (DEMO ONLY)
  * Plugin URI: http://www.github.com/bacoords/cb-custom-module
- * Description: Custom photogenic modules for Beaver Builder.
- * Version: 1.0
+ * Description: Custom photographic modules for Beaver Builder. (DEMO ONLY)
+ * Version: 0.1
  * Author: Brian Coords
  * Author URI: http://www.briancoords.com
  */
