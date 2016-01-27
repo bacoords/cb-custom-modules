@@ -17,7 +17,7 @@ class FLBasicExampleModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Grid', 'fl-builder'),
+            'name'          => __('CB Customs - Grid', 'fl-builder'),
             'description'   => __('Set up custom grids.', 'fl-builder'),
             'category'		=> __('Advanced Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'basic-example/',
