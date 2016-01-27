@@ -1,24 +1,56 @@
-/* line 1, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
-.boxes {
-  background: black; }
-  /* line 3, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
-  .boxes .box-wrapper {
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+/* line 36, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse; }
+
+/* line 41, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+.cb-shade-boxes {
+  background: rgba(0, 0, 0, 0.8); }
+  /* line 43, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+  .cb-shade-boxes .cb-shade-box-wrapper {
     min-height: 420px; }
-    /* line 6, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
-    .boxes .box-wrapper a.box-overlay {
+    /* line 46, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+    .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay {
       background: rgba(0, 0, 0, 0.3);
       padding: 5px;
       padding-top: 175px;
       display: block;
       width: 100%;
-      height: 420px;
+      min-height: 420px;
       text-decoration: none;
       -webkit-transition: background 500ms ease;
       -moz-transition: background 500ms ease;
       -o-transition: background 500ms ease;
-      transition: background 500ms ease; }
-      /* line 19, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
-      .boxes .box-wrapper a.box-overlay:hover {
+      transition: background 500ms ease;
+      overflow: hidden; }
+      /* line 60, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+      .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay:hover {
         background: rgba(0, 0, 0, 0.8); }
+        /* line 62, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/shade/css/frontend.scss */
+        .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay:hover .cb-shade-box-inner {
+          -webkit-animation: pulse 1s;
+          animation: pulse 1s; }
 
 /*# sourceMappingURL=frontend.css.map */

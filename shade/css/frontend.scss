@@ -1,28 +1,69 @@
-.boxes{
-	background:rgba(0,0,0,1);
-	.box-wrapper{
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.cb-shade-boxes{
+	background:rgba(0,0,0,0.8);
+	.cb-shade-box-wrapper{
 		min-height:420px;
 
-		a.box-overlay{
+		.cb-shade-box-overlay{
 			
 			background : rgba(0,0,0,0.3);
 			padding:5px;
 			padding-top:175px;
 			display:block;
 			width:100%;
-			height:420px;
+			min-height:420px;
 			text-decoration:none;
 			 -webkit-transition: background 500ms ease;
 			-moz-transition: background 500ms ease;
 			-o-transition: background 500ms ease;
 			transition: background 500ms ease;
+			overflow:hidden;
 			&:hover {
 				background : rgba(0,0,0,0.8);
-//				h3{
-//					
-//					-webkit-animation: pulse 1s;
-//					animation: pulse 1s;
-//				}
+				.cb-shade-box-inner{
+					
+					-webkit-animation: pulse 1s;
+					animation: pulse 1s;
+				}
 			}
 		}
 	}

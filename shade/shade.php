@@ -24,6 +24,7 @@ class CBCustomShadeModule extends FLBuilderModule {
             'url'           => CB_CUSTOM_MODULE_URL . 'shade/',
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
+						'partial_refresh' => true,
         ));
     }
 }
