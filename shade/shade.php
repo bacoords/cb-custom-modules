@@ -40,18 +40,18 @@ FLBuilder::register_module('CBCustomShadeModule', array(
                 'fields'        => array( // Section Fields
                     'my_photo_field' => array(
 												'type'          => 'photo',
-												'label'         => __('Background Photo', 'fl-builder')
+												'label'         => __('Background Photo', 'fl-builder'),
 												'show_remove'	=> false
 										),
-//                    'my_editor_field' => array(
-//												'type'          => 'editor',
-//												'media_buttons' => true,
-//												'rows'          => 10
-//										),
-//										'my_link_field' => array(
-//												'type'          => 'link',
-//												'label'         => __('Link', 'fl-builder')
-//										),
+                    'my_editor_field' => array(
+												'type'          => 'editor',
+												'media_buttons' => true,
+												'rows'          => 10
+										),
+										'my_link_field' => array(
+												'type'          => 'link',
+												'label'         => __('Link', 'fl-builder')
+										),
                 )
             )
         )
