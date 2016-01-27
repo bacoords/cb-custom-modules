@@ -19,7 +19,7 @@ class CBCustomShadeModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Shade', 'fl-builder'),
             'description'   => __('Throw some custom shade.', 'fl-builder'),
-            'category'		=> __('Advanced Modules', 'fl-builder'),
+            'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'shade/',
             'url'           => CB_CUSTOM_MODULE_URL . 'shade/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -38,17 +38,17 @@ FLBuilder::register_module('CBCustomShadeModule', array(
             'general'       => array( // Section
                 'title'         => __('General Section', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-                    'my_photo_field' => array(
+                    'cb_shade_photo_field' => array(
 												'type'          => 'photo',
 												'label'         => __('Background Photo', 'fl-builder'),
 												'show_remove'	=> false
 										),
-                    'my_editor_field' => array(
+                    'cb_shade_editor_field' => array(
 												'type'          => 'editor',
 												'media_buttons' => true,
 												'rows'          => 10
 										),
-										'my_link_field' => array(
+										'cb_shade_link_field' => array(
 												'type'          => 'link',
 												'label'         => __('Link', 'fl-builder')
 										),
