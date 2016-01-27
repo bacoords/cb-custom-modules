@@ -39,4 +39,3 @@ function fl_my_custom_field_assets() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'fl_my_custom_field_assets' );
-?>
