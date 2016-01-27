@@ -11,8 +11,21 @@
  */
 
 ?>
-<div class="fl-example-text" style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat center; background-size:cover;">
-  <a href="<?php echo $settings->cb_shade_link_field; ?>">
-    <?php echo $settings->cb_shade_editor_field; ?>
-	</a>
+<!--
+<div class="fl-example-text">
+  <div style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat center; background-size:cover;">
+		<a href="<?php echo $settings->cb_shade_link_field; ?>">
+			<?php echo $settings->cb_shade_editor_field; ?>
+		</a>
+	</div>
 </div>
+-->
+
+
+	<div class="boxes">
+		<div class="box-wrapper"  style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat center; background-size:cover;">
+			<a href="<?php echo $settings->cb_shade_link_field; ?>">
+				<?php echo $settings->cb_shade_editor_field; ?>
+			</a>
+		</div>
+	</div>
