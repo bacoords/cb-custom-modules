@@ -36,22 +36,27 @@ FLBuilder::register_module('CBCustomShadeModule', array(
     'general'       => array( // Tab
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
-            'general'       => array( // Section
-                'title'         => __('General Section', 'fl-builder'), // Section Title
+            'design'       => array( // Section
+                'title'         => __('Design', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_shade_photo_field' => array(
 												'type'          => 'photo',
 												'label'         => __('Background Photo', 'fl-builder'),
 												'show_remove'	=> false
 										),
+										'cb_shade_link_field' => array(
+												'type'          => 'link',
+												'label'         => __('Link (optional)', 'fl-builder')
+										),
+                )
+            ),
+            'content'       => array( // Section
+                'title'         => __('Content', 'fl-builder'), // Section Title
+                'fields'        => array( // Section Fields
                     'cb_shade_editor_field' => array(
 												'type'          => 'editor',
 												'media_buttons' => true,
 												'rows'          => 10
-										),
-										'cb_shade_link_field' => array(
-												'type'          => 'link',
-												'label'         => __('Link', 'fl-builder')
 										),
                 )
             )
