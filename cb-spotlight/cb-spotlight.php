@@ -4,9 +4,9 @@
  * This is an example module with only the basic
  * setup necessary to get it working.
  *
- * @class CBCustomPoiseModule
+ * @class CBCustomSpotlightModule
  */
-class CBCustomPoiseModule extends FLBuilderModule {
+class CBCustomSpotlightModule extends FLBuilderModule {
 
     /** 
      * Constructor function for the module. You must pass the
@@ -32,7 +32,7 @@ class CBCustomPoiseModule extends FLBuilderModule {
 /**
  * Register the module and its form settings.
  */
-FLBuilder::register_module('CBCustomPoiseModule', array(
+FLBuilder::register_module('CBCustomSpotlightModule', array(
     'general'       => array( // Tab
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
