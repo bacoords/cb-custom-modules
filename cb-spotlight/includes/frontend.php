@@ -15,7 +15,7 @@
 	<div class="cb-spotlight-spn-gallery">
 
       <div class="cb-spotlight-spn-image">
-       <img src="<?php echo $settings->cb_spotlight_form_field_repeater[0]->cb_spotlight_photo_field_src; ?>" alt="" id="cb-spotlight-spn-img-<?php echo $id; ?>"/>
+       <img src="<?php echo $settings->cb_spotlight_form_field_repeater[0]->cb_spotlight_photo_field_src; ?>" alt="Image Spotlight" id="cb-spotlight-spn-img-<?php echo $id; ?>"/>
       </div>
 
 
