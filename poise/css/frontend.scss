@@ -1,4 +1,4 @@
-.cb-poise-row{
+.cb-poise-container{
   img.cb-poise-img{
 //    border-radius: 10px;
       -ms-transform: scale(1); /* IE 9 */
@@ -9,6 +9,15 @@
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
   }
+	.cb-poise-row{
+		margin: 0 auto;
+    max-width: 100%;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+	}
   &:hover{
 		img.cb-poise-img{
 		-webkit-transition: all .3s ease-in-out;

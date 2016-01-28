@@ -1,5 +1,5 @@
 /* line 2, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
-.cb-poise-row img.cb-poise-img {
+.cb-poise-container img.cb-poise-img {
   -ms-transform: scale(1);
   /* IE 9 */
   -webkit-transform: scale(1);
@@ -10,8 +10,18 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-/* line 13, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
-.cb-poise-row:hover img.cb-poise-img {
+/* line 12, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+.cb-poise-container .cb-poise-row {
+  margin: 0 auto;
+  max-width: 100%; }
+  /* line 15, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+  .cb-poise-container .cb-poise-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 22, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+.cb-poise-container:hover img.cb-poise-img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -22,8 +32,8 @@
   /* Safari */
   transform: scale(0.9);
   opacity: 0.6; }
-  /* line 22, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
-  .cb-poise-row:hover img.cb-poise-img:hover {
+  /* line 31, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+  .cb-poise-container:hover img.cb-poise-img:hover {
     opacity: 1;
     -ms-transform: scale(1.1);
     /* IE 9 */
