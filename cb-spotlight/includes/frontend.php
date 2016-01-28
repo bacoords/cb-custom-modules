@@ -20,7 +20,10 @@
 
       <div class="cb-spotlight-spn-links">
 					<?php foreach($settings->cb_spotlight_form_field_repeater as $current_form){	?>
-							 <a class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?>" data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>"><?php echo $current_form->cb_spotlight_text_field; ?></a>
+							 <a class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?>" data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>">
+							 		
+							 		<?php echo $current_form->cb_spotlight_text_field; ?>
+							 	</a>
 					<?php	} ?>
   		</div>
 
