@@ -1,0 +1,47 @@
+/* line 2, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+.cb-poise-container img.cb-poise-img {
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -webkit-transform: scale(1);
+  /* Safari */
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/* line 12, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+.cb-poise-container .cb-poise-row {
+  margin: 0 auto;
+  max-width: 100%; }
+  /* line 15, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+  .cb-poise-container .cb-poise-row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 22, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+.cb-poise-container:hover img.cb-poise-img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -ms-transform: scale(0.9);
+  /* IE 9 */
+  -webkit-transform: scale(0.9);
+  /* Safari */
+  transform: scale(0.9);
+  opacity: 0.6; }
+  /* line 31, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
+  .cb-poise-container:hover img.cb-poise-img:hover {
+    opacity: 1;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari */
+    transform: scale(1.1);
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=frontend.css.map */
