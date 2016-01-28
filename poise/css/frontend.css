@@ -34,10 +34,4 @@
     -moz-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4);
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4); }
 
-/* line 36, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/poise/css/frontend.scss */
-.cb-poise-col {
-  width: 20%;
-  float: left;
-  padding: 5px; }
-
 /*# sourceMappingURL=frontend.css.map */
