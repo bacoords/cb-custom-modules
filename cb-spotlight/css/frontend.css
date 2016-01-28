@@ -14,9 +14,14 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
-    padding: 25px 10px; }
-    /* line 18, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/cb-spotlight/css/frontend.scss */
+    padding: 10px;
+    background: transparent;
+    -webkit-transition: background 500ms ease;
+    -moz-transition: background 500ms ease;
+    -o-transition: background 500ms ease;
+    transition: background 500ms ease; }
+    /* line 23, C:/Users/User6/Desktop/GJCF Site Assets/cb-custom-module/cb-spotlight/css/frontend.scss */
     .cb-spotlight-spn-gallery .cb-spotlight-spn-links .cb-spotlight-spn-link:hover {
-      background: rgba(0, 0, 0, 0.3); }
+      background: rgba(0, 0, 0, 0.1); }
 
 /*# sourceMappingURL=frontend.css.map */
