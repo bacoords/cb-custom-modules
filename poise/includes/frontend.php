@@ -22,9 +22,11 @@
 -->
 	
    <div class="cb-poise-row">
-    <?php foreach($settings->cb_poise_multiple_photos_field as $img) { ?>
+    <?php foreach($settings->cb_poise_multiple_photos_field as $img) { 
+		 $src = wp_get_attachment_image_src($img, 'full');
+		 ?>
      <div class="cb-poise-col">
-       <a href="<?php echo wp_get_attachment_image_src($img, 'full'); ?>">
+       <a href="<?php echo $src[0]; ?>">
 				 <?php echo wp_get_attachment_image($img, 'full', false, array('class'=>'cb-poise-img')); ?>
        </a>
      </div>
