@@ -11,19 +11,3 @@
  * Example: 
  */
 
-<?php if($settings->cb_shade_text_field) { ?>
-
-.fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper {
-    min-height: <?php echo $settings->cb_shade_text_field; ?>px;
-}
-
-.fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay {
-    min-height: <?php echo $settings->cb_shade_text_field; ?>px;
-}
-
-.fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
-    min-height: <?php echo $settings->cb_shade_text_field; ?>px;
-}
-
-
-<?php } ?>

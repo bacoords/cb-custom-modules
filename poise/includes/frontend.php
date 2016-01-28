@@ -22,7 +22,7 @@
 -->
 	
    <div class="cb-poise-row">
-    <?php foreach($settings->cb_poise_multiple_photos_field => $img) { ?>
+    <?php foreach($settings->cb_poise_multiple_photos_field as $img) { ?>
      <div class="cb-poise-col">
        <img src="<?php wp_get_attachment_image($img, 'full'); ?>" alt="App Screenshot" class="cb-poise-img">
      </div>
