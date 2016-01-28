@@ -3,3 +3,4 @@ jQuery(document).ready(function(){
     var i = jQuery(this).data('img-src');
     jQuery('#cb-spotlight-spn-img-<?php echo $id; ?>').attr('src',i);
   });
+});
