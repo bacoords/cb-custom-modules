@@ -12,7 +12,7 @@
 
 ?>
 
-	
+ <?php if($settings->cb_poise_multiple_photos_field){ ?> 	
    <div class="cb-poise-container">
    	<div class="cb-poise-row">
 			<?php 
@@ -37,3 +37,4 @@
 			} ?>
 		 </div>
    </div>
+ <?php } ?>

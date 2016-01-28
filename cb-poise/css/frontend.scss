@@ -1,13 +1,14 @@
 .cb-poise-container{
   img.cb-poise-img{
-//    border-radius: 10px;
-      -ms-transform: scale(1); /* IE 9 */
-      -webkit-transform: scale(1); /* Safari */
-      transform: scale(1);
-      -webkit-transition: all .3s ease-in-out;
-      -moz-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); /* Safari */
+		transform: scale(1);
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		display: block;
+		margin:0 auto;
   }
 	.cb-poise-row{
 		margin: 0 auto;
