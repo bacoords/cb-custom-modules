@@ -1,4 +1,4 @@
-# CB Custom Module for Beaver Builder
+# Crafted/by Custom Modules for Beaver Builder
 
 Early stage development of a custom module for Beaver Builder.
 
@@ -7,4 +7,4 @@ Early stage development of a custom module for Beaver Builder.
 - [ ] Grid w/ Observation Panel
 - [ ] Grid w/ Lightbox
 - [ ] Poster Gallery (opt lightbox)
-- [ ] Slick Overlays
+- [x] 'Shade'
