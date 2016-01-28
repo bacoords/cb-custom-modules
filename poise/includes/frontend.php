@@ -26,7 +26,7 @@
 		 $src = wp_get_attachment_image_src($img, 'full');
 		 ?>
      <div class="cb-poise-col">
-       <a href="<?php echo $src[0]; ?>">
+       <a href="<?php echo $src[0]; ?>" target="_self">
 				 <?php echo wp_get_attachment_image($img, 'full', false, array('class'=>'cb-poise-img')); ?>
        </a>
      </div>
