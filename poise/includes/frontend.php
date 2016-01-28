@@ -24,7 +24,7 @@
    <div class="cb-poise-row">
     <?php foreach($settings->cb_poise_multiple_photos_field as $img) { ?>
      <div class="cb-poise-col">
-       <img src="<?php echo wp_get_attachment_image($img, 'full', false); ?>" class="cb-poise-img">
+       <?php echo wp_get_attachment_image($img, 'full', array('class'=>'cb-poise-img')); ?>
      </div>
 		<?php } ?>
    </div>
