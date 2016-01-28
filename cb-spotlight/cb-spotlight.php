@@ -37,11 +37,11 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'my_form_field' => array(
+										'cb_spotlight_form_field_repeater' => array(
 												'type'          => 'form',
-												'label'         => __('Add Photo', 'fl-builder'),
+												'label'         => __('Spotlight Image', 'fl-builder'),
 												'form'          => 'cb_spotlight_form_field', // ID of a registered form.
 												'preview_text'  => 'cb_spotlight_text_field', // ID of a field to use for the preview text.
 												'multiple' 			=> true,
@@ -59,25 +59,25 @@ FLBuilder::register_settings_form('cb_spotlight_form_field', array(
     'title' => __('New Image', 'fl-builder'),
     'tabs'  => array(
         'image'      => array(
-            'title'         => __('Image', 'fl-builder'),
+            'title'         => __('Spotlight Image', 'fl-builder'),
             'sections'      => array(
                 'general'       => array(
                     'title'         => '',
                     'fields'        => array(
 												'cb_spotlight_photo_field' => array(
 														'type'          => 'photo',
-														'label'         => __('Image', 'fl-builder'),
+														'label'         => __('Spotlight Image', 'fl-builder'),
 														'show_remove'	=> false
 												),
 												'cb_spotlight_text_field' => array(
 														'type'          => 'text',
-														'label'         => __( 'Image Link Text', 'fl-builder' ),
+														'label'         => __( 'Spotlight Image Link Text', 'fl-builder' ),
 														'default'       => '',
 														'maxlength'     => '140',
-														'size'          => '30',
+														'size'          => '45',
 														'placeholder'   => __( 'Describe image here', 'fl-builder' ),
 														'class'         => 'my-css-class',
-														'description'   => __( 'px', 'fl-builder' ),
+														'description'   => __( '', 'fl-builder' ),
 														'help'          => __( 'Users will click on this text to load this image.', 'fl-builder' )
 												),
                     )

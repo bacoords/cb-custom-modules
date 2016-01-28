@@ -1,0 +1,23 @@
+.cb-spotlight-spn-gallery{
+  .cb-spotlight-spn-image{
+    width:50%;
+    float:left;
+		padding:5px;
+  }
+  .cb-spotlight-spn-links{
+    width:50%;
+    float:left;
+		padding:5px;
+    .cb-spotlight-spn-link{
+//      font:800 18px 'Lato';
+//      color:#000;
+      text-decoration:none;
+      display:block;
+      cursor:pointer;
+      padding:25px 10px;
+      &:hover{
+        background:rgba(0,0,0, 0.3);
+      }
+    }
+  }
+}
