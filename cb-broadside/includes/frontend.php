@@ -16,18 +16,18 @@
     <div class="cb-broadside">
       <span class="scroll-left scroll-left-<?php echo $id; ?>">&#10094;</span>
       <span class="scroll-right scroll-right-<?php echo $id; ?>">&#10095;</span>
-      <ul class="ul-<?php echo $id; ?>">
+      <div class="ul ul-<?php echo $id; ?>">
           <?php 
           foreach($settings->cb_broadside_multiple_photos_field as $img) { 
            $src = wp_get_attachment_image_src($img, 'full');
            ?>
-               <li>
+               
                 <a href="<?php echo $src[0]; ?>"><?php echo wp_get_attachment_image($img, 'large', false, array('class'=>'cb-broadside-img')); ?></a>
-              </li>
+              
           <?php 
 
           } ?>
-      </ul>
+      </div>
     </div>
  <?php } ?>
 
