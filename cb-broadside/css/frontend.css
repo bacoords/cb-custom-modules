@@ -56,8 +56,9 @@
         .cb-broadside ul li a img {
           -webkit-transition: all 300ms ease;
           transition: all 300ms ease;
+          min-width: 300px;
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
-        /* line 51, /Users/bacoords/Sites/cb-custom-module/cb-broadside/css/frontend.scss */
+        /* line 52, /Users/bacoords/Sites/cb-custom-module/cb-broadside/css/frontend.scss */
         .cb-broadside ul li a:hover img {
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
           opacity: 1; }
