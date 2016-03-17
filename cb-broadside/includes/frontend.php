@@ -22,7 +22,7 @@
            $src = wp_get_attachment_image_src($img, 'full');
            ?>
                <li>
-                <a href="<?php echo $src[0]; ?>"><?php echo wp_get_attachment_image($img, 'medium', false, array('class'=>'cb-poise-img')); ?></a>
+                <a href="<?php echo $src[0]; ?>"><?php echo wp_get_attachment_image($img, 'large', false, array('class'=>'cb-poise-img')); ?></a>
               </li>
           <?php 
 
