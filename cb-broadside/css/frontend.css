@@ -58,5 +58,8 @@
       .cb-broadside .ul a:hover img {
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
         opacity: 1; }
+      /* line 55, /Users/bacoords/Sites/cb-custom-module/cb-broadside/css/frontend.scss */
+      .cb-broadside .ul a:focus {
+        outline: none; }
 
 /*# sourceMappingURL=frontend.css.map */

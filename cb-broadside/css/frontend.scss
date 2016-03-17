@@ -52,7 +52,9 @@ transition:all 300ms ease;
           opacity:1;
         }
       }
-      
+      &:focus{
+       outline: none; 
+      }
     }
   }
 }
