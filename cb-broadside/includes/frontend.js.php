@@ -1,5 +1,5 @@
 
- $module->add_js( 'jquery-magnificpopup' );
+
 
  jQuery(document).ready(function(){
   

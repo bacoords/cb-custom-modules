@@ -27,6 +27,7 @@ class CBCustomBroadsideModule extends FLBuilderModule {
 //						'partial_refresh' => true,
         ));
     }
+   $this->add_js( 'jquery-magnificpopup' );
 }
 
 /**
