@@ -19,6 +19,7 @@ function fl_load_module_examples() {
 		require_once 'cb-shade/cb-shade.php';
 		require_once 'cb-poise/cb-poise.php';
 		require_once 'cb-spotlight/cb-spotlight.php';
+		require_once 'cb-broadside/cb-broadside.php';
 	}
 }
 add_action( 'init', 'fl_load_module_examples' );
