@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 
   jQuery(function() {
     jQuery('.ul-<?php echo $id; ?>').magnificPopup({
-     delegate: a,
+     delegate: 'a',
      gallery:{enabled:true},
       type: 'image',
       closeOnContentClick: true,
