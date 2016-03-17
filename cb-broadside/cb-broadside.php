@@ -26,8 +26,8 @@ class CBCustomBroadsideModule extends FLBuilderModule {
             'enabled'       => true, // Defaults to true and can be omitted.
 //						'partial_refresh' => true,
         ));
+        $this->add_js( 'jquery-magnificpopup' );
     }
-   $this->add_js( 'jquery-magnificpopup' );
 }
 
 /**
