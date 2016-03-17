@@ -1,4 +1,7 @@
-jQuery(document).ready(function(){
+
+ $module->add_js( 'jquery-magnificpopup' );
+
+ jQuery(document).ready(function(){
   
   //Swap out images on link
   
