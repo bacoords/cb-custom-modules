@@ -12,13 +12,13 @@
 
 ?>
 
- <?php if($settings->cb_poise_multiple_photos_field){ ?> 	
+ <?php if($settings->cb_broadside_multiple_photos_field){ ?> 	
     <div class="cb-broadside">
       <span class="scroll-left">&#10094;</span>
       <span class="scroll-right">&#10095;</span>
       <ul>
           <?php 
-          foreach($settings->cb_poise_multiple_photos_field as $img) { 
+          foreach($settings->cb_broadside_multiple_photos_field as $img) { 
            $src = wp_get_attachment_image_src($img, 'full');
            ?>
                <li>
