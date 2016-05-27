@@ -1,10 +1,11 @@
-# Crafted/by Custom Modules for Beaver Builder
+# CB Custom Modules for Beaver Builder
 
-Early stage development of a custom module for Beaver Builder.
+Free suite of custom modules for Beaver Builder.
 
-### Ideas so far:
+[Learn More & See Demos](http://briancoords.com/free-beaver-builder-custom-modules/)
+
+### Future Modules
 
 - [ ] Grid w/ Observation Panel
 - [ ] Grid w/ Lightbox
-- [ ] Poster Gallery (opt lightbox)
-- [x] 'Shade'
+- [ ] Hero
