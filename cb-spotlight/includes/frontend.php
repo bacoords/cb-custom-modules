@@ -19,8 +19,11 @@
       </div>
 
       <div class="cb-spotlight-spn-links">
-					<?php foreach($settings->cb_spotlight_form_field_repeater as $current_form){	?>
-							 <a class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?>" data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>">
+        <div class="cb-spotlight-header"><h3><?php echo $settings->cb_spotlight_text_field; ?></h3></div>
+					<?php
+              $f = true;
+              foreach($settings->cb_spotlight_form_field_repeater as $current_form){	?>
+							 <a class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?> <?php if($f){ echo 'active'; $f = false;} ?>" data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>">
 							 		
 							 		<?php echo $current_form->cb_spotlight_text_field; ?>
 							 	</a>

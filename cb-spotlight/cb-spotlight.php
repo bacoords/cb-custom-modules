@@ -39,13 +39,21 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
             'design'       => array( // Section
                 'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
+										'cb_spotlight_text_field' => array(
+												'type'          => 'text',
+												'label'         => __( 'Header Text', 'fl-builder' ),
+												'default'       => '',
+												'placeholder'   => __( 'Select an Image', 'fl-builder' ),
+												'class'         => 'my-css-class',
+												'help'          => __( 'Set a header.', 'fl-builder' )
+										),
 										'cb_spotlight_form_field_repeater' => array(
 												'type'          => 'form',
 												'label'         => __('Spotlight Image', 'fl-builder'),
 												'form'          => 'cb_spotlight_form_field', // ID of a registered form.
 												'preview_text'  => 'cb_spotlight_text_field', // ID of a field to use for the preview text.
 												'multiple' 			=> true,
-										)
+										),
                 )
             ),
         )

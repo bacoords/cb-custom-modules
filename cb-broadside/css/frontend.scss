@@ -1,6 +1,8 @@
 .cb-broadside{
   position:relative;
   width:100%;
+  max-height: 95vh;
+  overflow-y: hidden;
   .scroll-left, .scroll-right{
     position:absolute;
     height:100%;

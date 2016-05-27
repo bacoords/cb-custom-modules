@@ -1,26 +1,30 @@
 .cb-spotlight-spn-gallery{
   .cb-spotlight-spn-image{
-    width:50%;
-    float:left;
+    @media(min-width:600px){
+      width:50%;
+      float:left;
+    }
 		padding:5px;
   }
   .cb-spotlight-spn-links{
-    width:50%;
-    float:left;
+    
+    @media(min-width:600px){
+      width:50%;
+      float:left;
+    }
 		padding:5px;
     .cb-spotlight-spn-link{
-//      font:800 18px 'Lato';
-//      color:#000;
       text-decoration:none;
       display:block;
       cursor:pointer;
       padding:10px;
-        background:rgba(0,0,0, 0);
-			 -webkit-transition: background 500ms ease;
-			-moz-transition: background 500ms ease;
-			-o-transition: background 500ms ease;
+      background:rgba(0,0,0, 0);
 			transition: background 500ms ease;
+      margin-bottom:1rem;
       &:hover{
+        background:rgba(0,0,0, 0.1);
+      }
+      &.active{
         background:rgba(0,0,0, 0.1);
       }
     }
