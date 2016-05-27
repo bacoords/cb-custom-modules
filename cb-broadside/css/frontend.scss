@@ -4,13 +4,7 @@
   .scroll-left, .scroll-right{
     position:absolute;
     height:100%;
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
     display:flex;
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    -ms-flex-align:center;
     align-items:center;
     background:rgba(#fff,0.1);
     padding:10px;
@@ -28,21 +22,20 @@
   }
 
   .ul{
-   display:-webkit-box;   display:-webkit-flex;   display:-ms-flexbox;   display:flex;
+    display:flex;
     list-style-type:none;
     overflow-y:scroll;
-    -webkit-box-align:center;    -webkit-align-items:center;    -ms-flex-align:center;    -ms-grid-row-align:center;    align-items:center;
+    align-items:center;
     background:#494949;
     padding:30px 60px;
-    -webkit-transition:all 300ms ease;
     transition:all 300ms ease;
-
+    overflow-y: hidden;
     a{
       display:block;
       padding:15px;
+      flex-shrink: 0;
       img{
--webkit-transition:all 300ms ease;
-transition:all 300ms ease;
+        transition:all 300ms ease;
         min-width: 300px;
         box-shadow:0px 0px 5px rgba(0,0,0,0.5);
       }

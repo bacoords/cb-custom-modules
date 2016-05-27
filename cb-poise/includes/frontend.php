@@ -13,7 +13,7 @@
 ?>
 
  <?php if($settings->cb_poise_multiple_photos_field){ ?> 	
-   <div class="cb-poise-container">
+   <div class="cb-poise-container cb-poise-container-<?php echo $id; ?>">
    	<div class="cb-poise-row">
 			<?php 
 			$i = 0;
