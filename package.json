@@ -1,0 +1,24 @@
+{
+  "name": "cb-custom-module",
+  "version": "1.0.0",
+  "description": "Custom Modules for Beaver Builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacoords/cb-custom-module.git"
+  },
+  "keywords": [
+    "beaver",
+    "builder",
+    "wordpress"
+  ],
+  "author": "Brian Coords",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bacoords/cb-custom-module/issues"
+  },
+  "homepage": "https://github.com/bacoords/cb-custom-module#readme"
+}
