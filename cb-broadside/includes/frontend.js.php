@@ -4,7 +4,6 @@ jQuery(document).ready(function(){
 
   
   var maxScrollLeft = jQuery('.ul-<?php echo $id; ?>')[0].scrollWidth - jQuery('.ul-<?php echo $id; ?>')[0].clientWidth;
-  console.log('Max left: ' + maxScrollLeft);
   
   jQuery('.scroll-right-<?php echo $id; ?>').click(function(){
     jQuery('.ul-<?php echo $id; ?>').animate( { scrollLeft: '+=300' }, 300);
@@ -27,7 +26,6 @@ jQuery(document).ready(function(){
       jQuery('.scroll-right-<?php echo $id; ?>').removeClass('scroll-right--hidden');
     }
     
-    console.log('Current' + jQuery('.ul-<?php echo $id; ?>').scrollLeft());
   });
   
   jQuery(function() {
