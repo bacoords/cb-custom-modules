@@ -29,6 +29,9 @@ class CBCustomBroadsideModule extends FLBuilderModule {
         $this->add_js( 'jquery-magnificpopup' );
         $this->add_css( 'jquery-magnificpopup' );
     }
+
+  
+  
 }
 
 /**
@@ -38,6 +41,17 @@ FLBuilder::register_module('CBCustomBroadsideModule', array(
     'general'       => array( // Tab
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
+            'options'       => array( // Section
+                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'fields'        => array( // Section Fields
+										'cb_broadside_bg_color' => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Background Color', 'fl-builder' ),
+                        'default'       => '494949',
+                        'show_reset'    => true
+										),
+                )
+            ),
             'photos'       => array( // Section
                 'title'         => __('Select Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields

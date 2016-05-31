@@ -1,7 +1,7 @@
 === CB Custom Modules ===
 Contributors: bacoords
 Donate link: http://briancoords.com/
-Tags: beaver builder, photography
+Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.5
 Stable tag: 4.3
@@ -22,13 +22,18 @@ For more information and module demos, visit [http://briancoords.com/free-beaver
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
+== Frequently Asked Questions ==
+
+= Can I install this plugin without Beaver Builder? =
+
+Yes, but it won't do anything.
+
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets 
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png` 
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Poise Module Example
+2. Shade Module Example
+3. Spotlight Module Example
+4. Broadside Module Example
 
 == Changelog ==
 

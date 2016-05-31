@@ -10,3 +10,10 @@
  *
  * Example: 
  */
+
+
+
+
+.fl-node-<?php echo $id; ?> .cb-broadside .ul{
+  background: #<?php echo $settings->cb_broadside_bg_color; ?>;
+}
