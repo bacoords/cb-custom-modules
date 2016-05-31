@@ -1,76 +1,61 @@
 
 @-webkit-keyframes pulse {
   from {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
 
   to {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes pulse {
   from {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
 
   to {
-    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
 
 .pulse {
-  -webkit-animation-name: pulse;
   animation-name: pulse;
 }
 
 .cb-shade-boxes{
-	background:rgba(0,0,0,0.8);
+//	background:rgba(0,0,0,0.8);
 	.cb-shade-box-wrapper{
 		min-height:420px;
-
 		.cb-shade-box-overlay{
-			
-			background : rgba(0,0,0,0.3);
+//			background : rgba(0,0,0,0.3);
 			padding:5px;
-//			padding-top:175px;
 			display:block;
 			width:100%;
 			min-height:420px;
 			text-decoration:none;
-			 -webkit-transition: background 500ms ease;
-			-moz-transition: background 500ms ease;
-			-o-transition: background 500ms ease;
 			transition: background 500ms ease;
 			overflow:hidden;
 			.cb-shade-box-inner{
 				min-height:420px;
-				display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;
-				-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
-				-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;
+        display:flex;
+			  justify-content: center;
+				flex-direction: column;
 				* {
 					color:whitesmoke;
 				}
 			}
 			&:hover {
-				background : rgba(0,0,0,0.8);
+//				background : rgba(0,0,0,0.8);
 				.cb-shade-box-inner{
-					
-					-webkit-animation: pulse 1s;
 					animation: pulse 1s;
 				}
 			}

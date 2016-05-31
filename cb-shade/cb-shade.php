@@ -44,10 +44,37 @@ FLBuilder::register_module('CBCustomShadeModule', array(
 												'label'         => __('Background Photo', 'fl-builder'),
 												'show_remove'	=> false
 										),
-										'cb_shade_link_field' => array(
-												'type'          => 'link',
-												'label'         => __('Link (optional)', 'fl-builder')
-										),
+                    'cb_shade_bg_align' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Background Alignment', 'fl-builder' ),
+                        'default'       => 'center center',
+                        'options'       => array(
+                            'top left'      => __( 'Left Top', 'fl-builder' ),
+                            'center left'      => __( 'Left Center', 'fl-builder' ),
+                            'bottom left'      => __( 'Left Bottom', 'fl-builder' ),
+                            'top center'      => __( 'Center Top', 'fl-builder' ),
+                            'center center'      => __( 'Center', 'fl-builder' ),
+                            'bottom center'      => __( 'Center Bottom', 'fl-builder' ),
+                            'top right'      => __( 'Right Top', 'fl-builder' ),
+                            'center right'      => __( 'Right Center', 'fl-builder' ),
+                            'bottom right'      => __( 'Right Bottom', 'fl-builder' ),
+                        ),
+                    ),
+                    'cb_shade_bg_size' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Background Size', 'fl-builder' ),
+                        'default'       => 'cover',
+                        'options'       => array(
+                            'contain'      => __( 'Fit', 'fl-builder' ),
+                            'cover'      => __( 'Fill', 'fl-builder' ),
+                        ),
+                    ),
+                    'cb_shade_color_field' => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Background/Overlay Color', 'fl-builder' ),
+                        'default'       => '000000',
+                        'show_reset'    => true
+                    ),
 										'cb_shade_text_field' => array(
 												'type'          => 'text',
 												'label'         => __( 'Custom Minimum Height', 'fl-builder' ),
@@ -64,6 +91,11 @@ FLBuilder::register_module('CBCustomShadeModule', array(
             'content'       => array( // Section
                 'title'         => __('Content', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
+										'cb_shade_link_field' => array(
+												'type'          => 'link',
+												'label'         => __('Link (optional)', 'fl-builder'),
+												'help'          => __( 'Set the entire module to be a link. You can also input links in the editor below.', 'fl-builder' )
+										),
                     'cb_shade_editor_field' => array(
 												'type'          => 'editor',
 												'media_buttons' => true,

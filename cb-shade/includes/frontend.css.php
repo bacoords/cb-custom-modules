@@ -10,6 +10,40 @@
  *
  * Example: 
  */
+ 
+
+
+<?php 
+/* Convert hexdec color string to rgb(a) string */
+/* http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/ */
+
+
+if($settings->cb_shade_color_field){
+  $color = $settings->cb_shade_color_field;
+
+  if ($color[0] == '#' ) {
+    $color = substr( $color, 1 );
+  }
+  //Check if color has 6 or 3 characters and get values
+  if (strlen($color) == 6) {
+          $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+  } elseif ( strlen( $color ) == 3 ) {
+          $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+  } else {
+          return $default;
+  }
+
+  //Convert hexadec to rgb
+  $rgb =  array_map('hexdec', $hex);
+  
+  $color_8 = 'rgba('.implode(",",$rgb).',0.8)';
+  $color_3 = 'rgba('.implode(",",$rgb).',0.3)';
+  
+} else {
+  $color_8 = 'rgba(0,0,0,0.8)';
+  $color_3 = 'rgba(0,0,0,0.3)';
+}
+?>
 
 <?php if($settings->cb_shade_text_field) { ?>
 
@@ -27,3 +61,9 @@
 
 
 <?php } ?>
+
+.cb-shade-boxes { background: <?php echo $color_8; ?>; }
+.cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay { background: <?php echo $color_3; ?>; }
+.cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay:hover { background: <?php echo $color_8; ?>; }
+
+

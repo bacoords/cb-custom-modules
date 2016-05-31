@@ -12,9 +12,8 @@
 
 ?>
 
-
 	<div class="cb-shade-boxes">
-		<div class="cb-shade-box-wrapper" style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat center; background-size:cover;">
+		<div class="cb-shade-box-wrapper" style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat <?php echo $settings->cb_shade_bg_align; ?>; background-size:<?php echo $settings->cb_shade_bg_size; ?>;">
 		
 			<?php if($settings->cb_shade_link_field){ ?>
 			<a href="<?php echo $settings->cb_shade_link_field; ?>" class="cb-shade-box-overlay">
