@@ -1,17 +1,35 @@
-
-
-
 jQuery(document).ready(function(){
   
   //Swap out images on link
+
+  
+  var maxScrollLeft = jQuery('.ul-<?php echo $id; ?>')[0].scrollWidth - jQuery('.ul-<?php echo $id; ?>')[0].clientWidth;
+  console.log('Max left: ' + maxScrollLeft);
   
   jQuery('.scroll-right-<?php echo $id; ?>').click(function(){
-    jQuery('.ul-<?php echo $id; ?>').animate( { scrollLeft: '+=500' }, 300);
+    jQuery('.ul-<?php echo $id; ?>').animate( { scrollLeft: '+=300' }, 300);
   });
   jQuery('.scroll-left-<?php echo $id; ?>').click(function(){
-    jQuery('.ul-<?php echo $id; ?>').animate( { scrollLeft: '-=500' }, 300);
+    jQuery('.ul-<?php echo $id; ?>').animate( { scrollLeft: '-=300' }, 300);
   });
-
+  
+  
+  jQuery('.ul-<?php echo $id; ?>').scroll(function(){
+    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() == 0){
+      jQuery('.scroll-left-<?php echo $id; ?>').addClass('scroll-left--hidden');
+    } else {
+      jQuery('.scroll-left-<?php echo $id; ?>').removeClass('scroll-left--hidden');
+    }
+    
+    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() == maxScrollLeft){
+      jQuery('.scroll-right-<?php echo $id; ?>').addClass('scroll-right--hidden');
+    } else {
+      jQuery('.scroll-right-<?php echo $id; ?>').removeClass('scroll-right--hidden');
+    }
+    
+    console.log('Current' + jQuery('.ul-<?php echo $id; ?>').scrollLeft());
+  });
+  
   jQuery(function() {
     jQuery('.ul-<?php echo $id; ?>').magnificPopup({
      delegate: 'a',

@@ -14,7 +14,7 @@
 
  <?php if($settings->cb_broadside_multiple_photos_field){ ?> 	
     <div class="cb-broadside">
-      <span class="scroll-left scroll-left-<?php echo $id; ?>">&#10094;</span>
+      <span class="scroll-left scroll-left-<?php echo $id; ?> scroll-left--hidden">&#10094;</span>
       <span class="scroll-right scroll-right-<?php echo $id; ?>">&#10095;</span>
       <div class="ul ul-<?php echo $id; ?>">
           <?php 

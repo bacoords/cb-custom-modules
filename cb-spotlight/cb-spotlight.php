@@ -36,8 +36,8 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
     'general'       => array( // Tab
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
-            'design'       => array( // Section
-                'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
+            'settings'       => array( // Section
+                'title'         => __('Settings', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
 										'cb_spotlight_text_field' => array(
 												'type'          => 'text',
@@ -47,6 +47,33 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
 												'class'         => 'my-css-class',
 												'help'          => __( 'Set a header.', 'fl-builder' )
 										),
+                    'cb_spotlight_column_order' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Select Column Order', 'fl-builder' ),
+                        'default'       => 'txph',
+                        'options'       => array(
+                            'txph'      => __( 'Text | Photos', 'fl-builder' ),
+                            'phtx'      => __( 'Photos | Text', 'fl-builder' )
+                        )
+                    ),
+                    'cb_spotlight_column_widths' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Select Column Widths', 'fl-builder' ),
+                        'default'       => '75/25',
+                        'options'       => array(
+                            '50/50'      => __( '50% | 50%', 'fl-builder' ),
+                            '75/25'      => __( '75% | 25%', 'fl-builder' ),
+                            '25/75'      => __( '25% | 75%', 'fl-builder' ),
+                            '66/34'      => __( '2/3  |  1/3', 'fl-builder' ),
+                            '34/66'      => __( '1/3  |  2/3', 'fl-builder' )
+                        ),
+												'help'          => __( 'This applies to medium-sized screens and above. On smaller screens, the columns will collapse.', 'fl-builder' )
+                    ),
+                )
+            ),
+            'design'       => array( // Section
+                'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
+                'fields'        => array( // Section Fields
 										'cb_spotlight_form_field_repeater' => array(
 												'type'          => 'form',
 												'label'         => __('Spotlight Image', 'fl-builder'),

@@ -1,18 +1,14 @@
 .cb-spotlight-spn-gallery{
+  .cb-spotlight-column-one, .cb-spotlight-column-two{
+    width:50%;
+  }
   .cb-spotlight-spn-image{
-    @media(min-width:600px){
-      width:50%;
-      float:left;
-    }
 		padding:5px;
+    float:left;
   }
   .cb-spotlight-spn-links{
-    
-    @media(min-width:600px){
-      width:50%;
-      float:left;
-    }
 		padding:5px;
+    float:left;
     .cb-spotlight-spn-link{
       text-decoration:none;
       display:block;
