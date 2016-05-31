@@ -14,13 +14,13 @@ jQuery(document).ready(function(){
   
   
   jQuery('.ul-<?php echo $id; ?>').scroll(function(){
-    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() == 0){
+    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() <= 0){
       jQuery('.scroll-left-<?php echo $id; ?>').addClass('scroll-left--hidden');
     } else {
       jQuery('.scroll-left-<?php echo $id; ?>').removeClass('scroll-left--hidden');
     }
     
-    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() == maxScrollLeft){
+    if(jQuery('.ul-<?php echo $id; ?>').scrollLeft() >= maxScrollLeft){
       jQuery('.scroll-right-<?php echo $id; ?>').addClass('scroll-right--hidden');
     } else {
       jQuery('.scroll-right-<?php echo $id; ?>').removeClass('scroll-right--hidden');
