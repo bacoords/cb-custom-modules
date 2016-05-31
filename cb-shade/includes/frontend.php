@@ -11,7 +11,7 @@
  */
 
 ?>
-
+<?php if(isset($settings->cb_shade_photo_field_src)){ ?> 
 	<div class="cb-shade-boxes">
 		<div class="cb-shade-box-wrapper" style="background:url(<?php echo $settings->cb_shade_photo_field_src; ?>) no-repeat <?php echo $settings->cb_shade_bg_align; ?>; background-size:<?php echo $settings->cb_shade_bg_size; ?>;">
 		
@@ -30,3 +30,4 @@
 			<?php } ?>			
 		</div>
 	</div>
+<?php } ?>
