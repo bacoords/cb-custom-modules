@@ -15,6 +15,7 @@ gulp.task('css', function(){
 	gulp.watch('cb-shade/css/*.scss', ['shade']);
 	gulp.watch('cb-spotlight/css/*.scss', ['spotlight']);
 	gulp.watch('cb-scout/css/*.scss', ['scout']);
+	gulp.watch('cb-dust/css/*.scss', ['dust']);
 });
 
 gulp.task('broadside', function(){
@@ -55,4 +56,11 @@ gulp.task('scout', function(){
 		.pipe(autoprefixer())
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-scout/css'));
+});
+gulp.task('dust', function(){
+	return gulp.src('cb-dust/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-dust/css'));
 });

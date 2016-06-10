@@ -49,6 +49,13 @@ Yes. Some modules maintain their same behavior on mobile, but modules that rely 
 
 [Yes](https://github.com/bacoords/cb-custom-modules). Feel free to use and adapt as needed. Or reach out to me with any feature requests.
 
+= For the scout module, how do I make the page scroll to another part of the page? = 
+
+1. Find the row or element you want to scroll to, find the Advanced Settings tab, give that element a unique id such as *gallery*.
+1. When you add your link to the module, the link field will be *#gallery*. The plugins do the rest.
+
+The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder.com/knowledge-base/smooth-scrolling-buttons-icons-and-links/) of this technique with screenshots.
+
 == Screenshots ==
 
 1. Poise Module Example

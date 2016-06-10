@@ -15,9 +15,7 @@ jQuery(document).ready(function(){
         distance      = (elementOffsetTop - scrollTop),
         width = (jQuery('.fl-node-<?php echo $id; ?> .cb-scout-placeholder').width() - 10),
         height = (jQuery('.fl-node-<?php echo $id; ?> .cb-scout').height() - 10);
-    
-    
-    console.log(distance);
+
     if(distance < 0){
       jQuery('.fl-node-<?php echo $id; ?> .cb-scout').addClass('cb-scout-sticky');
       jQuery('.fl-node-<?php echo $id; ?> .cb-scout > ul').css('width',width);
