@@ -25,6 +25,12 @@
     position: fixed;
     top: 0;
     left:0;
+    z-index:1000;
+    width:100%;
+    ul{
+      position:relative;
+      margin: 0 auto;
+    }
   }
   &-placeholder{
     width:100%;
