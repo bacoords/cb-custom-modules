@@ -1,0 +1,33 @@
+.cb-dust{
+  width:100%;
+  display:block;
+  height:420px;
+  background:#494949;
+  position:relative;
+  overflow: hidden;
+  &__particles{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1
+  }
+  &__editor{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 5px;
+    height:100%;
+    z-index:2;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+    * {
+      color:whitesmoke;
+    }    
+  }
+
+}
