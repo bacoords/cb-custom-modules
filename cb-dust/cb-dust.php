@@ -45,6 +45,7 @@ FLBuilder::register_module('CBCustomDustModule', array(
                         'default'       => 'neural',
                         'options'       => array(
                             'neural'      => __( 'Neural', 'fl-builder' ),
+                            'snow'      => __( 'Snow', 'fl-builder' ),
                             'stars'      => __( 'Stars', 'fl-builder' )
                         ),
                     ),

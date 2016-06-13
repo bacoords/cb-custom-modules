@@ -33,8 +33,25 @@ class CBCustomScoutModule extends FLBuilderModule {
  * Register the module and its form settings.
  */
 FLBuilder::register_module('CBCustomScoutModule', array(
+      'links'       => array( // Tab
+        'title'         => __('Menu Items', 'fl-builder'), // Tab title
+        'sections'      => array( // Tab Sections
+            'links'       => array( // Section
+                'title'         => __('Menu Items', 'fl-builder'), // Section Title
+                'fields'        => array( // Section Fields
+										'cb_scout_form_field_repeater' => array(
+												'type'          => 'form',
+												'label'         => __('Link', 'fl-builder'),
+												'form'          => 'cb_scout_form_field', // ID of a registered form.
+												'preview_text'  => 'cb_scout_link_text', // ID of a field to use for the preview text.
+												'multiple' 			=> true,
+										),
+                )
+            )
+        )
+    ),
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('Design', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'general'       => array( // Section
                 'title'         => __('Design', 'fl-builder'), // Section Title
@@ -78,20 +95,8 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                     ),
                 )
             ),
-            'links'       => array( // Section
-                'title'         => __('Menu Items', 'fl-builder'), // Section Title
-                'fields'        => array( // Section Fields
-										'cb_scout_form_field_repeater' => array(
-												'type'          => 'form',
-												'label'         => __('Link', 'fl-builder'),
-												'form'          => 'cb_scout_form_field', // ID of a registered form.
-												'preview_text'  => 'cb_scout_link_text', // ID of a field to use for the preview text.
-												'multiple' 			=> true,
-										),
-                )
-            )
-        )
-    )
+          )
+      )
 ));
 
 
