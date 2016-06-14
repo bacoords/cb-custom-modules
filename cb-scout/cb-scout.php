@@ -80,7 +80,12 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                     ),
                     'cb_scout_text_color_hover' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Text Hover Color', 'fl-builder' ),
+                        'label'         => __( 'Hover Text Color', 'fl-builder' ),
+                        'show_reset'    => true
+                    ),
+                    'cb_scout_text_color_active' => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Active Text Color', 'fl-builder' ),
                         'show_reset'    => true
                     ),
                     'cb_scout_bg_color_main' => array(
@@ -90,7 +95,12 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                     ),
                     'cb_scout_bg_color_hover' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Background Hover Color', 'fl-builder' ),
+                        'label'         => __( 'Hover Background Color', 'fl-builder' ),
+                        'show_reset'    => true
+                    ),
+                    'cb_scout_bg_color_active' => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Active Background Color', 'fl-builder' ),
                         'show_reset'    => true
                     ),
                 )

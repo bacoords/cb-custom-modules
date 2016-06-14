@@ -30,6 +30,15 @@
 }
 <?php } ?>
 
+<?php if($settings->cb_scout_text_color_active){ ?>
+.fl-node-<?php echo $id; ?> .cb-scout ul li a:active{
+  color: #<?php echo $settings->cb_scout_text_color_active; ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout-active{
+  color: #<?php echo $settings->cb_scout_text_color_active; ?>;
+}
+<?php } ?>
+
 <?php if($settings->cb_scout_bg_color_main){ ?>
 .fl-node-<?php echo $id; ?> .cb-scout ul li a{
   background: #<?php echo $settings->cb_scout_bg_color_main; ?>;
@@ -39,6 +48,15 @@
 <?php if($settings->cb_scout_bg_color_hover){ ?>
 .fl-node-<?php echo $id; ?> .cb-scout ul li a:hover{
   background: #<?php echo $settings->cb_scout_bg_color_hover; ?>;
+}
+<?php } ?>
+
+<?php if($settings->cb_scout_bg_color_active){ ?>
+.fl-node-<?php echo $id; ?> .cb-scout ul li a:active{
+  background: #<?php echo $settings->cb_scout_bg_color_active; ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout-active{
+  background: #<?php echo $settings->cb_scout_bg_color_active; ?>;
 }
 <?php } ?>
 

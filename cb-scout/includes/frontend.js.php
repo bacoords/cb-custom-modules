@@ -8,8 +8,17 @@
  
 
 jQuery(document).ready(function(){
-  jQuery(document).scroll(function(){
+  
+  var ids = [];
+  
+  <?php foreach($settings->cb_scout_form_field_repeater as $current_form){
+    if(substr($current_form->cb_scout_link_url, 0, 1) == '#')
+      echo 'ids.push("' . $current_form->cb_scout_link_url . '");';
+  }?>
     
+  
+  jQuery(document).scroll(function(){
+    //Fixing element to top
     var scrollTop     = jQuery(window).scrollTop(),
         elementOffsetTop = jQuery('.fl-node-<?php echo $id; ?> .cb-scout-placeholder').offset().top,
         distance      = (elementOffsetTop - scrollTop),
@@ -26,5 +35,33 @@ jQuery(document).ready(function(){
       jQuery('.fl-node-<?php echo $id; ?> .cb-scout-placeholder').removeAttr('style');
       jQuery('.fl-node-<?php echo $id; ?> .cb-scout > ul').removeAttr('style');
     }
+    
+    //after scroll, update active & hash
+    jQuery.doTimeout( 'scroll', 250, function(){
+      cbScoutTopDiv(ids);
+    });
   });
 });
+
+
+//Find Topmost Div
+function cbScoutTopDiv(ids){
+  jQuery.each(ids, function(i, a){
+    if(jQuery(a).offset().top <= (jQuery(window).scrollTop() + 100)){
+      if(a != window.location.href.split("#")[1]){
+      cbScoutMakeActive(a);
+      }
+    }
+  });
+  return;
+}
+
+//Set active on div, update hash for non-IE browsers
+function cbScoutMakeActive(i){
+  jQuery('.fl-node-<?php echo $id; ?> .cb-scout ul li a').removeClass('cb-scout-active');
+  var s = '.fl-node-<?php echo $id; ?> .cb-scout ul li a[href*="' + i + '"]';
+  jQuery(s).addClass('cb-scout-active');
+  history.pushState(null, null, i);
+  return;
+}
+
