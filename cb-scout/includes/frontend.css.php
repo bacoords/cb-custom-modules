@@ -77,3 +77,11 @@
   -webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1;
 }
 <?php } ?>
+
+<?php if(is_admin_bar_showing()) { ?>
+.cb-scout-sticky{
+  top:32px;
+}
+
+
+<?php } ?>
