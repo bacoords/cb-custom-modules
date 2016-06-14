@@ -46,8 +46,11 @@ jQuery(document).ready(function(){
 
 //Find Topmost Div
 function cbScoutTopDiv(ids){
+  var offset = 100;
+  <?php if(is_admin_bar_showing()) { echo 'offset += 32;';} ?>
+    
   jQuery.each(ids, function(i, a){
-    if(jQuery(a).offset().top <= (jQuery(window).scrollTop() + 100)){
+    if(jQuery(a).offset().top <= (jQuery(window).scrollTop() + offset)){
       if(a != window.location.href.split("#")[1]){
       cbScoutMakeActive(a);
       }
