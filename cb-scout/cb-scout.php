@@ -73,6 +73,22 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                             'space-between' => __( 'Spread Evently', 'fl-builder')
                         ),
                     ),
+                    'cb_scout_first_active' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'First Element Active', 'fl-builder' ),
+                        'default'       => 'center',
+                        'help'          => __( 'Apply active styles to first menu item by default.', 'fl-builder' ),
+                        'options'       => array(
+                            'false' => __( 'No', 'fl-builder'),
+                            'true'      => __( 'Yes', 'fl-builder' )
+                        ),
+                    ),
+                  )
+              ),
+            'colors'       => array( // Section
+                'title'         => __('Colors', 'fl-builder'), // Section Title
+              
+                'fields'        => array( // Section Fields
                     'cb_scout_text_color_main' => array(
                         'type'          => 'color',
                         'label'         => __( 'Text Color', 'fl-builder' ),

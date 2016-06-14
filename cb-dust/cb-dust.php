@@ -57,14 +57,14 @@ FLBuilder::register_module('CBCustomDustModule', array(
                     ),
 										'cb_dust_min_height' => array(
 												'type'          => 'text',
-												'label'         => __( 'Custom Minimum Height', 'fl-builder' ),
+												'label'         => __( 'Row Height', 'fl-builder' ),
 												'default'       => '',
 												'maxlength'     => '4',
 												'size'          => '6',
 												'placeholder'   => __( '420', 'fl-builder' ),
 												'class'         => 'my-css-class',
 												'description'   => __( 'px', 'fl-builder' ),
-												'help'          => __( 'Set a custom minimum height in pixels. For smaller screens, the module height may increase to accomodate content.', 'fl-builder' )
+												'help'          => __( 'Set a custom height in pixels. Default: 420px.', 'fl-builder' )
 										),
                 )
             ),

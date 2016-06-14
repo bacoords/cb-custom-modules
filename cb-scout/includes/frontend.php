@@ -17,13 +17,17 @@
       <ul>
           <?php
               $f = true;
+              $i = 0;
               foreach($settings->cb_scout_form_field_repeater as $current_form){	?>
 							 <li class="cb-scout__li-<?php echo $id; ?>">
-							 		<a href="<?php echo $current_form->cb_scout_link_url; ?>">
+							 		<a href="<?php echo $current_form->cb_scout_link_url; ?>" <?php if(($settings->cb_scout_first_active == 'true') && ($i < 1)){ echo 'class="cb-scout-active"'; }
+                ?>>
 							 		  <?php echo $current_form->cb_scout_link_text; ?>
 							 		</a>
 							 	</li>
-					<?php	} ?>
+					    <?php	
+               $i++;
+               } ?>
       </ul>   
   </div>
   
