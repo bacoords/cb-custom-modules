@@ -17,7 +17,7 @@ class CBCustomSpotlightModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Spotlight (CB Custom)', 'fl-builder'),
+            'name'          => __('Spotlight', 'fl-builder'),
             'description'   => __('Let your viewer spotlight an image.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-spotlight/',

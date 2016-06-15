@@ -17,7 +17,7 @@ class CBCustomPoiseModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Poise (CB Custom)', 'fl-builder'),
+            'name'          => __('Poise', 'fl-builder'),
             'description'   => __('Display elements with poise.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-poise/',

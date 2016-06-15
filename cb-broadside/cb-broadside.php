@@ -17,7 +17,7 @@ class CBCustomBroadsideModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Broadside (CB Custom)', 'fl-builder'),
+            'name'          => __('Broadside', 'fl-builder'),
             'description'   => __('Display a gallery.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-broadside/',

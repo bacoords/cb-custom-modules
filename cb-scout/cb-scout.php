@@ -17,8 +17,8 @@ class CBCustomScoutModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Scout (CB Custom)', 'fl-builder'),
-            'description'   => __('Throw some custom shade.', 'fl-builder'),
+            'name'          => __('Scout', 'fl-builder'),
+            'description'   => __('Sticky Navbar.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-scout/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-scout/',
@@ -26,6 +26,7 @@ class CBCustomScoutModule extends FLBuilderModule {
             'enabled'       => true, // Defaults to true and can be omitted.
 						'partial_refresh' => true,
         ));
+      $this->add_css('font-awesome');
     }
   
     public function responsive_breakpoint()

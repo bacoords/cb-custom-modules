@@ -41,12 +41,12 @@
 			display:block;
 			width:100%;
 			min-height:420px;
-			text-decoration:none;
+		  text-decoration:none;
 			transition: background 500ms ease;
 			overflow:hidden;
 			.cb-shade-box-inner{
 				min-height:420px;
-        display:flex;
+				display:flex;
 			  justify-content: center;
 				flex-direction: column;
 				* {

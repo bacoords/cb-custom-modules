@@ -39,20 +39,19 @@ jQuery(document).ready(function(){
       
       
       if((mblSetting == 'icon') && (mblBreak < window.innerWidth)){
-        jQuery('.fl-node-<?php echo $id; ?> .cb-scout > .cb-scout--mobile-icon').hide();
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout > ul').removeClass('cb-scout--mobile-hide');
       }
       if(distance < 0){
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout').addClass('cb-scout--sticky');
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout > ul').css('width',width);
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout--placeholder').css('height',height);
-        if(mblSetting == 'icon') jQuery('.fl-node-<?php echo $id; ?> .cb-scout > .cb-scout--mobile-icon').css('width',width);
+//        if(mblSetting == 'icon') jQuery('.fl-node-<?php echo $id; ?> .cb-scout > .cb-scout--mobile-icon').css('width',width);
       } else {
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout').removeClass('cb-scout--sticky');
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout').removeAttr('style');
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout--placeholder').removeAttr('style');
         jQuery('.fl-node-<?php echo $id; ?> .cb-scout > ul').removeAttr('style');
-        if(mblSetting == 'icon') jQuery('.fl-node-<?php echo $id; ?> .cb-scout > .cb-scout--mobile-icon').removeAttr('style');
+//        if(mblSetting == 'icon') jQuery('.fl-node-<?php echo $id; ?> .cb-scout > .cb-scout--mobile-icon').removeAttr('style');
       }
 
       //after scroll, update active & hash

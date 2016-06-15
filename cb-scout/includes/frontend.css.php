@@ -86,11 +86,14 @@
   .fl-node-<?php echo $id; ?> .cb-scout--mobile-icon {
     display:block;
   }
+  .fl-node-<?php echo $id; ?> .cb-scout--mobile-hide{
+    display:none;
+  }
 }
 <?php } ?>
 
 <?php if(is_admin_bar_showing()) { ?>
-.cb-scout-sticky{
+.cb-scout--sticky{
   top:32px;
 }
 

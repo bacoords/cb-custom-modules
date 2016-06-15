@@ -4,7 +4,7 @@ Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 4.3
+Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,8 @@ CB Custom Modules is a free suite of elegant custom modules for for Beaver Build
 * Shade - Add sleek hover effects and custom colors to your background images. Overlay them with custom WYSIWYG content and even make them clickable.
 * Spotlight - Create your own list of custom links on one side that each replaces the 'spotlight' photo on the other. Customize column sizes and more.
 * Broadside - Horizontal slider to showcase design work, posters, photography, and more. Responsive and responds to touch on mobile. Clicking on images opens them in the beautiful default BB lightbox.
+* Scout - Sticky navbar that fixes to the top of the screen when it gets there, allowing smooth scrolling to other elements on the page.
+* Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
 
 For more information and module demos, visit [the plugin page](http://cbcustommodules.com).
 
@@ -65,10 +67,17 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.1.0 =
+* Added two new modules: Dust and Scout
+* New upgrades and options to existing modules
+
 = 1.0 =
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Upgrade to 1.1.0 for two new modules and upgrades to existing modules.
 
 = 1.0 =
 Upgrade to initial version.

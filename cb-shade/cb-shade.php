@@ -17,7 +17,7 @@ class CBCustomShadeModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Shade (CB Custom)', 'fl-builder'),
+            'name'          => __('Shade', 'fl-builder'),
             'description'   => __('Throw some custom shade.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-shade/',
@@ -33,8 +33,39 @@ class CBCustomShadeModule extends FLBuilderModule {
  * Register the module and its form settings.
  */
 FLBuilder::register_module('CBCustomShadeModule', array(
-    'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+    'content'       => array( // Tab
+        'title'         => __('Content', 'fl-builder'), // Tab title
+        'sections'      => array( // Tab Sections
+            'content'       => array( // Section
+                'title'         => __('Content', 'fl-builder'), // Section Title
+                'fields'        => array( // Section Fields
+										'cb_shade_link_field' => array(
+												'type'          => 'link',
+												'label'         => __('Link (optional)', 'fl-builder'),
+												'help'          => __( 'Set the entire module to be a link. You can also input links in the editor below.', 'fl-builder' )
+										),
+                    'cb_shade_vertical_align' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Vertical Alignment', 'fl-builder' ),
+                        'default'       => 'center',
+                        'options'       => array(
+                            'flex-start'      => __( 'Top', 'fl-builder' ),
+                            'center'      => __( 'Center', 'fl-builder' ),
+                            'flex-end'      => __( 'Bottom', 'fl-builder' )
+                        ),
+												'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'fl-builder' )
+                    ),
+                    'cb_shade_editor_field' => array(
+												'type'          => 'editor',
+												'media_buttons' => true,
+												'rows'          => 10
+										),
+                )
+            )
+        )
+    ),
+      'design'       => array( // Tab
+        'title'         => __('Design', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
                 'title'         => __('Design', 'fl-builder'), // Section Title
@@ -88,21 +119,6 @@ FLBuilder::register_module('CBCustomShadeModule', array(
 										),
                 )
             ),
-            'content'       => array( // Section
-                'title'         => __('Content', 'fl-builder'), // Section Title
-                'fields'        => array( // Section Fields
-										'cb_shade_link_field' => array(
-												'type'          => 'link',
-												'label'         => __('Link (optional)', 'fl-builder'),
-												'help'          => __( 'Set the entire module to be a link. You can also input links in the editor below.', 'fl-builder' )
-										),
-                    'cb_shade_editor_field' => array(
-												'type'          => 'editor',
-												'media_buttons' => true,
-												'rows'          => 10
-										),
-                )
-            )
-        )
-    )
+        ),
+    ),
 ));

@@ -49,18 +49,33 @@ if($settings->cb_shade_color_field){
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper {
     min-height: <?php echo $settings->cb_shade_text_field; ?>px;
+    _height: <?php echo $settings->cb_shade_text_field; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay {
     min-height: <?php echo $settings->cb_shade_text_field; ?>px;
+    _height: <?php echo $settings->cb_shade_text_field; ?>px;
 }
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
     min-height: <?php echo $settings->cb_shade_text_field; ?>px;
+    _height: <?php echo $settings->cb_shade_text_field; ?>px;
 }
 
 
-<?php } ?>
+
+<?php }  ?>
+
+
+
+<?php if($settings->cb_shade_vertical_align) { ?>
+.fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
+    -webkit-box-pack: <?php echo $settings->cb_shade_vertical_align ?>;    -webkit-justify-content: <?php echo $settings->cb_shade_vertical_align ?>;    -ms-flex-pack: <?php echo $settings->cb_shade_vertical_align ?>;    justify-content: <?php echo $settings->cb_shade_vertical_align ?>;
+}
+<?php }  ?>
+
+
+
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes { background: <?php echo $color_8; ?>; }
 .fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay { background: <?php echo $color_3; ?>; }

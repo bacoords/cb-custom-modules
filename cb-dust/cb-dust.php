@@ -17,8 +17,8 @@ class CBCustomDustModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Dust (CB Custom)', 'fl-builder'),
-            'description'   => __('Throw some custom shade.', 'fl-builder'),
+            'name'          => __('Dust', 'fl-builder'),
+            'description'   => __('Have fun with Particles.js.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-dust/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-dust/',

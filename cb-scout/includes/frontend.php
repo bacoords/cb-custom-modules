@@ -15,7 +15,7 @@
   <div class="cb-scout">
      
      <?php if(($settings->cb_scout_responsive == 'icon')){
-        echo '<div class="cb-scout--mobile-icon"><p>&#9776;</p></div>';
+        echo '<div class="cb-scout--mobile-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>';
       }
       ?>
       <ul <?php if(($settings->cb_scout_responsive == 'icon')){

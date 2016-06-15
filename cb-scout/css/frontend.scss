@@ -10,9 +10,6 @@
     flex-direction:row;
     justify-content: center;
     flex-wrap:wrap;
-    &.cb-scout--mobile-hide{
-      display:none;
-    }
     li{
       flex-grow:0;
       padding:3px;
