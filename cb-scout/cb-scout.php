@@ -27,6 +27,12 @@ class CBCustomScoutModule extends FLBuilderModule {
 						'partial_refresh' => true,
         ));
     }
+  
+    public function responsive_breakpoint()
+    {
+      $settings = FLBuilderModel::get_global_settings();
+      return $settings->responsive_breakpoint;
+    }
 }
 
 /**
@@ -76,11 +82,22 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                     'cb_scout_first_active' => array(
                         'type'          => 'select',
                         'label'         => __( 'First Element Active', 'fl-builder' ),
-                        'default'       => 'center',
+                        'default'       => 'false',
                         'help'          => __( 'Apply active styles to first menu item by default.', 'fl-builder' ),
                         'options'       => array(
                             'false' => __( 'No', 'fl-builder'),
                             'true'      => __( 'Yes', 'fl-builder' )
+                        ),
+                    ),
+                    'cb_scout_responsive' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Responsive Behavior', 'fl-builder' ),
+                        'default'       => 'stay',
+                        'help'          => __( 'How to adapt for mobile screens.', 'fl-builder' ),
+                        'options'       => array(
+                            'stay' => __( 'Don\'t Fix To Top', 'fl-builder'),
+                            'icon'      => __( 'Fix To Top, Use Icon to Toggle', 'fl-builder' ),
+                            'stack'      => __( 'Fix To Top, Wrap Items', 'fl-builder' )
                         ),
                     ),
                   )

@@ -10,6 +10,9 @@
     flex-direction:row;
     justify-content: center;
     flex-wrap:wrap;
+    &.cb-scout--mobile-hide{
+      display:none;
+    }
     li{
       flex-grow:0;
       padding:3px;
@@ -21,7 +24,7 @@
       }
     }
   }
-  &-sticky{
+  &--sticky{
     position: fixed;
     top: 0;
     left:0;
@@ -32,8 +35,26 @@
       margin: 0 auto;
     }
   }
-  &-placeholder{
+  &--sticky--mobile{
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1000;
+    width:100%;
+    ul{
+      position:relative;
+      margin: 0 auto;
+    }
+  }
+  &--mobile-icon{
+    width:100%;
+    display: none;
+    text-align: left;
+    padding:5px;
+  }
+  
+  &--placeholder{
     width:100%;
     height:0;
   }
-}
+} 

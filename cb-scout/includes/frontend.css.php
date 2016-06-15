@@ -34,7 +34,7 @@
 .fl-node-<?php echo $id; ?> .cb-scout ul li a:active{
   color: #<?php echo $settings->cb_scout_text_color_active; ?>;
 }
-.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout-active{
+.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout--active{
   color: #<?php echo $settings->cb_scout_text_color_active; ?>;
 }
 <?php } ?>
@@ -55,7 +55,7 @@
 .fl-node-<?php echo $id; ?> .cb-scout ul li a:active{
   background: #<?php echo $settings->cb_scout_bg_color_active; ?>;
 }
-.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout-active{
+.fl-node-<?php echo $id; ?> .cb-scout ul li a.cb-scout--active{
   background: #<?php echo $settings->cb_scout_bg_color_active; ?>;
 }
 <?php } ?>
@@ -75,6 +75,17 @@
 .fl-node-<?php echo $id; ?> .cb-scout ul li{
    -webkit-box-pack: justify;-webkit-justify-content: space-between;-ms-flex-pack: justify;justify-content: space-between;
   -webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1;
+}
+<?php } ?>
+
+<?php if($settings->cb_scout_responsive == 'icon'){ ?>
+@media(max-width: <?php echo $module->responsive_breakpoint();  ?>px){
+  .fl-node-<?php echo $id; ?> .cb-scout ul {
+   -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column;
+  }
+  .fl-node-<?php echo $id; ?> .cb-scout--mobile-icon {
+    display:block;
+  }
 }
 <?php } ?>
 
