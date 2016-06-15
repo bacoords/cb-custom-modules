@@ -54,7 +54,7 @@ Yes. Some modules maintain their same behavior on mobile, but modules that rely 
 = For the scout module, how do I make the page scroll to another part of the page? = 
 
 1. Find the row or element you want to scroll to, find the Advanced Settings tab, give that element a unique id such as *gallery*.
-1. When you add your link to the module, the link field will be *#gallery*. The plugins do the rest.
+1. When you add your link to the module, the link field would need to be *#gallery*. The plugins do the rest.
 
 The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder.com/knowledge-base/smooth-scrolling-buttons-icons-and-links/) of this technique with screenshots.
 
@@ -64,12 +64,15 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 2. Shade Module Example
 3. Spotlight Module Example
 4. Broadside Module Example
+5. Dust Module Example
+6. Scout Module Example
 
 == Changelog ==
 
 = 1.1.0 =
-* Added two new modules: Dust and Scout
-* New upgrades and options to existing modules
+* Adds two new modules: Dust and Scout
+* Streamlines settings layout for multiple modules
+* Adds vertical align options to Shade module
 
 = 1.0 =
 * Initial Version
