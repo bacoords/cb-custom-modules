@@ -101,6 +101,16 @@ FLBuilder::register_module('CBCustomScoutModule', array(
                             'stack'      => __( 'Fix To Top, Wrap Items', 'fl-builder' )
                         ),
                     ),
+                  'cb_scout_offset' => array(
+                      'type'          => 'text',
+                      'label'         => __( 'Offset from top', 'fl-builder' ),
+                      'default'       => '0',
+                      'maxlength'     => '3',
+                      'size'          => '3',
+                      'placeholder'   => __( '0', 'fl-builder' ),
+                      'description'   => __( 'px', 'fl-builder' ),
+                      'help'          => __( 'Leave some space from the top of the window when element gets sticky to account for a menu or navigation bar. If Beaver Builder Bar or WP Admin Bar is showing, Scout rests directly below.', 'fl-builder' )
+                  ),
                   )
               ),
             'colors'       => array( // Section

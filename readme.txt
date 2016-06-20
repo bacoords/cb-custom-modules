@@ -4,7 +4,7 @@ Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 4.4
+Stable tag: 4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.1.1 =
+* Adds offset option to CB Scout Module, allowing you to set the distance from the top of the screen.
+
 = 1.1.0 =
 * Adds two new modules: Dust and Scout
 * Streamlines settings layout for multiple modules
@@ -78,6 +81,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Upgrade to 1.1.1 for new, much-requested setting in the Scout module.
 
 = 1.1.0 =
 Upgrade to 1.1.0 for two new modules and upgrades to existing modules.

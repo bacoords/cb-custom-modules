@@ -9,7 +9,14 @@
 
 jQuery(document).ready(function(){
   
+
+  
   var ids = [];
+  
+  var cbScoutOffset = false;
+  <?php if($settings->cb_scout_offset > 0){
+    echo 'cbScoutOffset = true;';
+  } ?>
   
   <?php foreach($settings->cb_scout_form_field_repeater as $current_form){
     if(substr($current_form->cb_scout_link_url, 0, 1) == '#')
@@ -32,7 +39,9 @@ jQuery(document).ready(function(){
         width = (jQuery('.fl-node-<?php echo $id; ?> .cb-scout--placeholder').width() - 10),
         height = (jQuery('.fl-node-<?php echo $id; ?> .cb-scout').height() - 10);
 
-    
+   if ((jQuery('.fl-builder-bar').length > 0) && !cbScoutOffset) {
+    jQuery('.cb-scout--sticky').attr('style','top:44px');
+   }   
     
     //Check mobile settings & width
     if((mblSetting != 'stay') || (mblBreak < window.innerWidth)){  

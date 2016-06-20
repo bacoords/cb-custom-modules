@@ -92,10 +92,19 @@
 }
 <?php } ?>
 
-<?php if(is_admin_bar_showing()) { ?>
+<?php if((is_admin_bar_showing()) && !($settings->cb_scout_offset)) { ?>
 .cb-scout--sticky{
   top:32px;
 }
-
-
 <?php } ?>
+
+<?php if($settings->cb_scout_offset) { ?>
+.cb-scout--sticky{
+  top: <?php echo $settings->cb_scout_offset; ?>px !important;
+}
+<?php } ?>
+
+
+
+
+
