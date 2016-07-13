@@ -31,6 +31,11 @@ class CBCustomSliceModule extends FLBuilderModule {
     }
 
   
+    public function responsive_breakpoint()
+    {
+      $settings = FLBuilderModel::get_global_settings();
+      return $settings->responsive_breakpoint;
+    }  
   
 }
 
@@ -42,20 +47,30 @@ FLBuilder::register_module('CBCustomSliceModule', array(
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'options'       => array( // Section
-                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'title'         => __('Design', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_broadside_bg_color' => array(
+										'cb_slice_bg_color' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Background Color', 'fl-builder' ),
-                        'default'       => '494949',
+                        'label'         => __( 'Divider Color', 'fl-builder' ),
+                        'default'       => 'ffffff',
                         'show_reset'    => true
 										),
+                  'cb_slice_row_limit' => array(
+                      'type'          => 'text',
+                      'label'         => __( 'Images Per Row', 'fl-builder' ),
+                      'default'       => '',
+                      'maxlength'     => '2',
+                      'size'          => '3',
+                      'placeholder'   => __( '', 'fl-builder' ),
+                      'description'   => __( 'images', 'fl-builder' ),
+                      'help'          => __( 'If left blank or set to zero, there will be no limit.', 'fl-builder' )
+                  ),
                 )
             ),
             'photos'       => array( // Section
                 'title'         => __('Select Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_broadside_multiple_photos_field' => array(
+										'cb_slice_multiple_photos_field' => array(
 												'type'          => 'multiple-photos',
 												'label'         => __( 'Select all photos', 'fl-builder' )
 										),

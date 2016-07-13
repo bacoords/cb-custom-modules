@@ -22,6 +22,7 @@ CB Custom Modules is a free suite of elegant custom modules for for Beaver Build
 * Broadside - Horizontal slider to showcase design work, posters, photography, and more. Responsive and responds to touch on mobile. Clicking on images opens them in the beautiful default BB lightbox.
 * Scout - Sticky navbar that fixes to the top of the screen when it gets there, allowing smooth scrolling to other elements on the page.
 * Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
+* Slice - Animated photo gallery with stacked, 'sliding cards' effect. Integrates with the default Beaver Builder lightbox.
 
 For more information and module demos, visit [the plugin page](http://cbcustommodules.com).
 
@@ -69,6 +70,10 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.2.0 =
+* New Module: Slice, a photo gallery module
+* New design in Dust module: Bubbles
+
 = 1.1.1 =
 * Adds offset option to CB Scout Module, allowing you to set the distance from the top of the screen.
 
@@ -81,6 +86,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Upgrade to 1.2.0 for a new module and a new design in the Dust module.
 
 = 1.1.1 =
 Upgrade to 1.1.1 for new, much-requested setting in the Scout module.

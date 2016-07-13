@@ -16,6 +16,7 @@ gulp.task('css', function(){
 	gulp.watch('cb-spotlight/css/*.scss', ['spotlight']);
 	gulp.watch('cb-scout/css/*.scss', ['scout']);
 	gulp.watch('cb-dust/css/*.scss', ['dust']);
+	gulp.watch('cb-slice/css/*.scss', ['slice']);
 });
 
 gulp.task('broadside', function(){
