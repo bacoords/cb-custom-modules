@@ -47,7 +47,8 @@ FLBuilder::register_module('CBCustomDustModule', array(
                             'neural'      => __( 'Neural', 'fl-builder' ),
                             'rain'      => __( 'Rain', 'fl-builder' ),
                             'snow'      => __( 'Snow', 'fl-builder' ),
-                            'stars'      => __( 'Stars', 'fl-builder' )
+                            'stars'      => __( 'Stars', 'fl-builder' ),
+                            'bubbles'      => __( 'Bubbles', 'fl-builder' )
                         ),
                     ),
                     'cb_dust_bg_color' => array(

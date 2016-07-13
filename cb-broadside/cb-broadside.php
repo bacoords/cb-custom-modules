@@ -42,7 +42,7 @@ FLBuilder::register_module('CBCustomBroadsideModule', array(
         'title'         => __('General', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'options'       => array( // Section
-                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'title'         => __('Design Options', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
 										'cb_broadside_bg_color' => array(
                         'type'          => 'color',
@@ -53,7 +53,7 @@ FLBuilder::register_module('CBCustomBroadsideModule', array(
                 )
             ),
             'photos'       => array( // Section
-                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'title'         => __('Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
 										'cb_broadside_multiple_photos_field' => array(
 												'type'          => 'multiple-photos',

@@ -64,3 +64,10 @@ gulp.task('dust', function(){
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-dust/css'));
 });
+gulp.task('slice', function(){
+	return gulp.src('cb-slice/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-slice/css'));
+});
