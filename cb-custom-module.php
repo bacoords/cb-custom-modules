@@ -15,8 +15,8 @@ define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
  */
 function fl_load_module_examples() {
 	if ( class_exists( 'FLBuilder' ) ) {
-//			require_once 'grid/grid.php';
 		require_once 'cb-shade/cb-shade.php';
+//		require_once 'cb-posts/cb-posts.php'; //In Progress
 		require_once 'cb-poise/cb-poise.php';
 		require_once 'cb-spotlight/cb-spotlight.php';
 		require_once 'cb-broadside/cb-broadside.php';
