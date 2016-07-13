@@ -1,0 +1,215 @@
+/* Post Grid */
+.fl-post-grid {
+	margin: 0 auto;
+	position: relative;
+}
+.fl-post-grid-post {
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	visibility: hidden;
+}
+.fl-post-grid-image img {
+	height: auto !important;
+	width: 100% !important;
+}
+.fl-post-grid-text {
+	padding: 20px;
+}
+.fl-post-grid-title {
+	padding-bottom: 7px;
+}
+body .fl-post-grid-text,
+body .fl-post-grid-content p {
+	font-size: 14px;
+	line-height: 22px;
+}
+body .fl-post-grid-content p:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+body .fl-post-grid-text a {
+	text-decoration: none;
+}
+body h2.fl-post-grid-title {
+	font-size: 20px;
+	line-height: 26px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+body .fl-post-grid-meta {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+.fl-post-grid-more {
+	margin-top: 10px;
+	display: inline-block;
+}
+.fl-post-grid #infscr-loading {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 40px 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+/* Post Gallery */
+.fl-post-gallery-post {
+	overflow: hidden;
+	position: relative;
+	visibility: hidden;
+}
+.fl-post-gallery-link {
+	display: block;
+	height: 100%;
+}
+.fl-post-gallery-img {
+	position: relative;
+	z-index: 1;
+}
+.fl-post-gallery-img-horiz {
+	height: 100% !important;
+	max-height: 100% !important;
+	max-width: none !important;
+	width: auto !important;
+}
+.fl-post-gallery-img-vert {
+	height: auto !important;
+	max-height: none !important;
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.fl-post-gallery-text-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+	text-align: center;
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+.fl-post-gallery-link:hover .fl-post-gallery-text-wrap {
+	filter: alpha(opacity = 100);
+	opacity: 1;
+}
+
+.fl-post-gallery-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	        transition: all 0.3s;
+}
+
+/* Gallery Transitions */
+.fl-post-gallery-text,
+.fl-post-gallery-link:hover .fl-post-gallery-text{
+	-webkit-transform: translate3d(-50%,-50%,0); 
+	   -moz-transform: translate3d(-50%,-50%,0); 
+	    -ms-transform: translate(-50%,-50%); 
+			transform: translate3d(-50%,-50%,0); 
+}
+
+/* Gallery Icons */
+.fl-post-gallery-text .fl-gallery-icon{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.fl-post-gallery-text .fl-gallery-icon i,
+.fl-post-gallery-text .fl-gallery-icon i:before{
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+}
+
+.fl-post-gallery-text h2.fl-post-gallery-title {
+	font-size: 22px;
+	margin: 0 0 5px 0;
+}
+.fl-post-gallery #infscr-loading {
+	clear: both;
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+}
+
+/* Post Feed */
+.fl-post-feed-post {
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+}
+.fl-post-feed-post:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.fl-post-feed-header {
+	margin-bottom: 25px;
+}
+.fl-post-feed-header a {
+	text-decoration: none;
+}
+body h2.fl-post-feed-title {
+	margin: 0 0 10px;
+	padding: 0;
+}
+body .fl-post-feed-meta {
+	font-size: 14px;
+}
+.fl-post-feed-meta .fl-sep {
+	margin: 0 3px;
+}
+.fl-post-feed-image {
+	margin-bottom: 25px;
+}
+.fl-post-feed-image img {
+	height: auto !important;
+	width: 100% !important;
+}
+.fl-post-feed-image-beside .fl-post-feed-image {
+	float: left;
+	width: 33%;
+}
+.fl-post-feed-image-beside.fl-post-feed-has-image .fl-post-feed-content {
+	margin-left: 37%;
+}
+.fl-post-feed-content a {
+	text-decoration: none;
+}
+.fl-post-feed-content p:last-of-type {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.fl-post-feed-more {
+	margin-top: 15px;
+	display: inline-block;
+}
+.fl-post-feed #infscr-loading {
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+}
+
+/* No posts message */
+.fl-post-grid-empty {
+	border: 1px dashed #ccc;
+	font-size: 16px;
+	padding: 20px;
+	text-align: center;
+}
