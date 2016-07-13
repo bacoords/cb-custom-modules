@@ -4,7 +4,7 @@ Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 4.5
+Stable tag: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,7 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 4. Broadside Module Example
 5. Dust Module Example
 6. Scout Module Example
+7. Slice Module Example
 
 == Changelog ==
 
