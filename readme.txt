@@ -4,7 +4,7 @@ Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 4.6
+Stable tag: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.2.1 =
+* Update to fix bug that may cause conflicts with other custom modules
+
 = 1.2.0 =
 * New Module: Slice, a photo gallery module
 * New design in Dust module: Bubbles
@@ -87,6 +90,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+* Update to fix bug that may cause conflicts with other custom modules
 
 = 1.2.0 =
 Upgrade to 1.2.0 for a new module and a new design in the Dust module.
