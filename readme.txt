@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
-Tested up to: 4.5
-Stable tag: 4.7
+Tested up to: 4.7
+Stable tag: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ CB Custom Modules is a free suite of elegant custom modules for for Beaver Build
 
 For more information and module demos, visit [the plugin page](http://cbcustommodules.com).
 
-If you have ideas for future modules or enhancements to current modules, please [contact me](https://briancoords.com/contact).
+If you have ideas for future modules or enhancements to current modules, please [contact me](https://briancoords.com/contact) or visit the [github repo](https://github.com/bacoords/cb-custom-modules).
 
 == Installation ==
 
@@ -71,6 +71,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.2.2 =
+* Update to fix bug with Scout Module caching admin bar override
+
 = 1.2.1 =
 * Update to fix bug that may cause conflicts with other custom modules
 
@@ -90,6 +93,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+* Update to fix bug with Scout Module caching admin bar override
 
 = 1.2.1 =
 * Update to fix bug that may cause conflicts with other custom modules

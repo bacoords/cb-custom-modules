@@ -92,8 +92,8 @@
 }
 <?php } ?>
 
-<?php if((is_admin_bar_showing()) && !($settings->cb_scout_offset)) { ?>
-.cb-scout--sticky{
+<?php if(!($settings->cb_scout_offset)) { ?>
+body.admin-bar .cb-scout--sticky{
   top:32px;
 }
 <?php } ?>

@@ -3,7 +3,7 @@
  * Plugin Name: CB Custom Beaver Builder Modules 
  * Plugin URI: http://www.briancoords.com/free-beaver-builder-custom-modules
  * Description: Custom photographic modules for Beaver Builder.
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Brian Coords
  * Author URI: http://www.briancoords.com
  */
