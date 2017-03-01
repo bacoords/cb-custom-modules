@@ -17,6 +17,7 @@ gulp.task('css', function(){
 	gulp.watch('cb-scout/css/*.scss', ['scout']);
 	gulp.watch('cb-dust/css/*.scss', ['dust']);
 	gulp.watch('cb-slice/css/*.scss', ['slice']);
+	gulp.watch('cb-modal/css/*.scss', ['modal']);
 });
 
 gulp.task('broadside', function(){
@@ -58,6 +59,7 @@ gulp.task('scout', function(){
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-scout/css'));
 });
+
 gulp.task('dust', function(){
 	return gulp.src('cb-dust/css/*.scss')
 		.pipe(sass())
@@ -65,10 +67,19 @@ gulp.task('dust', function(){
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-dust/css'));
 });
+
 gulp.task('slice', function(){
 	return gulp.src('cb-slice/css/*.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-slice/css'));
+});
+
+gulp.task('modal', function(){
+	return gulp.src('cb-modal/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-modal/css'));
 });

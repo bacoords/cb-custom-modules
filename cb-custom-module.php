@@ -23,6 +23,7 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-scout/cb-scout.php';
 		require_once 'cb-dust/cb-dust.php';
 		require_once 'cb-slice/cb-slice.php';
+		require_once 'cb-modal/cb-modal.php';
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );
