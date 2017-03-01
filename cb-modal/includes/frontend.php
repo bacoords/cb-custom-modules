@@ -29,24 +29,28 @@
       </div>
 
       <div class="cb-modal-box">
+        
+        <div class="cb-modal-box__inner">
 
-        <div class="cb-modal-box__thumb">
+          <div class="cb-modal-box__thumb">
 
-          <img src="<?php echo $settings->cb_modal_photo_src; ?>" alt="thumbnail"> 
+            <img src="<?php echo $settings->cb_modal_photo_src; ?>" alt="thumbnail"> 
 
+          </div>
+
+          <div class="cb-modal-box__description">
+
+            <?php echo $settings->cb_modal_content; ?>
+
+          </div>
+        
         </div>
 
-        <div class="cb-modal-box__description">
-
-          <?php echo $settings->cb_modal_content; ?>
-
-        </div>
+      </div>
       
-        <div class="cb-modal-close">
+      <div class="cb-modal-close">
 
-          <span>&#215;</span>
-
-        </div>
+        <span>&#215;</span>
 
       </div>
 

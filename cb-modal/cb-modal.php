@@ -75,6 +75,12 @@ FLBuilder::register_module('CBCustomModalModule', array(
                         'default'       => 'ffffff',
                         'show_reset'    => true
                     ),
+                    'cb_modal_textcolor' => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Text Color', 'fl-builder' ),
+                        'default'       => '000000',
+                        'show_reset'    => true
+                    ),
                     'cb_modal_overlaycolor' => array(
                         'type'          => 'color',
                         'label'         => __( 'Overlay Color', 'fl-builder' ),
