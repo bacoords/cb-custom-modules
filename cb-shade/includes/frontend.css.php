@@ -75,6 +75,16 @@ if($settings->cb_shade_color_field){
 <?php }  ?>
 
 
+<?php if($settings->cb_shade_secret == 'on') { ?>
+.fl-node-<?php echo $id; ?> .cb-shade-boxes .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
+   opacity: 0;
+}
+.fl-node-<?php echo $id; ?> .cb-shade-boxes:hover .cb-shade-box-wrapper .cb-shade-box-overlay .cb-shade-box-inner {
+    opacity: 1;
+}
+<?php }  ?>
+
+
 
 
 .fl-node-<?php echo $id; ?> .cb-shade-boxes { background: <?php echo $color_8; ?>; }

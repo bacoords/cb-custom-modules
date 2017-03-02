@@ -117,6 +117,16 @@ FLBuilder::register_module('CBCustomShadeModule', array(
 												'description'   => __( 'px', 'fl-builder' ),
 												'help'          => __( 'Set a custom minimum height in pixels. For smaller screens, the module height may increase to accomodate content.', 'fl-builder' )
 										),
+                    'cb_shade_secret' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Secret Content', 'fl-builder' ),
+                        'default'       => 'off',
+                        'options'       => array(
+                            'off'      => __( 'Off', 'fl-builder' ),
+                            'on'      => __( 'On', 'fl-builder' )
+                        ),
+												'help'          => __( 'Content inside of the Module ONLY appears on hover.', 'fl-builder' )
+                    ),
                 )
             ),
         ),
