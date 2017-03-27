@@ -59,8 +59,8 @@ if($settings->cb_caption_color_field){
 
 
 .fl-node-<?php echo $id; ?> .cb-caption-boxes .cb-caption-box-wrapper .cb-caption-box-overlay { background: <?php echo $color_3; ?>; }
-.fl-node-<?php echo $id; ?> .cb-caption-boxes .cb-caption-box-wrapper:hover { background: <?php echo $color_8; ?>; }
-.fl-node-<?php echo $id; ?> .cb-caption-boxes .cb-caption-box-wrapper:focus { background: <?php echo $color_8; ?>; }
+.fl-node-<?php echo $id; ?> .cb-caption-boxes .cb-caption-box-wrapper:hover .cb-caption-box-overlay { background: <?php echo $color_8; ?>; }
+.fl-node-<?php echo $id; ?> .cb-caption-boxes .cb-caption-box-wrapper.hover_effect .cb-caption-box-overlay { background: <?php echo $color_8; ?>; }
 
 
 
