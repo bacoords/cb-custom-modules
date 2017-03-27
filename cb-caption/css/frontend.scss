@@ -37,7 +37,7 @@
     position: relative;
     transition: all 300ms ease;
     .cb-caption-img-wrapper{
-      
+      pointer-events: none;
     }
     
 		.cb-caption-box-overlay{
@@ -50,6 +50,7 @@
 		  text-decoration:none;
 			transition: background 500ms ease;
 			overflow:hidden;
+      pointer-events: none;
 			.cb-caption-box-inner{
 				display:flex;
 			  justify-content: center;
@@ -58,6 +59,7 @@
         height: 100%;
         opacity:0;
         color:whitesmoke;
+        pointer-events: none;
 				* {
 					color:whitesmoke;
 				}
