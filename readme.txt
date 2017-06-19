@@ -73,6 +73,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.3.1 =
+* Update to fix bug with new module: Legend
+
 = 1.3 =
 * Update to branding
 * New 'Legend' Module
@@ -99,6 +102,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+* Update to fix bug with new module: Legend
 
 = 1.3 =
 * Update to reveal new branding and new 'Legend' custom module

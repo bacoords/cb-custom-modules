@@ -33,9 +33,13 @@
 
 .cb-caption-boxes{
   
+  height:auto;
+  
 	.cb-caption-box-wrapper{
     position: relative;
     transition: all 300ms ease;
+    height:auto;
+    overflow: hidden;
     .cb-caption-img-wrapper{
       pointer-events: none;
     }
