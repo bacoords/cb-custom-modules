@@ -1,18 +1,18 @@
-=== CB Custom Modules ===
+=== CB Custom Beaver Builder Modules ===
 Contributors: bacoords
 Donate link: http://briancoords.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Free suite of custom modules for Beaver Builder that highlight photography with smooth animations, interactions, and hover effects.
+Free suite of custom modules for Beaver Builder that highlight content photography with smooth animations, interactions, and hover effects from Crafty Beaver.
 
 == Description ==
 
-CB Custom Modules is a free suite of elegant custom modules for for Beaver Builder that highlight photography with smooth animations, interactions, and hover effects. This is an extension of the Beaver Builder page builder plugin.
+Crafty Beaver Custom Modules is a free suite of elegant custom modules for for Beaver Builder that highlight photography with smooth animations, interactions, and hover effects. This is an extension of the Beaver Builder page builder plugin.
 
 **Current Modules**
 
@@ -23,10 +23,11 @@ CB Custom Modules is a free suite of elegant custom modules for for Beaver Build
 * Scout - Sticky navbar that fixes to the top of the screen when it gets there, allowing smooth scrolling to other elements on the page.
 * Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
 * Slice - Animated photo gallery with stacked, 'sliding cards' effect. Integrates with the default Beaver Builder lightbox.
+* Legend - Standard photo module but with a twist- hidden content is revealed on hover.
 
-For more information and module demos, visit [the plugin page](http://cbcustommodules.com).
+For more information and module demos, visit [Crafty Beavers](https://cbcustommodules.com).
 
-If you have ideas for future modules or enhancements to current modules, please [contact me](https://briancoords.com/contact) or visit the [github repo](https://github.com/bacoords/cb-custom-modules).
+If you have need for new modules or enhancements to current modules, please [contact us](https://cbcustommodules.com) or visit the [github repo](https://github.com/bacoords/cb-custom-modules).
 
 == Installation ==
 
@@ -71,6 +72,10 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.3 =
+* Update to branding
+* New 'Legend' Module
+
 = 1.2.2 =
 * Update to fix bug with Scout Module caching admin bar override
 
@@ -93,6 +98,9 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.3 =
+* Update to reveal new branding and new 'Legend' custom module
 
 = 1.2.2 =
 * Update to fix bug with Scout Module caching admin bar override

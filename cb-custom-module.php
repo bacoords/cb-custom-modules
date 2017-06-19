@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: CB Custom Beaver Builder Modules 
- * Plugin URI: http://www.briancoords.com/free-beaver-builder-custom-modules
- * Description: Custom photographic modules for Beaver Builder.
- * Version: 1.2.2
+ * Plugin URI: https://cbcustommodules.com
+ * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
+ * Version: 1.3
  * Author: Brian Coords
- * Author URI: http://www.briancoords.com
+ * Author URI: https://briancoords.com
  */
 define( 'CB_CUSTOM_MODULE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
@@ -46,3 +46,11 @@ add_action( 'init', 'fl_load_module_cb_custom_modules' );
 //    }
 //}
 //add_action( 'wp_enqueue_scripts', 'fl_my_custom_field_assets' );
+
+
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'cb_plugin_action_links' );
+
+function cb_plugin_action_links( $links ) {
+   $links[] = '<a href="https://cbcustommodules.com" target="_blank">Request Custom Module</a>';
+   return $links;
+}
