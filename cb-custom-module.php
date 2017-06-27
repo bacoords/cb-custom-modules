@@ -3,9 +3,9 @@
  * Plugin Name: CB Custom Beaver Builder Modules 
  * Plugin URI: https://cbcustommodules.com
  * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
- * Version: 1.3.2
- * Author: Brian Coords
- * Author URI: https://briancoords.com
+ * Version: 1.3.3
+ * Author: Crafty Beavers
+ * Author URI: https://cbcustommodules.com
  */
 define( 'CB_CUSTOM_MODULE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
