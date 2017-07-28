@@ -1,0 +1,25 @@
+/* File Fields */
+.fl-pdf-field .fl-pdf-select,
+.fl-pdf-field.fl-pdf-empty .fl-pdf-preview {
+	display: none;
+}
+.fl-pdf-field.fl-pdf-empty .fl-pdf-select {
+	display: block;
+}
+.fl-pdf-field .fl-pdf-preview-img {
+	float: left;
+	line-height: 0;
+	margin: 5px 0;
+}
+.fl-pdf-field .fl-pdf-preview-img img {
+	max-width: 60px;
+}
+.fl-pdf-field .fl-pdf-preview-filename {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 7px 0 0 58px;
+}
+.fl-pdf-field .fl-pdf-replace {
+	margin: 0 0 0 11px;
+}

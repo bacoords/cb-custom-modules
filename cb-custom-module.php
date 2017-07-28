@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: CB Custom Beaver Builder Modules 
- * Plugin URI: https://cbcustommodules.com
+ * Plugin URI: https://www.cbcustommodules.com
  * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
- * Version: 1.3.3
+ * Version: 1.4.0
  * Author: Crafty Beavers
- * Author URI: https://cbcustommodules.com
+ * Author URI: https://www.cbcustommodules.com
  */
 define( 'CB_CUSTOM_MODULE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
@@ -15,6 +15,10 @@ define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
  */
 function fl_load_module_cb_custom_modules() {
 	if ( class_exists( 'FLBuilder' ) ) {
+      
+        // Require custom 'media file' field type
+        require_once 'includes/BB-PDF-field-modified/zestsms-pdf.php';
+      
 		require_once 'cb-shade/cb-shade.php';
 //		require_once 'cb-posts/cb-posts.php'; //In Progress
 		require_once 'cb-poise/cb-poise.php';
@@ -24,29 +28,10 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-dust/cb-dust.php';
 		require_once 'cb-slice/cb-slice.php';
 		require_once 'cb-caption/cb-caption.php';
+		require_once 'cb-link-list/cb-link-list.php';
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );
-
-///**
-// * Custom fields
-// */
-//function fl_my_custom_field( $name, $value, $field ) {
-//    echo '<input type="text" class="text text-full" name="' . $name . '" value="' . $value . '" />';
-//}
-//add_action( 'fl_builder_control_my-custom-field', 'fl_my_custom_field', 1, 3 );
-//
-///**
-// * Custom field styles and scripts
-// */
-//function fl_my_custom_field_assets() {
-//    if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
-//        wp_enqueue_style( 'my-custom-fields', CB_CUSTOM_MODULE_URL . 'assets/css/fields.css', array(), '' );
-//        wp_enqueue_script( 'my-custom-fields', CB_CUSTOM_MODULE_URL . 'assets/js/fields.js', array(), '', true );
-//    }
-//}
-//add_action( 'wp_enqueue_scripts', 'fl_my_custom_field_assets' );
-
 
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'cb_plugin_action_links' );
 
