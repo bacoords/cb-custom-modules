@@ -53,7 +53,7 @@ FLBuilder::render_module_css('icon', $id, array(
 
 
 .fl-node-<?php echo $id; ?> .fl-module-content .fl-icon-wrap .fl-icon i,
-.fl-node-<?php echo $id; ?> .fl-module-content .fl-icon-wrap .fl-icon i:before ,{
+.fl-node-<?php echo $id; ?> .fl-module-content .fl-icon-wrap .fl-icon i:before {
 
 	border-radius: 100%;
 	-moz-border-radius: 100%;
