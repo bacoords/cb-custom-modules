@@ -34,16 +34,16 @@ class CBCustomLinkListModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomLinkListModule', array(
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('Assets', 'fl-builder'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
+                'title'         => __('', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_link_list_form_field_repeater' => array(
 							'type'          => 'form',
 							'label'         => __('Link', 'fl-builder'),
 							'form'          => 'cb_link_list_form_field', // ID of a registered form.
-							'preview_text'  => 'cb_link_list_text_field', // ID of a field to use for the preview text.
+							'preview_text'  => 'cb_link_label', // ID of a field to use for the preview text.
 							'multiple' 			=> true,
 					),
                 )
@@ -68,8 +68,8 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 						'type'          => 'font',
 						'label'         => __( 'Font', 'fl-builder' ),
 						'default'       => array(
-							'family'        => 'Helvetica',
-							'weight'        => 300
+							'family'        => 'Default',
+							'weight'        => 'default'
 						)
 					),
 					'cb_link_list_line_height'          => array(
@@ -109,6 +109,19 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					'cb_link_icon_hover_color' => array(
 						'type'          => 'color',
 						'label'         => __('Icon Hover Default Color', 'fl-builder'),
+						'show_reset'    => true,
+						'preview'       => array(
+							'type'          => 'none'
+						)
+					),		
+					'cb_link_icon_bg_color'         => array(
+						'type'          => 'color',
+						'label'         => __('Icon Default Background Color', 'fl-builder'),
+						'show_reset'    => true
+					),
+					'cb_link_icon_bg_hover_color' => array(
+						'type'          => 'color',
+						'label'         => __('Icon Hover Default Background Color', 'fl-builder'),
 						'show_reset'    => true,
 						'preview'       => array(
 							'type'          => 'none'
@@ -188,14 +201,14 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 							'label'         => __( 'Link Type', 'fl-builder' ),
 							'default'       => 'option-1',
 							'options'       => array(
-								'option-1'      => __( 'Media Library', 'fl-builder' ),
-								'option-2'      => __( 'URL', 'fl-builder' )
+								'file'      => __( 'Media Library', 'fl-builder' ),
+								'link'      => __( 'URL', 'fl-builder' )
 							),
 							'toggle'        => array(
-								'option-1'      => array(
+								'file'      => array(
 									'sections'      => array( 'file' )
 								),
-								'option-2'      => array(
+								'link'      => array(
 									'sections'      => array( 'link' )
 								)
 							)
@@ -237,6 +250,19 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 						'cb_link_icon_hover_color' => array(
 							'type'          => 'color',
 							'label'         => __('Icon Hover Color', 'fl-builder'),
+							'show_reset'    => true,
+							'preview'       => array(
+								'type'          => 'none'
+							)
+						),	
+						'cb_link_icon_bg_color'         => array(
+							'type'          => 'color',
+							'label'         => __('Icon Background Color', 'fl-builder'),
+							'show_reset'    => true
+						),
+						'cb_link_icon_bg_hover_color' => array(
+							'type'          => 'color',
+							'label'         => __('Icon Hover Background Color', 'fl-builder'),
 							'show_reset'    => true,
 							'preview'       => array(
 								'type'          => 'none'
