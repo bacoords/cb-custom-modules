@@ -75,10 +75,10 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					'cb_link_list_line_height'          => array(
 						'type'          => 'text',
 						'label'         => __('Line Height', 'fl-builder'),
-						'default'       => '1',
-						'maxlength'     => '2',
+						'default'       => '1.4',
+						'maxlength'     => '4',
 						'size'          => '4',
-						'description'   => ''
+						'description'   => 'em'
 					),
 					'cb_link_list_label_font_size' => array(
 						'type'          => 'text',

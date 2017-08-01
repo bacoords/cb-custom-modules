@@ -54,7 +54,7 @@ $default_filesize_hover_color = isset($settings->cb_link_filesize_hover_color) ?
 				
 				$label .= '  <span class="cb-link-list__filesize">( ' . $attachment_meta['filesizeHumanReadable'] . ' )</span>';
 			} else {
-				$link = $link->cb_link_link;
+				$link_url = $link->cb_link_link;
 			}
 			
 			$icon_color = isset($link->cb_link_icon_color) ? $link->cb_link_icon_color : $default_icon_color;

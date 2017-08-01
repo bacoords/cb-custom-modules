@@ -21,14 +21,14 @@ $label_font_size = $settings->cb_link_list_label_font_size;
 $filesize_font_size = $settings->cb_link_list_filesize_font_size;
 
 //Default Colors
-$default_icon_color = isset($settings->cb_link_icon_color)? $settings->cb_link_icon_color : '';
-$default_icon_hover_color = isset($settings->cb_link_icon_hover_color)? $settings->cb_link_icon_hover_color : '';
-$default_icon_bg_color = isset($settings->cb_link_icon_bg_color)? $settings->cb_link_icon_bg_color : '';
-$default_icon_bg_hover_color = isset($settings->cb_link_icon_bg_hover_color)? $settings->cb_link_icon_bg_hover_color : '';
-$default_font_color = isset($settings->cb_link_font_color)? $settings->cb_link_font_color : '';
-$default_font_hover_color = isset($settings->cb_link_font_hover_color)? $settings->cb_link_font_hover_color : '';
-$default_filesize_color = isset($settings->cb_link_filesize_color)? $settings->cb_link_filesize_color : '';
-$default_filesize_hover_color = isset($settings->cb_link_filesize_hover_color)? $settings->cb_link_filesize_hover_color : '';
+$default_icon_color = isset($settings->cb_link_icon_color) ? $settings->cb_link_icon_color : '';
+$default_icon_hover_color = isset($settings->cb_link_icon_hover_color) ? $settings->cb_link_icon_hover_color : '';
+$default_icon_bg_color = isset($settings->cb_link_icon_bg_color) ? $settings->cb_link_icon_bg_color : '';
+$default_icon_bg_hover_color = isset($settings->cb_link_icon_bg_hover_color) ? $settings->cb_link_icon_bg_hover_color : '';
+$default_font_color = isset($settings->cb_link_font_color) ? $settings->cb_link_font_color : '';
+$default_font_hover_color = isset($settings->cb_link_font_hover_color) ? $settings->cb_link_font_hover_color : '';
+$default_filesize_color = isset($settings->cb_link_filesize_color) ? $settings->cb_link_filesize_color : '';
+$default_filesize_hover_color = isset($settings->cb_link_filesize_hover_color) ? $settings->cb_link_filesize_hover_color : '';
 
 ?>
 
@@ -73,7 +73,9 @@ FLBuilder::render_module_css('icon', $id, array(
 	<?php if ( $font['weight'] !== 'default' ) :  ?>
 		font-weight: <?php echo $font['weight']; ?>;
 	<?php endif; ?>
-	color: #<?php echo $default_font_color; ?>;
+	<?php if ( $default_font_color !== '' ) :  ?>
+		color: #<?php echo $default_font_color; ?>;
+	<?php endif; ?>
 	font-size: <?php echo $label_font_size; ?>px;
 	line-height: <?php echo $line_height; ?>;
 	
@@ -81,7 +83,9 @@ FLBuilder::render_module_css('icon', $id, array(
 
 .fl-node-<?php echo $id; ?> .fl-module-content .fl-icon-wrap:hover .fl-icon-text a{
 
-	color: #<?php echo $default_font_hover_color; ?>;
+	<?php if ( $default_font_hover_color !== '' ) :  ?>
+		color: #<?php echo $default_font_chover_olor; ?>;
+	<?php endif; ?>
 	text-decoration: none;
 }
 
