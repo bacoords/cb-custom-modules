@@ -29,6 +29,7 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-slice/cb-slice.php';
 		require_once 'cb-caption/cb-caption.php';
 		require_once 'cb-link-list/cb-link-list.php';
+		require_once 'cb-button-list/cb-button-list.php';
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );
