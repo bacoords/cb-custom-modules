@@ -327,10 +327,10 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
         ),
 
 		'button'      => array(
-			'title'         => __('Button', 'fl-builder'),
+			'title'         => __('Colors', 'fl-builder'),
 			'sections'      => array(
 				'btn_colors'     => array(
-					'title'         => __('Button Colors', 'fl-builder'),
+					'title'         => __('', 'fl-builder'),
 					'fields'        => array(
 						'btn_bg_color'  => array(
 							'type'          => 'color',
