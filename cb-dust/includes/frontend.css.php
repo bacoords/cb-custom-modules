@@ -24,3 +24,13 @@
     background: #<?php echo $settings->cb_dust_bg_color; ?>;
 }
 <?php } ?>
+
+
+<?php if( 'content' == $settings->cb_dust_mouse ) { ?>
+.fl-node-<?php echo $id; ?> .cb-dust .cb-dust__editor { 
+	pointer-events: auto; 
+}
+<?php } ?>
+
+
+

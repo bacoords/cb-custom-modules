@@ -51,33 +51,43 @@ FLBuilder::register_module('CBCustomDustModule', array(
                             'bubbles'      => __( 'Bubbles', 'fl-builder' )
                         ),
                     ),
+                   'cb_dust_mouse' => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Mouse Interaction', 'fl-builder' ),
+                        'default'       => 'bg',
+                        'options'       => array(
+                            'bg'      	   => __( 'Particle Effect', 'fl-builder' ),
+                            'content'      => __( 'Content', 'fl-builder' )
+                        ),
+						'help'          => __( 'Change to \'Content\' to allow links inside of this module.', 'fl-builder' )
+                    ),
                     'cb_dust_bg_color' => array(
                         'type'          => 'color',
                         'label'         => __( 'Background Color', 'fl-builder' ),
                         'default'       => '494949',
                         'show_reset'    => true
                     ),
-										'cb_dust_min_height' => array(
-												'type'          => 'text',
-												'label'         => __( 'Row Height', 'fl-builder' ),
-												'default'       => '',
-												'maxlength'     => '4',
-												'size'          => '6',
-												'placeholder'   => __( '420', 'fl-builder' ),
-												'class'         => 'my-css-class',
-												'description'   => __( 'px', 'fl-builder' ),
-												'help'          => __( 'Set a custom height in pixels. Default: 420px.', 'fl-builder' )
-										),
+					'cb_dust_min_height' => array(
+							'type'          => 'text',
+							'label'         => __( 'Row Height', 'fl-builder' ),
+							'default'       => '',
+							'maxlength'     => '4',
+							'size'          => '6',
+							'placeholder'   => __( '420', 'fl-builder' ),
+							'class'         => 'my-css-class',
+							'description'   => __( 'px', 'fl-builder' ),
+							'help'          => __( 'Set a custom height in pixels. Default: 420px.', 'fl-builder' )
+					),
                 )
             ),
             'content'       => array( // Section
                 'title'         => __('Content', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_dust_editor' => array(
-												'type'          => 'editor',
-												'media_buttons' => true,
-												'rows'          => 10
-										),
+							'type'          => 'editor',
+							'media_buttons' => true,
+							'rows'          => 10
+					),
                 )
             )
         )
