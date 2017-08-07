@@ -1,10 +1,10 @@
 === CB Custom Beaver Builder Modules ===
 Contributors: bacoords
-Donate link: http://briancoords.com/
+Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.8
-Stable tag: 5.0
+Stable tag: 5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,8 +24,10 @@ Crafty Beaver Custom Modules is a free suite of elegant custom modules for for B
 * Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
 * Slice - Animated photo gallery with stacked, 'sliding cards' effect. Integrates with the default Beaver Builder lightbox.
 * Legend - Standard photo module but with a twist- hidden content is revealed on hover.
+* Link List - Create a list of files/links for users, displayed in rows with a custom icon and color scheme.
+* Button List - Create of list of files/links, displayed as buttons with a custom icon and color scheme.
 
-For more information and module demos, visit [Crafty Beavers](https://cbcustommodules.com).
+For more information and module demos, visit [Crafty Beavers](https://www.cbcustommodules.com).
 
 If you have need for new modules or enhancements to current modules, please [contact us](https://cbcustommodules.com) or visit the [github repo](https://github.com/bacoords/cb-custom-modules).
 
@@ -73,6 +75,11 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 
 == Changelog ==
 
+= 1.4 = 
+* New Module: Link List
+* New Module: Button List
+* New Feature: Use links inside of Dust
+
 = 1.3.3 =
 * Update to fix bugs with new module: Legend
 
@@ -102,6 +109,11 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.4 = 
+* New Module: Link List
+* New Module: Button List
+* New Feature: Use links inside of Dust
 
 = 1.3.3 =
 * Update to fix bugs with new module: Legend

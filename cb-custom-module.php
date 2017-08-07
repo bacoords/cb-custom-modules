@@ -37,6 +37,6 @@ add_action( 'init', 'fl_load_module_cb_custom_modules' );
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'cb_plugin_action_links' );
 
 function cb_plugin_action_links( $links ) {
-   $links[] = '<a href="https://cbcustommodules.com" target="_blank">Request Custom Module</a>';
+   $links[] = '<a href="https://www.cbcustommodules.com/request-module" target="_blank">Request Custom Module</a>';
    return $links;
 }
