@@ -39,26 +39,27 @@ FLBuilder::register_module('CBCustomPoiseModule', array(
             'design'       => array( // Section
                 'title'         => __('Design', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_poise_text_field' => array(
-												'type'          => 'text',
-												'label'         => __( 'Columns', 'fl-builder' ),
-												'default'       => '',
-												'maxlength'     => '2',
-												'size'          => '4',
-												'placeholder'   => __( '5', 'fl-builder' ),
-												'class'         => 'my-css-class',
-												'description'   => __( 'columns', 'fl-builder' ),
-												'help'          => __( 'Set the max number of images per row.', 'fl-builder' )
-										),
+					'cb_poise_text_field' => array(
+							'type'          => 'text',
+							'label'         => __( 'Columns', 'fl-builder' ),
+							'default'       => '',
+							'maxlength'     => '2',
+							'size'          => '4',
+							'placeholder'   => __( '5', 'fl-builder' ),
+							'class'         => 'my-css-class',
+							'description'   => __( 'columns', 'fl-builder' ),
+							'help'          => __( 'Set the max number of images per row.', 'fl-builder' )
+					),
                 )
             ),
             'photos'       => array( // Section
                 'title'         => __('Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_poise_multiple_photos_field' => array(
-												'type'          => 'multiple-photos',
-												'label'         => __( 'Select all photos', 'fl-builder' )
-										),
+					'cb_poise_multiple_photos_field' => array(
+							'type'          => 'multiple-photos',
+							'label'         => __( 'Select all photos', 'fl-builder' ),
+							'connections'   => array( 'multiple-photos' )
+					),
                 )
             )
         )

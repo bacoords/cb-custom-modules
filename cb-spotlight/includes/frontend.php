@@ -31,14 +31,19 @@
   <?php	} else { ?>
       <div class="cb-spotlight-spn-links cb-spotlight-column-one">
         <div class="cb-spotlight-header"><h3><?php echo $settings->cb_spotlight_text_field; ?></h3></div>
-					<?php
+			<?php
               $f = true;
               foreach($settings->cb_spotlight_form_field_repeater as $current_form){	?>
-							 <a class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?> <?php if($f){ echo 'active'; $f = false;} ?>" data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>">
-							 		
-							 		<?php echo $current_form->cb_spotlight_text_field; ?>
-							 	</a>
-					<?php	} ?>
+				 <a 
+					class="cb-spotlight-spn-link cb-spotlight-spn-link-<?php echo $id; ?> <?php if($f){ echo 'active'; $f = false;} ?>" 
+					data-img-src="<?php echo $current_form->cb_spotlight_photo_field_src; ?>" 
+					<?php if ( function_exists( 'wr2x_get_retina_from_url' ) ) { 
+						echo 'data-img-retina="' . wr2x_get_retina_from_url( $current_form->cb_spotlight_photo_field_src ) . '"'; } ?>
+					>
+
+						<?php echo $current_form->cb_spotlight_text_field; ?>
+					</a>
+			<?php } ?>
   		</div> 
      
       <div class="cb-spotlight-spn-image cb-spotlight-column-two">

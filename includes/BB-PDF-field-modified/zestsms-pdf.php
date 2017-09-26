@@ -1,7 +1,7 @@
 <?php
 
 
-function zestsms_pdf_field( $name, $value, $field ) { ?>
+function zestsms_cb_pdf_field( $name, $value, $field ) { ?>
 <?php $pdf = FLBuilderPhoto::get_attachment_data($value); ?>
 <div class="fl-pdf-field fl-builder-custom-field<?php if(empty($value) || !$pdf) echo ' fl-pdf-empty'; if(isset($field['class'])) echo ' ' . $field['class']; ?>">
 	<a class="fl-pdf-select" href="javascript:void(0);" onclick="return false;"><?php _e('Select File', 'fl-builder'); ?></a>
@@ -26,13 +26,13 @@ function zestsms_pdf_field( $name, $value, $field ) { ?>
 </div>
 <?php
 }
-add_action( 'fl_builder_control_zestsms-pdf', 'zestsms_pdf_field', 1, 3 );
+add_action( 'fl_builder_control_zestsms-file', 'zestsms_cb_pdf_field', 1, 3 );
 
 
-function zestsms_pdf_field_assets() {
+function zestsms_cb_pdf_field_assets() {
     if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
     		wp_enqueue_style( 'zestsms-pdf', CB_CUSTOM_MODULE_URL . 'includes/BB-PDF-field-modified/css/zestsms-pdf.css', array(), '' );
         wp_enqueue_script( 'zestsms-pdf', CB_CUSTOM_MODULE_URL . 'includes/BB-PDF-field-modified/js/zestsms-pdf.js', array(), '', true );
     }
 }
-add_action( 'wp_enqueue_scripts', 'zestsms_pdf_field_assets' );
+add_action( 'wp_enqueue_scripts', 'zestsms_cb_pdf_field_assets' );

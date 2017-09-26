@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
-Tested up to: 4.8
-Stable tag: 5.1
+Tested up to: 4.8.1
+Stable tag: 5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,15 @@ Yes. Some modules maintain their same behavior on mobile, but modules that rely 
 
 The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder.com/knowledge-base/smooth-scrolling-buttons-icons-and-links/) of this technique with screenshots.
 
+= Can I get a custom module made for me or my client? = 
+
+Of course! Visit our [website](https://www.cbcustommodules.com/request-module) to learn more about requesting a custom module.
+
+= Does CB Custom Modules work with Beaver Themer? = 
+
+Yes! Most modules have Beaver Field Connections where appropriate.
+
+
 == Screenshots ==
 
 1. Poise Module Example
@@ -74,6 +83,18 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 8. Legend Module Example
 
 == Changelog ==
+
+= 1.5 = 
+* Adds Support for Beaver Themer
+
+= 1.4.3 = 
+* Adds "Link Target" option to Link List Module
+
+= 1.4.2 = 
+* Adds support for WP Retina 2x
+
+= 1.4.1 = 
+* Fixes conflict with beaverlodge
 
 = 1.4 = 
 * New Module: Link List
@@ -109,6 +130,18 @@ The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.5 = 
+* Adds Support for Beaver Themer
+
+= 1.4.3 = 
+* Adds "Link Target" option to Link List Module
+
+= 1.4.2 = 
+* Adds support for WP Retina 2x
+
+= 1.4.1 = 
+* Fixes conflict with beaverlodge
 
 = 1.4 = 
 * New Module: Link List

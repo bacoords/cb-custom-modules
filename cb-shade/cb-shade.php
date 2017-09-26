@@ -39,11 +39,12 @@ FLBuilder::register_module('CBCustomShadeModule', array(
             'content'       => array( // Section
                 'title'         => __('Content', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_shade_link_field' => array(
-												'type'          => 'link',
-												'label'         => __('Link (optional)', 'fl-builder'),
-												'help'          => __( 'Set the entire module to be a link. You can also input links in the editor below.', 'fl-builder' )
-										),
+					'cb_shade_link_field' => array(
+							'type'          => 'link',
+							'label'         => __('Link (optional)', 'fl-builder'),
+							'help'          => __( 'Set the entire module to be a link. You can also input links in the editor below.', 'fl-builder' ),
+							'connections'   => array( 'url' )
+					),
                     'cb_shade_vertical_align' => array(
                         'type'          => 'select',
                         'label'         => __( 'Vertical Alignment', 'fl-builder' ),
@@ -53,13 +54,14 @@ FLBuilder::register_module('CBCustomShadeModule', array(
                             'center'      => __( 'Center', 'fl-builder' ),
                             'flex-end'      => __( 'Bottom', 'fl-builder' )
                         ),
-												'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'fl-builder' )
+						'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'fl-builder' )
                     ),
                     'cb_shade_editor_field' => array(
-												'type'          => 'editor',
-												'media_buttons' => true,
-												'rows'          => 10
-										),
+							'type'          => 'editor',
+							'media_buttons' => true,
+							'rows'          => 10,
+							'connections'   => array( 'string' )
+					),
                 )
             )
         )
@@ -71,10 +73,11 @@ FLBuilder::register_module('CBCustomShadeModule', array(
                 'title'         => __('Design', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_shade_photo_field' => array(
-												'type'          => 'photo',
-												'label'         => __('Background Photo', 'fl-builder'),
-												'show_remove'	=> false
-										),
+							'type'          => 'photo',
+							'label'         => __('Background Photo', 'fl-builder'),
+							'show_remove'	=> false,
+							'connections'   => array( 'photo' )
+					),
                     'cb_shade_bg_align' => array(
                         'type'          => 'select',
                         'label'         => __( 'Background Alignment', 'fl-builder' ),
@@ -106,17 +109,17 @@ FLBuilder::register_module('CBCustomShadeModule', array(
                         'default'       => '000000',
                         'show_reset'    => true
                     ),
-										'cb_shade_text_field' => array(
-												'type'          => 'text',
-												'label'         => __( 'Custom Minimum Height', 'fl-builder' ),
-												'default'       => '',
-												'maxlength'     => '4',
-												'size'          => '6',
-												'placeholder'   => __( '420', 'fl-builder' ),
-												'class'         => 'my-css-class',
-												'description'   => __( 'px', 'fl-builder' ),
-												'help'          => __( 'Set a custom minimum height in pixels. For smaller screens, the module height may increase to accomodate content.', 'fl-builder' )
-										),
+					'cb_shade_text_field' => array(
+							'type'          => 'text',
+							'label'         => __( 'Custom Minimum Height', 'fl-builder' ),
+							'default'       => '',
+							'maxlength'     => '4',
+							'size'          => '6',
+							'placeholder'   => __( '420', 'fl-builder' ),
+							'class'         => 'my-css-class',
+							'description'   => __( 'px', 'fl-builder' ),
+							'help'          => __( 'Set a custom minimum height in pixels. For smaller screens, the module height may increase to accomodate content.', 'fl-builder' )
+					),
                     'cb_shade_secret' => array(
                         'type'          => 'select',
                         'label'         => __( 'Secret Content', 'fl-builder' ),
@@ -125,7 +128,7 @@ FLBuilder::register_module('CBCustomShadeModule', array(
                             'off'      => __( 'Off', 'fl-builder' ),
                             'on'      => __( 'On', 'fl-builder' )
                         ),
-												'help'          => __( 'Content inside of the Module ONLY appears on hover.', 'fl-builder' )
+						'help'          => __( 'Content inside of the Module ONLY appears on hover.', 'fl-builder' )
                     ),
                 )
             ),

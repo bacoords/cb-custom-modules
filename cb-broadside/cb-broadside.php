@@ -55,10 +55,11 @@ FLBuilder::register_module('CBCustomBroadsideModule', array(
             'photos'       => array( // Section
                 'title'         => __('Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_broadside_multiple_photos_field' => array(
-												'type'          => 'multiple-photos',
-												'label'         => __( 'Select all photos', 'fl-builder' )
-										),
+						'cb_broadside_multiple_photos_field' => array(
+								'type'          => 'multiple-photos',
+								'label'         => __( 'Select all photos', 'fl-builder' ),
+								'connections'   => array( 'multiple-photos' )
+						),
                 )
             )
         )

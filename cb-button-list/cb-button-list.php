@@ -232,6 +232,7 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
 							'type'          => 'text',
 							'label'         => __('Button Text', 'fl-builder'),
 							'default'       => __('Get Started', 'fl-builder'),
+							'connections'   => array( 'string' )
 						),
 						'btn_link_target'    	=> array(
 							'type'          => 'select',
@@ -308,7 +309,7 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
                     'title'         => '',
                     'fields'        => array(
                         'cb_link_file' => array(
-                                'type'          => 'zestsms-pdf',
+                                'type'          => 'zestsms-file',
                                 'label'         => __('File', 'fl-builder'),
                                 'show_remove'	=> false
                         ),
@@ -319,7 +320,8 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
                     'fields'        => array(
 						'cb_link_link' => array(
 							'type'          => 'link',
-							'label'         => __('Link', 'fl-builder')
+							'label'         => __('Link', 'fl-builder'),
+							'connections'   => array( 'url' )
 						),
                     )
                 ),

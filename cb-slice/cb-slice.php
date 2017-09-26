@@ -70,10 +70,11 @@ FLBuilder::register_module('CBCustomSliceModule', array(
             'photos'       => array( // Section
                 'title'         => __('Select Photos', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_slice_multiple_photos_field' => array(
-												'type'          => 'multiple-photos',
-												'label'         => __( 'Select all photos', 'fl-builder' )
-										),
+					'cb_slice_multiple_photos_field' => array(
+							'type'          => 'multiple-photos',
+							'label'         => __( 'Select all photos', 'fl-builder' ),
+							'connections'   => array( 'multiple-photos' )
+					),
                 )
             )
         )

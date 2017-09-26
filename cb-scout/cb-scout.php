@@ -46,13 +46,13 @@ FLBuilder::register_module('CBCustomScoutModule', array(
             'links'       => array( // Section
                 'title'         => __('Menu Items', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_scout_form_field_repeater' => array(
-												'type'          => 'form',
-												'label'         => __('Link', 'fl-builder'),
-												'form'          => 'cb_scout_form_field', // ID of a registered form.
-												'preview_text'  => 'cb_scout_link_text', // ID of a field to use for the preview text.
-												'multiple' 			=> true,
-										),
+					'cb_scout_form_field_repeater' => array(
+							'type'          => 'form',
+							'label'         => __('Link', 'fl-builder'),
+							'form'          => 'cb_scout_form_field', // ID of a registered form.
+							'preview_text'  => 'cb_scout_link_text', // ID of a field to use for the preview text.
+							'multiple' 			=> true,
+					),
                 )
             )
         )
@@ -168,18 +168,20 @@ FLBuilder::register_settings_form('cb_scout_form_field', array(
                     'fields'        => array(
                         'cb_scout_link_url' => array(
                             'type'          => 'link',
-                            'label'         => __('Link Field', 'fl-builder')
+                            'label'         => __('Link Field', 'fl-builder'),
+							'connections'   => array( 'url' )
                         ),
-												'cb_scout_link_text' => array(
-														'type'          => 'text',
-														'label'         => __( 'Link Text', 'fl-builder' ),
-														'default'       => '',
-														'maxlength'     => '50',
-														'size'          => '45',
-														'placeholder'   => __( 'Link Text Here', 'fl-builder' ),
-														'class'         => 'my-css-class',
-														'description'   => __( '', 'fl-builder' )
-												),
+						'cb_scout_link_text' => array(
+							'type'          => 'text',
+							'label'         => __( 'Link Text', 'fl-builder' ),
+							'default'       => '',
+							'maxlength'     => '50',
+							'size'          => '45',
+							'placeholder'   => __( 'Link Text Here', 'fl-builder' ),
+							'class'         => 'my-css-class',
+							'description'   => __( '', 'fl-builder' ),
+							'connections'   => array( 'string' )
+						),
                     )
                 ),
             )

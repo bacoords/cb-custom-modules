@@ -39,11 +39,12 @@ FLBuilder::register_module('CBCustomCaptionModule', array(
             'content'       => array( // Section
                 'title'         => __('Content', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_caption_link_field' => array(
-												'type'          => 'link',
-												'label'         => __('Link (optional)', 'fl-builder'),
-												'help'          => __( 'Set the photo to be a link. You can also input links in the editor below.', 'fl-builder' )
-										),
+					'cb_caption_link_field' => array(
+							'type'          => 'link',
+							'label'         => __('Link (optional)', 'fl-builder'),
+							'help'          => __( 'Set the photo to be a link. You can also input links in the editor below.', 'fl-builder' ),
+							'connections'   => array( 'url' )
+					),
                     'cb_caption_vertical_align' => array(
                         'type'          => 'select',
                         'label'         => __( 'Vertical Alignment', 'fl-builder' ),
@@ -56,10 +57,11 @@ FLBuilder::register_module('CBCustomCaptionModule', array(
 												'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'fl-builder' )
                     ),
                     'cb_caption_editor_field' => array(
-												'type'          => 'editor',
-												'media_buttons' => true,
-												'rows'          => 10
-										),
+							'type'          => 'editor',
+							'media_buttons' => true,
+							'rows'          => 10,
+							'connections'   => array( 'string' )
+					),
                 )
             )
         )
@@ -71,10 +73,11 @@ FLBuilder::register_module('CBCustomCaptionModule', array(
                 'title'         => __('Design', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_caption_photo' => array(
-												'type'          => 'photo',
-												'label'         => __('Photo', 'fl-builder'),
-												'show_remove'	=> false
-										),
+							'type'          => 'photo',
+							'label'         => __('Photo', 'fl-builder'),
+							'show_remove'	=> false,
+							'connections'   => array( 'photo' )
+					),
                     'cb_caption_photo_align' => array(
                         'type'          => 'select',
                         'label'         => __( 'Photo Alignment', 'fl-builder' ),

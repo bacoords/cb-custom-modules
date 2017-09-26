@@ -39,14 +39,15 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
             'settings'       => array( // Section
                 'title'         => __('Settings', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_spotlight_text_field' => array(
-												'type'          => 'text',
-												'label'         => __( 'Header Text', 'fl-builder' ),
-												'default'       => '',
-												'placeholder'   => __( 'Select an Image', 'fl-builder' ),
-												'class'         => 'my-css-class',
-												'help'          => __( 'Set a header.', 'fl-builder' )
-										),
+					'cb_spotlight_text_field' => array(
+							'type'          => 'text',
+							'label'         => __( 'Header Text', 'fl-builder' ),
+							'default'       => '',
+							'placeholder'   => __( 'Select an Image', 'fl-builder' ),
+							'class'         => 'my-css-class',
+							'help'          => __( 'Set a header.', 'fl-builder' ),
+							'connections'   => array( 'string' )
+					),
                     'cb_spotlight_column_order' => array(
                         'type'          => 'select',
                         'label'         => __( 'Select Column Order', 'fl-builder' ),
@@ -67,21 +68,21 @@ FLBuilder::register_module('CBCustomSpotlightModule', array(
                             '66/34'      => __( '2/3  |  1/3', 'fl-builder' ),
                             '34/66'      => __( '1/3  |  2/3', 'fl-builder' )
                         ),
-												'help'          => __( 'This applies to medium-sized screens and above. On smaller screens, the columns will collapse.', 'fl-builder' )
+						'help'          => __( 'This applies to medium-sized screens and above. On smaller screens, the columns will collapse.', 'fl-builder' )
                     ),
                 )
             ),
             'design'       => array( // Section
                 'title'         => __('Spotlight Images', 'fl-builder'), // Section Title
                 'fields'        => array( // Section Fields
-										'cb_spotlight_form_field_repeater' => array(
-												'type'          => 'form',
-												'label'         => __('Spotlight Image', 'fl-builder'),
-												'form'          => 'cb_spotlight_form_field', // ID of a registered form.
-												'preview_text'  => 'cb_spotlight_text_field', // ID of a field to use for the preview text.
-												'multiple' 			=> true,
-										),
-                )
+				'cb_spotlight_form_field_repeater' => array(
+						'type'          => 'form',
+						'label'         => __('Spotlight Image', 'fl-builder'),
+						'form'          => 'cb_spotlight_form_field', // ID of a registered form.
+						'preview_text'  => 'cb_spotlight_text_field', // ID of a field to use for the preview text.
+						'multiple' 			=> true,
+				),
+)
             ),
         )
     )
@@ -99,22 +100,24 @@ FLBuilder::register_settings_form('cb_spotlight_form_field', array(
                 'general'       => array(
                     'title'         => '',
                     'fields'        => array(
-												'cb_spotlight_photo_field' => array(
-														'type'          => 'photo',
-														'label'         => __('Spotlight Image', 'fl-builder'),
-														'show_remove'	=> false
-												),
-												'cb_spotlight_text_field' => array(
-														'type'          => 'text',
-														'label'         => __( 'Spotlight Image Link Text', 'fl-builder' ),
-														'default'       => '',
-														'maxlength'     => '140',
-														'size'          => '45',
-														'placeholder'   => __( 'Describe image here', 'fl-builder' ),
-														'class'         => 'my-css-class',
-														'description'   => __( '', 'fl-builder' ),
-														'help'          => __( 'Users will click on this text to load this image.', 'fl-builder' )
-												),
+						'cb_spotlight_photo_field' => array(
+								'type'          => 'photo',
+								'label'         => __('Spotlight Image', 'fl-builder'),
+								'show_remove'	=> false,
+								'connections'   => array( 'photo' )
+						),
+						'cb_spotlight_text_field' => array(
+								'type'          => 'text',
+								'label'         => __( 'Spotlight Image Link Text', 'fl-builder' ),
+								'default'       => '',
+								'maxlength'     => '140',
+								'size'          => '45',
+								'placeholder'   => __( 'Describe image here', 'fl-builder' ),
+								'class'         => 'my-css-class',
+								'description'   => __( '', 'fl-builder' ),
+								'help'          => __( 'Users will click on this text to load this image.', 'fl-builder' ),
+								'connections'   => array( 'string' )
+						),
                     )
                 ),
             )

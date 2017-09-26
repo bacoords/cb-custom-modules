@@ -86,7 +86,8 @@ FLBuilder::register_module('CBCustomDustModule', array(
                     'cb_dust_editor' => array(
 							'type'          => 'editor',
 							'media_buttons' => true,
-							'rows'          => 10
+							'rows'          => 10,
+							'connections'   => array( 'string' )
 					),
                 )
             )

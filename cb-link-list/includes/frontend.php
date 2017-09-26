@@ -65,7 +65,7 @@ $default_filesize_hover_color = isset($settings->cb_link_filesize_hover_color) ?
 			$font_hover_color = isset($link->cb_link_font_hover_color) ? $link->cb_link_font_hover_color :  $default_font_hover_color;
 			$filesize_color = isset($link->cb_link_filesize_color) ? $link->cb_link_filesize_color : $default_filesize_color;
 			$filesize_hover_color = isset($link->cb_link_filesize_hover_color) ? $link->cb_link_filesize_hover_color : $default_filesize_hover_color;
-
+			$link_target = isset($link->link_target) ? $link->link_target : '_self';
 			?>		
 		
 			<div class="col-xs-12">
@@ -81,7 +81,7 @@ $default_filesize_hover_color = isset($settings->cb_link_filesize_hover_color) ?
 						'hover_color'    => $icon_hover_color,
 						'icon'           => $icon,
 						'link'           => $link_url,
-						'link_target'    => isset($icon->link_target) ? $icon->link_target : '_blank',
+						'link_target'    => $link_target,
 						'size'           => $icon_size,
 						'text'           => $label,
 						'three_d'        => ''
