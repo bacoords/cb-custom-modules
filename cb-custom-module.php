@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: CB Custom Beaver Builder Modules 
+ * Plugin Name: CB Custom Beaver Builder Modules
  * Plugin URI: https://www.cbcustommodules.com
  * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
- * Version: 1.5
+ * Version: 1.5.1
  * Author: Crafty Beavers
  * Author URI: https://www.cbcustommodules.com
  */
@@ -15,12 +15,13 @@ define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
  */
 function fl_load_module_cb_custom_modules() {
 	if ( class_exists( 'FLBuilder' ) ) {
-      
-        // Require custom 'media file' field type
-        require_once 'includes/BB-PDF-field-modified/zestsms-pdf.php';
-      
+
+    // Require custom 'media file' field type
+    require_once 'includes/BB-PDF-field-modified/zestsms-pdf.php';
+    require_once 'includes/BB-date-Field-master/bb_date_field.php';
+
 		require_once 'cb-shade/cb-shade.php';
-//		require_once 'cb-posts/cb-posts.php'; //In Progress
+		// require_once 'cb-posts/cb-posts.php'; //In Progress
 		require_once 'cb-poise/cb-poise.php';
 		require_once 'cb-spotlight/cb-spotlight.php';
 		require_once 'cb-broadside/cb-broadside.php';
@@ -30,6 +31,7 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-caption/cb-caption.php';
 		require_once 'cb-link-list/cb-link-list.php';
 		require_once 'cb-button-list/cb-button-list.php';
+		require_once 'cb-simple-events/cb-simple-events.php';
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );

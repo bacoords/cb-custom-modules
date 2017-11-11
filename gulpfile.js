@@ -3,7 +3,7 @@ var	gutil = require('gulp-util');
 var	sass = require('gulp-sass');
 var	autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
-
+var zip = require('gulp-zip');
 
 gulp.task('default', ['css']);
 
@@ -18,6 +18,7 @@ gulp.task('css', function(){
 	gulp.watch('cb-dust/css/*.scss', ['dust']);
 	gulp.watch('cb-slice/css/*.scss', ['slice']);
 	gulp.watch('cb-caption/css/*.scss', ['caption']);
+	gulp.watch('cb-simple-events/css/*.scss', ['events']);
 });
 
 gulp.task('broadside', function(){
@@ -79,4 +80,20 @@ gulp.task('caption', function(){
 		.pipe(autoprefixer())
 		.pipe(minifycss())
 		.pipe(gulp.dest('cb-caption/css'));
+});
+
+gulp.task('events', function(){
+	return gulp.src('cb-simple-events/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-simple-events/css'));
+});
+
+
+
+gulp.task('zip', function () {
+  return gulp.src(['./**/*', '!./node_modules/**/*', '!./grid/**/*', '!./cb-posts/**/*'])
+    .pipe(zip('cb-custom-modules.zip'))
+    .pipe(gulp.dest('./../'));
 });

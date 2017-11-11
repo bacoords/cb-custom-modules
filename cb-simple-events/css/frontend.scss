@@ -1,0 +1,30 @@
+.cb-simple-events{
+
+  ul{
+    padding: 0px;
+    li{
+      list-style-type: none;
+      display: block;
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius:3px;
+    }
+  }
+
+  &__meta{
+    margin-bottom:5px;
+  }
+  &__date{
+
+  }
+  &__time{
+
+  }
+  &__desc{
+
+  }
+  &__link{
+
+  }
+
+}

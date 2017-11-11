@@ -3,7 +3,7 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
-Tested up to: 4.8.1
+Tested up to: 4.9
 Stable tag: 5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -45,7 +45,7 @@ Yes, but it won't do anything. This plugin is an extension to [Beaver Builder](h
 
 = What about browsers? =
 
-CB Custom Modules uses some modern CSS specs like Flexbox and animations. Modules will all work, but with older versions of IE you might see a less-refined version. 
+CB Custom Modules uses some modern CSS specs like Flexbox and animations. Modules will all work, but with older versions of IE you might see a less-refined version.
 
 = Are these modules responsive? =
 
@@ -55,18 +55,18 @@ Yes. Some modules maintain their same behavior on mobile, but modules that rely 
 
 [Yes](https://github.com/bacoords/cb-custom-modules). Feel free to use and adapt as needed. Or reach out to me with any feature requests.
 
-= For the scout module, how do I make the page scroll to another part of the page? = 
+= For the scout module, how do I make the page scroll to another part of the page? =
 
 1. Find the row or element you want to scroll to, find the Advanced Settings tab, give that element a unique id such as *gallery*.
 1. When you add your link to the module, the link field would need to be *#gallery*. The plugins do the rest.
 
 The Beaver Builder team also has a great [breakdown](https://www.wpbeaverbuilder.com/knowledge-base/smooth-scrolling-buttons-icons-and-links/) of this technique with screenshots.
 
-= Can I get a custom module made for me or my client? = 
+= Can I get a custom module made for me or my client? =
 
 Of course! Visit our [website](https://www.cbcustommodules.com/request-module) to learn more about requesting a custom module.
 
-= Does CB Custom Modules work with Beaver Themer? = 
+= Does CB Custom Modules work with Beaver Themer? =
 
 Yes! Most modules have Beaver Field Connections where appropriate.
 
@@ -84,19 +84,19 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
-= 1.5 = 
+= 1.5 =
 * Adds Support for Beaver Themer
 
-= 1.4.3 = 
+= 1.4.3 =
 * Adds "Link Target" option to Link List Module
 
-= 1.4.2 = 
+= 1.4.2 =
 * Adds support for WP Retina 2x
 
-= 1.4.1 = 
+= 1.4.1 =
 * Fixes conflict with beaverlodge
 
-= 1.4 = 
+= 1.4 =
 * New Module: Link List
 * New Module: Button List
 * New Feature: Use links inside of Dust
@@ -131,19 +131,19 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Upgrade Notice ==
 
-= 1.5 = 
+= 1.5 =
 * Adds Support for Beaver Themer
 
-= 1.4.3 = 
+= 1.4.3 =
 * Adds "Link Target" option to Link List Module
 
-= 1.4.2 = 
+= 1.4.2 =
 * Adds support for WP Retina 2x
 
-= 1.4.1 = 
+= 1.4.1 =
 * Fixes conflict with beaverlodge
 
-= 1.4 = 
+= 1.4 =
 * New Module: Link List
 * New Module: Button List
 * New Feature: Use links inside of Dust
