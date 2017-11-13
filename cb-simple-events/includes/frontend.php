@@ -22,6 +22,8 @@ $form_field_repeater = $settings->cb_simple_events_form_field_repeater;
 
 		<?php foreach($form_field_repeater as $i=>$event){
 
+				$date_string = strtotime($event->cb_simple_event_date);
+
         if( $event->cb_simple_event_include_time == 'yes' ){
           $time = $event->cb_simple_event_time;
           $hours = $time->hours;
@@ -29,19 +31,28 @@ $form_field_repeater = $settings->cb_simple_events_form_field_repeater;
           $day_period = $time->day_period;
         }
 
-      ?>
-      <li id="cb-simple-event-<?php echo $i; ?>">
+				if( $event->cb_simple_event_date_format =='custom' ){
+					$date_format = $event->cb_simple_event_date_format_custom;
+				} else {
+					$date_format = $event->cb_simple_event_date_format;
+				}
 
-        <h4 class="cb-simple-events__title">
-					<?php if($event->cb_simple_event_link) echo "<a href='" . $event->cb_simple_event_link . "'>"; ?>
+				$schema_date = date(DATE_ISO8601, $date_string);
+
+
+      ?>
+      <li id="cb-simple-event-<?php echo $i; ?>"  itemscope itemtype="http://schema.org/Event">
+
+        <h4 class="cb-simple-events__title" itemprop="name">
+					<?php if($event->cb_simple_event_link) echo "<a itemprop='url' href='" . $event->cb_simple_event_link . "'>"; ?>
 						<?php echo $event->cb_simple_event_label; ?>
 					<?php if($event->cb_simple_event_link) echo "</a>"; ?>
 				</h4>
 
 				<div class="cb-simple-events__meta">
 
-					<span class="cb-simple-events__date">
-						<?php echo $event->cb_simple_event_date; ?>
+					<span class="cb-simple-events__date"  itemprop="startDate" content="<?php echo $schema_date; ?>">
+						<?php echo date($date_format, $date_string); ?>
 					</span>
 
 					<?php if( $event->cb_simple_event_include_time == 'yes' ){ ?>
@@ -54,7 +65,7 @@ $form_field_repeater = $settings->cb_simple_events_form_field_repeater;
 
 					<?php if(  $event->cb_simple_event_location ) { ?>
 
-						<span class="cb-simple-events__location">
+						<span class="cb-simple-events__location" itemprop="location" >
 							|
 							<?php echo $event->cb_simple_event_location; ?>
 						</span>
@@ -62,7 +73,7 @@ $form_field_repeater = $settings->cb_simple_events_form_field_repeater;
 
 				</div>
 
-        <div class="cb-simple-events__desc">
+        <div class="cb-simple-events__desc" itemprop="description">
 					<?php echo $event->cb_simple_event_desc; ?>
 				</div>
 

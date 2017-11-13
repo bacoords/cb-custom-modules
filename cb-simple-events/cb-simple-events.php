@@ -75,9 +75,73 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                           'description'   => __( '', 'fl-builder' ),
 					                'connections'   => array( 'string' )
                         ),
+                        'cb_simple_event_location' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Location (optional)', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '140',
+                          'size'          => '40',
+                          'placeholder'   => __( 'Location', 'fl-builder' ),
+                          'class'         => '',
+                          'description'   => __( '', 'fl-builder' ),
+                          'connections'   => array( 'string' )
+                        ),
+                      )
+                  ),
+
+                  'datetime'       => array(
+                      'title'         => 'Date and Time',
+                      'fields'        => array(
                         'cb_simple_event_date' => array(
                         	'type'       => 'date',
                         	'label'      => __( 'Date', 'fl-builder' )
+                        ),
+                        'cb_simple_event_date_format' => array(
+                            'type'          => 'select',
+                            'label'         => __( 'Date Display Format', 'fl-builder' ),
+                            'default'       => 'F j, Y',
+                            'options'       => array(
+                                'F j, Y'      => __( 'March 1, 1999', 'fl-builder' ),
+                                'l, F j, Y'      => __( 'Monday, March 1, 1999', 'fl-builder' ),
+                                'D, jS, F Y'      => __( 'Mon, 1st March, 1999', 'fl-builder' ),
+                                'D M j'      => __( 'Mon Mar 1', 'fl-builder' ),
+                                'j/n/Y'      => __( '03/01/99', 'fl-builder' ),
+                                'n/j/Y'      => __( '01/03/99', 'fl-builder' ),
+                                'custom'    => __( 'Custom PHP String', 'fl-builder' ),
+                            ),
+                            'toggle'        => array(
+                                'F j, Y'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'l, F j, Y'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'D, jS, F Y'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'D M j'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'j/n/Y'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'n/j/Y'      => array(
+                                    'fields'        => array(),
+                                ),
+                                'custom'      => array(
+                                    'fields'        => array( 'cb_simple_event_date_format_custom' ),
+                                )
+                            )
+                        ),
+                        'cb_simple_event_date_format_custom' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Custom Date Format String', 'fl-builder' ),
+                          'default'       => 'F j, Y',
+                          'maxlength'     => '140',
+                          'size'          => '40',
+                          'placeholder'   => __( 'F j, Y', 'fl-builder' ),
+                          'class'         => '',
+                          'description'   => __( 'Accepts a PHP datetime string format.', 'fl-builder' )
                         ),
                         'cb_simple_event_include_time' => array(
                             'type'          => 'select',
@@ -103,22 +167,11 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                               'day_period'	=> 'am'
                             )
                         ),
-                        'cb_simple_event_location' => array(
-                          'type'          => 'text',
-                          'label'         => __( 'Location (optional)', 'fl-builder' ),
-                          'default'       => '',
-                          'maxlength'     => '140',
-                          'size'          => '40',
-                          'placeholder'   => __( 'Location', 'fl-builder' ),
-                          'class'         => '',
-                          'description'   => __( '', 'fl-builder' ),
-					                'connections'   => array( 'string' )
-                        ),
                     )
                 ),
 
                 'link'       => array(
-                    'title'         => '',
+                    'title'         => 'Event Link',
                     'fields'        => array(
           						'cb_simple_event_link' => array(
           							'type'          => 'link',
@@ -160,6 +213,28 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
           								'type'          => 'none'
           							)
           						),
+          						'cb_simple_event_spacing' => array(
+          							'type'          => 'text',
+          							'label'         => __('Event Spacing', 'fl-builder'),
+                        'default'       => '',
+                        'maxlength'     => '3',
+                        'size'          => '4',
+                        'placeholder'   => __( '10', 'fl-builder' ),
+                        // 'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        'help'          => __( 'Spacing between this event and the next one.', 'fl-builder' )
+          						),
+          						'cb_simple_event_padding' => array(
+          							'type'          => 'text',
+          							'label'         => __('Event Padding', 'fl-builder'),
+                        'default'       => '',
+                        'maxlength'     => '3',
+                        'size'          => '4',
+                        'placeholder'   => __( '5', 'fl-builder' ),
+                        // 'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        'help'          => __( 'Spacing around the event.', 'fl-builder' )
+          						),
         						),
       						),
                 'label'       => array(
@@ -177,7 +252,7 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                           'maxlength'     => '2',
                           'size'          => '3',
                           // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
-                          'class'         => 'my-css-class',
+                          // 'class'         => 'my-css-class',
                           'description'   => __( 'px', 'fl-builder' ),
                           // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
                       ),
@@ -267,27 +342,7 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                       ),
         						),
       						),
-                // 'link'       => array(
-                //     'title'         => 'Link',
-                //     'fields'        => array(
-          			// 			'cb_simple_event_link_color'      => array(
-          			// 				'type'          => 'color',
-          			// 				'label'         => __('Link Color', 'fl-builder'),
-          			// 				'show_reset'    => true
-          			// 			),
-                //       'cb_simple_event_link_size' => array(
-                //           'type'          => 'text',
-                //           'label'         => __( 'Link Font Size', 'fl-builder' ),
-                //           'default'       => '',
-                //           'maxlength'     => '2',
-                //           'size'          => '3',
-                //           // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
-                //           'class'         => 'my-css-class',
-                //           'description'   => __( 'px', 'fl-builder' ),
-                //           // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
-                //       ),
-                //     )
-                // ),
+
             )
         )
     )
