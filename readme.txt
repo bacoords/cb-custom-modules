@@ -4,7 +4,7 @@ Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.9
-Stable tag: 5.5
+Stable tag: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ Crafty Beaver Custom Modules is a free suite of elegant custom modules for for B
 * Legend - Standard photo module but with a twist- hidden content is revealed on hover.
 * Link List - Create a list of files/links for users, displayed in rows with a custom icon and color scheme.
 * Button List - Create of list of files/links, displayed as buttons with a custom icon and color scheme.
+* Simple Events - Create a simple list of events with great responsive styling options and no need for an extensive plugin.
 
 For more information and module demos, visit [Crafty Beavers](https://www.cbcustommodules.com).
 
@@ -84,6 +85,10 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
+= 1.5.2 =
+* New Modules: Simple Events
+* Updated with more BB 2.0 support
+
 = 1.5 =
 * Adds Support for Beaver Themer
 
@@ -130,6 +135,10 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.5.2 =
+* New Modules: Simple Events
+* Updated with more BB 2.0 support
 
 = 1.5 =
 * Adds Support for Beaver Themer
