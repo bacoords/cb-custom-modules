@@ -1,5 +1,5 @@
 <?php
-function fl_date_field($name, $value, $field) {
+function fl_cbdate_field($name, $value, $field) {
 
 ?>
 
@@ -18,12 +18,12 @@ jQuery( document ).ready(function() {
 
 <?php
 }
-add_action('fl_builder_control_date', 'fl_date_field', 1, 3);
+add_action('fl_builder_control_cbdate', 'fl_cbdate_field', 1, 3);
 
-function fl_date_field_assets() {
+function fl_cbdate_field_assets() {
     if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
         wp_enqueue_style( 'jquery-ui-datepicker', CB_CUSTOM_MODULE_URL  . '/includes/BB-date-Field-master/assets/jquery-bootstrap-datepicker.css', array(), '' );
         wp_enqueue_script( 'jquery-ui-datepicker');
     }
 }
-add_action( 'wp_enqueue_scripts', 'fl_date_field_assets' );
+add_action( 'wp_enqueue_scripts', 'fl_cbdate_field_assets' );

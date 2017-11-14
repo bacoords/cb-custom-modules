@@ -372,7 +372,7 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                       'title'         => 'Date and Time',
                       'fields'        => array(
                         'cb_simple_event_date' => array(
-                        	'type'       => 'date',
+                        	'type'       => 'cbdate',
                         	'label'      => __( 'Date', 'fl-builder' )
                         ),
                         'cb_simple_event_date_format' => array(
