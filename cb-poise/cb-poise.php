@@ -8,17 +8,18 @@
  */
 class CBCustomPoiseModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Poise', 'fl-builder'),
             'description'   => __('Display elements with poise.', 'fl-builder'),
+            'icon'          => 'format-gallery.svg',
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-poise/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-poise/',

@@ -8,18 +8,19 @@
  */
 class CBCustomSliceModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Slice', 'fl-builder'),
             'description'   => __('Display a gallery.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'      => 'format-gallery.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-slice/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-slice/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -30,13 +31,13 @@ class CBCustomSliceModule extends FLBuilderModule {
         $this->add_css( 'jquery-magnificpopup' );
     }
 
-  
+
     public function responsive_breakpoint()
     {
       $settings = FLBuilderModel::get_global_settings();
       return $settings->responsive_breakpoint;
-    }  
-  
+    }
+
 }
 
 /**

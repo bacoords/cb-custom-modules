@@ -8,18 +8,19 @@
  */
 class CBCustomShadeModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Shade', 'fl-builder'),
             'description'   => __('Throw some custom shade.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'        => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-shade/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-shade/',
             'editor_export' => true, // Defaults to true and can be omitted.

@@ -8,18 +8,19 @@
  */
 class CBCustomButtonListModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Button List', 'fl-builder'),
             'description'   => __('Create a list of buttons linking to URLs or any file from your Media Library.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'      => 'button.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-button-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-button-list/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -27,26 +28,26 @@ class CBCustomButtonListModule extends FLBuilderModule {
 //						'partial_refresh' => true,
         ));
     }
-	
-	
-	
+
+
+
 	/**
 	 * Return the correct value
 	 */
-	
-	
+
+
 	public function filter_value($button, $field){
-		
+
 		if( !empty( $button->$field ) ) {
 			return $button->$field;
 		}
-		
+
 		if( !empty( $this->settings->$field ) ) {
 			return $this->settings->$field;
 		}
-		
+
 		return $button->$field;
-		
+
 	}
 
 }

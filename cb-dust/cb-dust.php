@@ -8,12 +8,12 @@
  */
 class CBCustomDustModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
@@ -22,6 +22,7 @@ class CBCustomDustModule extends FLBuilderModule {
             'category'		=> __('CB Custom Modules', 'fl-builder'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-dust/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-dust/',
+            'icon'          => 'star-filled.svg',
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
 						'partial_refresh' => true,

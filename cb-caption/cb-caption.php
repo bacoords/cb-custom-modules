@@ -8,18 +8,19 @@
  */
 class CBCustomCaptionModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Legend', 'fl-builder'),
             'description'   => __('Photo Module with a secret caption.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'        => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-caption/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-caption/',
             'editor_export' => true, // Defaults to true and can be omitted.

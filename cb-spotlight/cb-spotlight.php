@@ -8,18 +8,19 @@
  */
 class CBCustomSpotlightModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Spotlight', 'fl-builder'),
             'description'   => __('Let your viewer spotlight an image.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'      => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-spotlight/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-spotlight/',
             'editor_export' => true, // Defaults to true and can be omitted.

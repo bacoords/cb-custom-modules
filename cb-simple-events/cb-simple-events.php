@@ -20,6 +20,7 @@ class CBCustomSimpleEventsModule extends FLBuilderModule {
             'name'          => __('Simple Events', 'fl-builder'),
             'description'   => __('Simple events listing widget.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'      => 'megaphone.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-simple-events/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-simple-events/',
             'editor_export' => true, // Defaults to true and can be omitted.

@@ -8,18 +8,19 @@
  */
 class CBCustomLinkListModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Link List', 'fl-builder'),
             'description'   => __('Create a list of links from URLs or Media Library files.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'        => 'text.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-link-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-link-list/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -100,7 +101,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
             ),
             'color'       => array( // Section
                 'title'         => __('Colors', 'fl-builder'), // Section Title
-                'fields'        => array( // Section Fields					
+                'fields'        => array( // Section Fields
 					'cb_link_icon_color'         => array(
 						'type'          => 'color',
 						'label'         => __('Icon Default Color', 'fl-builder'),
@@ -113,7 +114,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 						'preview'       => array(
 							'type'          => 'none'
 						)
-					),		
+					),
 					'cb_link_icon_bg_color'         => array(
 						'type'          => 'color',
 						'label'         => __('Icon Default Background Color', 'fl-builder'),
@@ -268,7 +269,7 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 							'preview'       => array(
 								'type'          => 'none'
 							)
-						),	
+						),
 						'cb_link_icon_bg_color'         => array(
 							'type'          => 'color',
 							'label'         => __('Icon Background Color', 'fl-builder'),

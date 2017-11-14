@@ -8,18 +8,19 @@
  */
 class CBCustomScoutModule extends FLBuilderModule {
 
-    /** 
+    /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
      *
      * @method __construct
-     */  
+     */
     public function __construct()
     {
         parent::__construct(array(
             'name'          => __('Scout', 'fl-builder'),
             'description'   => __('Sticky Navbar.', 'fl-builder'),
             'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'icon'        => 'hamburger-menu.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-scout/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-scout/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -28,7 +29,7 @@ class CBCustomScoutModule extends FLBuilderModule {
         ));
       $this->add_css('font-awesome');
     }
-  
+
     public function responsive_breakpoint()
     {
       $settings = FLBuilderModel::get_global_settings();
@@ -115,7 +116,7 @@ FLBuilder::register_module('CBCustomScoutModule', array(
               ),
             'colors'       => array( // Section
                 'title'         => __('Colors', 'fl-builder'), // Section Title
-              
+
                 'fields'        => array( // Section Fields
                     'cb_scout_text_color_main' => array(
                         'type'          => 'color',
