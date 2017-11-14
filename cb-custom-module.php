@@ -19,6 +19,7 @@ function fl_load_module_cb_custom_modules() {
     // Require custom 'media file' field type
     require_once 'includes/BB-PDF-field-modified/zestsms-pdf.php';
     require_once 'includes/BB-date-Field-master/bb_date_field.php';
+    require_once 'includes/responsive-borders-helper.php';
 
 		require_once 'cb-shade/cb-shade.php';
 		// require_once 'cb-posts/cb-posts.php'; //In Progress

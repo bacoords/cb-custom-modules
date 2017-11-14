@@ -49,6 +49,284 @@ FLBuilder::register_module('CBCustomSimpleEventsModule', array(
         )
       )
       )
+    ),
+    'styles'       => array( // Tab
+        'title'         => __('Styles', 'fl-builder'), // Tab title
+        'sections'      => array( // Tab Sections
+              'general'       => array(
+                  'title'         => 'Event',
+                  'fields'        => array(
+        						'cb_simple_events_bg_color'         => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Event Background Color', 'fl-builder'),
+        							'show_reset'    => true
+        						),
+        						'cb_simple_events_bg_hover_color' => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Event Hover Background Color', 'fl-builder'),
+        							'show_reset'    => true,
+        							'preview'       => array(
+        								'type'          => 'none'
+        							)
+        						),
+        						'cb_simple_events_spacing' => array(
+        							'type'          => 'text',
+        							'label'         => __('Default Event Spacing', 'fl-builder'),
+                      'default'       => '',
+                      'maxlength'     => '3',
+                      'size'          => '4',
+                      'placeholder'   => __( '10', 'fl-builder' ),
+                      // 'class'         => 'my-css-class',
+                      'description'   => __( 'px', 'fl-builder' ),
+                      'help'          => __( 'Spacing between this event and the next one.', 'fl-builder' )
+        						),
+        						'cb_simple_events_padding' => array(
+        							'type'          => 'text',
+        							'label'         => __('Default Event Padding', 'fl-builder'),
+                      'default'       => '',
+                      'maxlength'     => '3',
+                      'size'          => '4',
+                      'placeholder'   => __( '5', 'fl-builder' ),
+                      // 'class'         => 'my-css-class',
+                      'description'   => __( 'px', 'fl-builder' ),
+                      'help'          => __( 'Spacing around the event.', 'fl-builder' )
+        						),
+      						),
+    						),
+                'border'       => array(
+                  'title'         => __( 'Border', 'fl-builder' ),
+                  'fields'        => array(
+                    'border_type'   => array(
+                      'type'          => 'select',
+                      'label'         => __( 'Type', 'fl-builder' ),
+                      'default'       => '',
+                      'help'          => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'fl-builder' ),
+                      'options'       => array(
+                        ''       => _x( 'None', 'Border type.', 'fl-builder' ),
+                        'solid'  => _x( 'Solid', 'Border type.', 'fl-builder' ),
+                        'dashed' => _x( 'Dashed', 'Border type.', 'fl-builder' ),
+                        'dotted' => _x( 'Dotted', 'Border type.', 'fl-builder' ),
+                        'double' => _x( 'Double', 'Border type.', 'fl-builder' ),
+                      ),
+                      'toggle'        => array(
+                        ''              => array(
+                          'fields'        => array(),
+                        ),
+                        'solid'         => array(
+                          'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                        ),
+                        'dashed'        => array(
+                          'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                        ),
+                        'dotted'        => array(
+                          'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                        ),
+                        'double'        => array(
+                          'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                        ),
+                      ),
+                      'preview'         => array(
+                        'type'            => 'none',
+                      ),
+                    ),
+                    'border_color'  => array(
+                      'type'          => 'color',
+                      'label'         => __( 'Color', 'fl-builder' ),
+                      'show_reset'    => true,
+                      'preview'         => array(
+                        'type'            => 'none',
+                      ),
+                    ),
+                    'border_opacity' => array(
+                      'type'          => 'text',
+                      'label'         => __( 'Opacity', 'fl-builder' ),
+                      'default'       => '100',
+                      'description'   => '%',
+                      'maxlength'     => '3',
+                      'size'          => '5',
+                      'preview'         => array(
+                        'type'            => 'none',
+                      ),
+                    ),
+                    'border' 	 => array(
+                      'type'        => 'dimension',
+                      'label'       => __( 'Width', 'fl-builder' ),
+                      'description' => 'px',
+                      'preview'     => array(
+                        'type' => 'none',
+                      ),
+                      'responsive'  => array(
+                        'placeholder' => array(
+                          'default'    => '0',
+                          'medium'     => '',
+                          'responsive' => '',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              'label'       => array(
+                  'title'         => 'Title',
+                  'fields'        => array(
+        						'cb_simple_events_title_color'         => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Title Color', 'fl-builder'),
+        							'show_reset'    => true
+        						),
+                    'cb_simple_events_title_size' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Title Font Size', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        // 'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+                    'cb_simple_events_title_size_r' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Title Font Size (Mobile)', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        // 'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+      						),
+    						),
+              'desc'       => array(
+                  'title'         => 'Description',
+                  'fields'        => array(
+        						'cb_simple_events_desc_color'      => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Description Color', 'fl-builder'),
+        							'show_reset'    => true
+        						),
+                    'cb_simple_events_desc_size' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Description Font Size', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+                    'cb_simple_events_desc_size_r' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Description Font Size (Mobile)', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+      						),
+    						),
+              'date'       => array(
+                  'title'         => 'Date',
+                  'fields'        => array(
+        						'cb_simple_events_date_color' => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Date Color', 'fl-builder'),
+        							'show_reset'    => true,
+        						),
+                    'cb_simple_events_date_size' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Date Font Size', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+                    'cb_simple_events_date_size_r' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Date Font Size (Mobile)', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+      						),
+    						),
+              'Time'       => array(
+                  'title'         => 'Time',
+                  'fields'        => array(
+        						'cb_simple_events_time_color' => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Time Color', 'fl-builder'),
+        							'show_reset'    => true,
+        						),
+                    'cb_simple_events_time_size' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Time Font Size', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+                    'cb_simple_events_time_size_r' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Time Font Size (Mobile)', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+      						),
+    						),
+              'location'       => array(
+                  'title'         => 'Location',
+                  'fields'        => array(
+        						'cb_simple_events_location_color' => array(
+        							'type'          => 'color',
+        							'label'         => __('Default Location Color', 'fl-builder'),
+        							'show_reset'    => true,
+        						),
+                    'cb_simple_events_location_size' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Location Font Size', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+                    'cb_simple_events_location_size_r' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Default Location Font Size (Mobile)', 'fl-builder' ),
+                        'default'       => '',
+                        'maxlength'     => '2',
+                        'size'          => '3',
+                        // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                        'class'         => 'my-css-class',
+                        'description'   => __( 'px', 'fl-builder' ),
+                        // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                    ),
+      						),
+    						),
+
+      )
     )
 ));
 
@@ -237,6 +515,78 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
           						),
         						),
       						),
+                  'border'       => array(
+                    'title'         => __( 'Border Override', 'fl-builder' ),
+                    'fields'        => array(
+                      'border_type'   => array(
+                        'type'          => 'select',
+                        'label'         => __( 'Type', 'fl-builder' ),
+                        'default'       => '',
+                        'help'          => __( 'The type of border to use. Double borders must have a width of at least 3px to render properly.', 'fl-builder' ),
+                        'options'       => array(
+                          ''       => _x( 'None', 'Border type.', 'fl-builder' ),
+                          'solid'  => _x( 'Solid', 'Border type.', 'fl-builder' ),
+                          'dashed' => _x( 'Dashed', 'Border type.', 'fl-builder' ),
+                          'dotted' => _x( 'Dotted', 'Border type.', 'fl-builder' ),
+                          'double' => _x( 'Double', 'Border type.', 'fl-builder' ),
+                        ),
+                        'toggle'        => array(
+                          ''              => array(
+                            'fields'        => array(),
+                          ),
+                          'solid'         => array(
+                            'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                          ),
+                          'dashed'        => array(
+                            'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                          ),
+                          'dotted'        => array(
+                            'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                          ),
+                          'double'        => array(
+                            'fields'        => array( 'border_color', 'border_opacity', 'border' ),
+                          ),
+                        ),
+                        'preview'         => array(
+                          'type'            => 'none',
+                        ),
+                      ),
+                      'border_color'  => array(
+                        'type'          => 'color',
+                        'label'         => __( 'Color', 'fl-builder' ),
+                        'show_reset'    => true,
+                        'preview'         => array(
+                          'type'            => 'none',
+                        ),
+                      ),
+                      'border_opacity' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Opacity', 'fl-builder' ),
+                        'default'       => '100',
+                        'description'   => '%',
+                        'maxlength'     => '3',
+                        'size'          => '5',
+                        'preview'         => array(
+                          'type'            => 'none',
+                        ),
+                      ),
+                      'border' 	 => array(
+                        'type'        => 'dimension',
+                        'label'       => __( 'Width', 'fl-builder' ),
+                        'description' => 'px',
+                        'preview'     => array(
+                          'type' => 'none',
+                        ),
+                        'responsive'  => array(
+                          'placeholder' => array(
+                            'default'    => '0',
+                            'medium'     => '',
+                            'responsive' => '',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 'label'       => array(
                     'title'         => 'Title',
                     'fields'        => array(
@@ -248,6 +598,17 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                       'cb_simple_event_title_size' => array(
                           'type'          => 'text',
                           'label'         => __( 'Title Font Size', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '2',
+                          'size'          => '3',
+                          // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                          // 'class'         => 'my-css-class',
+                          'description'   => __( 'px', 'fl-builder' ),
+                          // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                      ),
+                      'cb_simple_event_title_size_r' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Title Font Size (Mobile)', 'fl-builder' ),
                           'default'       => '',
                           'maxlength'     => '2',
                           'size'          => '3',
@@ -277,6 +638,17 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                           'description'   => __( 'px', 'fl-builder' ),
                           // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
                       ),
+                      'cb_simple_event_desc_size_r' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Description Font Size (mobile)', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '2',
+                          'size'          => '3',
+                          // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                          'class'         => 'my-css-class',
+                          'description'   => __( 'px', 'fl-builder' ),
+                          // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                      ),
         						),
       						),
                 'date'       => array(
@@ -290,6 +662,17 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                       'cb_simple_event_date_size' => array(
                           'type'          => 'text',
                           'label'         => __( 'Date Font Size', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '2',
+                          'size'          => '3',
+                          // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                          'class'         => 'my-css-class',
+                          'description'   => __( 'px', 'fl-builder' ),
+                          // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                      ),
+                      'cb_simple_event_date_size_r' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Date Font Size (Mobile)', 'fl-builder' ),
                           'default'       => '',
                           'maxlength'     => '2',
                           'size'          => '3',
@@ -319,6 +702,17 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                           'description'   => __( 'px', 'fl-builder' ),
                           // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
                       ),
+                      'cb_simple_event_time_size_r' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Time Font Size (Mobile)', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '2',
+                          'size'          => '3',
+                          // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                          'class'         => 'my-css-class',
+                          'description'   => __( 'px', 'fl-builder' ),
+                          // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                      ),
         						),
       						),
                 'location'       => array(
@@ -332,6 +726,17 @@ FLBuilder::register_settings_form('cb_simple_events_form_field', array(
                       'cb_simple_event_location_size' => array(
                           'type'          => 'text',
                           'label'         => __( 'Location Font Size', 'fl-builder' ),
+                          'default'       => '',
+                          'maxlength'     => '2',
+                          'size'          => '3',
+                          // 'placeholder'   => __( 'Placeholder text', 'fl-builder' ),
+                          'class'         => 'my-css-class',
+                          'description'   => __( 'px', 'fl-builder' ),
+                          // 'help'          => __( 'Text displayed in the help tooltip', 'fl-builder' )
+                      ),
+                      'cb_simple_event_location_size_2' => array(
+                          'type'          => 'text',
+                          'label'         => __( 'Location Font Size (Mobile)', 'fl-builder' ),
                           'default'       => '',
                           'maxlength'     => '2',
                           'size'          => '3',

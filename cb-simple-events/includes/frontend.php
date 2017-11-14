@@ -65,7 +65,7 @@ $form_field_repeater = $settings->cb_simple_events_form_field_repeater;
 
 					<?php if(  $event->cb_simple_event_location ) { ?>
 
-						<span class="cb-simple-events__location" itemprop="location" >
+						<span class="cb-simple-events__location">
 							|
 							<?php echo $event->cb_simple_event_location; ?>
 						</span>
