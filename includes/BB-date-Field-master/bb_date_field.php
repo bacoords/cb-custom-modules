@@ -9,7 +9,7 @@ jQuery( document ).ready(function() {
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
-        dateFormat: 'DD, d MM, yy'
+        dateFormat: 'd MM yy'
     });
 });
 </script>
