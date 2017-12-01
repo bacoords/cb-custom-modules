@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 5.6
+Tested up to: 4.9.1
+Stable tag: 5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,13 +24,17 @@ Crafty Beaver Custom Modules is a free suite of elegant custom modules for for B
 * Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
 * Slice - Animated photo gallery with stacked, 'sliding cards' effect. Integrates with the default Beaver Builder lightbox.
 * Legend - Standard photo module but with a twist- hidden content is revealed on hover.
-* Link List - Create a list of files/links for users, displayed in rows with a custom icon and color scheme.
-* Button List - Create of list of files/links, displayed as buttons with a custom icon and color scheme.
+* Link List - Create a list of files/links for users, displayed in rows with a custom icon and color scheme. +
+* Button List - Create of list of files/links, displayed as buttons with a custom icon and color scheme. +
 * Simple Events - Create a simple list of events with great responsive styling options and no need for an extensive plugin.
+* CB Advanced Menu - Playing on the default BB Menu Module, this horizontal menu style is called... the Pancake Menu. +
 
 For more information and module demos, visit [Crafty Beavers](https://www.cbcustommodules.com).
 
 If you have need for new modules or enhancements to current modules, please [contact us](https://cbcustommodules.com) or visit the [github repo](https://github.com/bacoords/cb-custom-modules).
+
+*+ Some features of this module may require the Paid version of Beaver Builder.*
+*++ Some features of this module may require Beaver Builder 2.0+.*
 
 == Installation ==
 
@@ -42,7 +46,7 @@ If you have need for new modules or enhancements to current modules, please [con
 
 = Can I install this plugin without Beaver Builder? =
 
-Yes, but it won't do anything. This plugin is an extension to [Beaver Builder](https://www.wpbeaverbuilder.com/).
+Yes, but it won't do anything. This plugin is an extension to [Beaver Builder](https://www.wpbeaverbuilder.com/). Be aware that some modules require the paid version of Beaver Builder and some modules require Beaver Builder 2.0+.
 
 = What about browsers? =
 
@@ -74,16 +78,24 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Screenshots ==
 
-1. Poise Module Example
-2. Shade Module Example
-3. Spotlight Module Example
-4. Broadside Module Example
-5. Dust Module Example
-6. Scout Module Example
-7. Slice Module Example
-8. Legend Module Example
+1. Poise
+2. Shade
+3. Spotlight
+4. Broadside
+5. Dust
+6. Scout
+7. Slice
+8. Legend
+9. Simple Events
+10. CB Advanced Menu
 
 == Changelog ==
+
+= 1.5.4 =
+* New Module: CB Advanced Menu
+
+= 1.5.3 =
+* Bug fix: fixes an issue with Events Calendar
 
 = 1.5.2 =
 * New Modules: Simple Events
@@ -135,6 +147,12 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.5.4 =
+* New Module: CB Advanced Menu
+
+= 1.5.3 =
+* Bug fix: fixes an issue with Events Calendar
 
 = 1.5.2 =
 * New Modules: Simple Events

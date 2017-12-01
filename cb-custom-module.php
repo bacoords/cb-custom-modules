@@ -3,7 +3,7 @@
  * Plugin Name: CB Custom Beaver Builder Modules
  * Plugin URI: https://www.cbcustommodules.com
  * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
- * Version: 1.5.2
+ * Version: 1.5.4
  * Author: Crafty Beavers
  * Author URI: https://www.cbcustommodules.com
  */
@@ -22,7 +22,6 @@ function fl_load_module_cb_custom_modules() {
     require_once 'includes/responsive-borders-helper.php';
 
 		require_once 'cb-shade/cb-shade.php';
-		// require_once 'cb-posts/cb-posts.php'; //In Progress
 		require_once 'cb-poise/cb-poise.php';
 		require_once 'cb-spotlight/cb-spotlight.php';
 		require_once 'cb-broadside/cb-broadside.php';
@@ -33,6 +32,7 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-link-list/cb-link-list.php';
 		require_once 'cb-button-list/cb-button-list.php';
 		require_once 'cb-simple-events/cb-simple-events.php';
+		require_once 'cb-menu/cb-menu.php';
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );
