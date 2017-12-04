@@ -29,10 +29,17 @@ function fl_load_module_cb_custom_modules() {
 		require_once 'cb-dust/cb-dust.php';
 		require_once 'cb-slice/cb-slice.php';
 		require_once 'cb-caption/cb-caption.php';
-		require_once 'cb-link-list/cb-link-list.php';
-		require_once 'cb-button-list/cb-button-list.php';
+
+		if( class_exists( 'FLIconModule' ) ){
+			require_once 'cb-link-list/cb-link-list.php';
+			require_once 'cb-button-list/cb-button-list.php';
+		}
 		require_once 'cb-simple-events/cb-simple-events.php';
-		require_once 'cb-menu/cb-menu.php';
+
+		if( class_exists( 'FLMenuModule') ){
+			require_once 'cb-menu/cb-menu.php';
+		}
+
 	}
 }
 add_action( 'init', 'fl_load_module_cb_custom_modules' );
