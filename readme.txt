@@ -2,7 +2,7 @@
 Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
-Requires at least: 3.0.1
+Requires at least: 4.6
 Tested up to: 4.9.1
 Stable tag: 6.0
 License: GPLv2 or later
