@@ -17,9 +17,9 @@ class CBCustomBroadsideModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Broadside', 'fl-builder'),
-            'description'   => __('Display a gallery.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Broadside', 'cb-custom-modules'),
+            'description'   => __('Display a gallery.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'icon'        =>'format-gallery.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-broadside/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-broadside/',
@@ -40,25 +40,25 @@ class CBCustomBroadsideModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomBroadsideModule', array(
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('General', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'options'       => array( // Section
-                'title'         => __('Design Options', 'fl-builder'), // Section Title
+                'title'         => __('Design Options', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 										'cb_broadside_bg_color' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Background Color', 'fl-builder' ),
+                        'label'         => __( 'Background Color', 'cb-custom-modules' ),
                         'default'       => '494949',
                         'show_reset'    => true
 										),
                 )
             ),
             'photos'       => array( // Section
-                'title'         => __('Photos', 'fl-builder'), // Section Title
+                'title'         => __('Photos', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 						'cb_broadside_multiple_photos_field' => array(
 								'type'          => 'multiple-photos',
-								'label'         => __( 'Select all photos', 'fl-builder' ),
+								'label'         => __( 'Select all photos', 'cb-custom-modules' ),
 								'connections'   => array( 'multiple-photos' )
 						),
                 )

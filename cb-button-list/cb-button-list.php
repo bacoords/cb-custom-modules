@@ -17,9 +17,9 @@ class CBCustomButtonListModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Button List', 'fl-builder'),
-            'description'   => __('Create a list of buttons linking to URLs or any file from your Media Library.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Button List', 'cb-custom-modules'),
+            'description'   => __('Create a list of buttons linking to URLs or any file from your Media Library.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'icon'      => 'button.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-button-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-button-list/',
@@ -57,14 +57,14 @@ class CBCustomButtonListModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomButtonListModule', array(
     'general'       => array( // Tab
-        'title'         => __('Assets', 'fl-builder'), // Tab title
+        'title'         => __('Assets', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('', 'fl-builder'), // Section Title
+                'title'         => __('', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_button_list_form_field_repeater' => array(
 							'type'          => 'form',
-							'label'         => __('Button', 'fl-builder'),
+							'label'         => __('Button', 'cb-custom-modules'),
 							'form'          => 'cb_button_list_form_field', // ID of a registered form.
 							'preview_text'  => 'button_text', // ID of a field to use for the preview text.
 							'multiple' 			=> true,
@@ -75,48 +75,48 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
     ),
 
 		'button'      => array(
-			'title'         => __('Defaults', 'fl-builder'),
+			'title'         => __('Defaults', 'cb-custom-modules'),
 			'sections'      => array(
 				'btn_colors'     => array(
-					'title'         => __('Button Colors', 'fl-builder'),
+					'title'         => __('Button Colors', 'cb-custom-modules'),
 					'fields'        => array(
 						'btn_bg_color'  => array(
 							'type'          => 'color',
-							'label'         => __('Background Color', 'fl-builder'),
+							'label'         => __('Background Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true
 						),
 						'btn_bg_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Background Hover Color', 'fl-builder'),
+							'label'         => __('Background Hover Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true,
 						),
 						'btn_text_color' => array(
 							'type'          => 'color',
-							'label'         => __('Text Color', 'fl-builder'),
+							'label'         => __('Text Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true
 						),
 						'btn_text_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Text Hover Color', 'fl-builder'),
+							'label'         => __('Text Hover Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true,
 						)
 					)
 				),
 				'btn_style'     => array(
-					'title'         => __('Button Style', 'fl-builder'),
+					'title'         => __('Button Style', 'cb-custom-modules'),
 					'fields'        => array(
 						'btn_style'     => array(
 							'type'          => 'select',
-							'label'         => __('Style', 'fl-builder'),
+							'label'         => __('Style', 'cb-custom-modules'),
 							'default'       => 'flat',
 							'options'       => array(
-								'flat'          => __('Flat', 'fl-builder'),
-								'gradient'      => __('Gradient', 'fl-builder'),
-								'transparent'   => __('Transparent', 'fl-builder')
+								'flat'          => __('Flat', 'cb-custom-modules'),
+								'gradient'      => __('Gradient', 'cb-custom-modules'),
+								'transparent'   => __('Transparent', 'cb-custom-modules')
 							),
 							'toggle'        => array(
 								'transparent'   => array(
@@ -126,7 +126,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_border_size' => array(
 							'type'          => 'text',
-							'label'         => __('Border Size', 'fl-builder'),
+							'label'         => __('Border Size', 'cb-custom-modules'),
 							'default'       => '2',
 							'description'   => 'px',
 							'maxlength'     => '3',
@@ -135,7 +135,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_bg_opacity' => array(
 							'type'          => 'text',
-							'label'         => __('Background Opacity', 'fl-builder'),
+							'label'         => __('Background Opacity', 'cb-custom-modules'),
 							'default'       => '0',
 							'description'   => '%',
 							'maxlength'     => '3',
@@ -144,7 +144,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_bg_hover_opacity' => array(
 						'type'          => 'text',
-						'label'         => __('Background Hover Opacity', 'fl-builder'),
+						'label'         => __('Background Hover Opacity', 'cb-custom-modules'),
 						'default'       => '0',
 						'description'   => '%',
 						'maxlength'     => '3',
@@ -153,35 +153,35 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_button_transition' => array(
 							'type'          => 'select',
-							'label'         => __('Transition', 'fl-builder'),
+							'label'         => __('Transition', 'cb-custom-modules'),
 							'default'       => 'disable',
 							'options'       => array(
-								'disable'        => __('Disabled', 'fl-builder'),
-								'enable'         => __('Enabled', 'fl-builder')
+								'disable'        => __('Disabled', 'cb-custom-modules'),
+								'enable'         => __('Enabled', 'cb-custom-modules')
 							)
 						)
 					)
 				),
 				'btn_structure' => array(
-					'title'         => __('Button Structure', 'fl-builder'),
+					'title'         => __('Button Structure', 'cb-custom-modules'),
 					'fields'        => array(
 						'btn_width'     => array(
 							'type'          => 'select',
-							'label'         => __('Width', 'fl-builder'),
+							'label'         => __('Width', 'cb-custom-modules'),
 							'default'       => 'full',
 							'options'       => array(
-								'auto'          => _x( 'Auto', 'Width.', 'fl-builder' ),
-								'full'          => __('Full Width', 'fl-builder')
+								'auto'          => _x( 'Auto', 'Width.', 'cb-custom-modules' ),
+								'full'          => __('Full Width', 'cb-custom-modules')
 							)
 						),
 						'btn_align'    	=> array(
 							'type'          => 'select',
-							'label'         => __('Alignment', 'fl-builder'),
+							'label'         => __('Alignment', 'cb-custom-modules'),
 							'default'       => 'center',
 							'options'       => array(
-								'left'          => __('Left', 'fl-builder'),
-								'center'		=> __('Center', 'fl-builder'),
-								'right'         => __('Right', 'fl-builder'),
+								'left'          => __('Left', 'cb-custom-modules'),
+								'center'		=> __('Center', 'cb-custom-modules'),
+								'right'         => __('Right', 'cb-custom-modules'),
 							),
 							'preview'       => array(
 								'type'          => 'none'
@@ -189,7 +189,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_font_size' => array(
 							'type'          => 'text',
-							'label'         => __('Font Size', 'fl-builder'),
+							'label'         => __('Font Size', 'cb-custom-modules'),
 							'default'       => '16',
 							'maxlength'     => '3',
 							'size'          => '4',
@@ -197,7 +197,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_padding'   => array(
 							'type'          => 'text',
-							'label'         => __('Padding', 'fl-builder'),
+							'label'         => __('Padding', 'cb-custom-modules'),
 							'default'       => '12',
 							'maxlength'     => '3',
 							'size'          => '4',
@@ -205,7 +205,7 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 						),
 						'btn_border_radius' => array(
 							'type'          => 'text',
-							'label'         => __('Round Corners', 'fl-builder'),
+							'label'         => __('Round Corners', 'cb-custom-modules'),
 							'default'       => '4',
 							'maxlength'     => '3',
 							'size'          => '4',
@@ -221,27 +221,27 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
  * Register form
  */
 FLBuilder::register_settings_form('cb_button_list_form_field', array(
-    'title' => __('New Button Link', 'fl-builder'),
+    'title' => __('New Button Link', 'cb-custom-modules'),
     'tabs'  => array(
         'file'      => array(
-            'title'         => __('Link', 'fl-builder'),
+            'title'         => __('Link', 'cb-custom-modules'),
             'sections'      => array(
 				'default'   => array(
 					'title'         => '',
 					'fields'        => array(
 						'button_text'   => array(
 							'type'          => 'text',
-							'label'         => __('Button Text', 'fl-builder'),
-							'default'       => __('Get Started', 'fl-builder'),
+							'label'         => __('Button Text', 'cb-custom-modules'),
+							'default'       => __('Get Started', 'cb-custom-modules'),
 							'connections'   => array( 'string' )
 						),
 						'btn_link_target'    	=> array(
 							'type'          => 'select',
-							'label'         => __('Link Target', 'fl-builder'),
+							'label'         => __('Link Target', 'cb-custom-modules'),
 							'default'       => '_self',
 							'options'       => array(
-								'_self'         => __('Same Window', 'fl-builder'),
-								'_blank'        => __('New Window', 'fl-builder')
+								'_self'         => __('Same Window', 'cb-custom-modules'),
+								'_blank'        => __('New Window', 'cb-custom-modules')
 							),
 							'preview'       => array(
 								'type'          => 'none'
@@ -249,11 +249,11 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
 						),
 						'btn_link_nofollow' => array(
 							'type'          	=> 'select',
-							'label' 	        => __('Link No Follow', 'fl-builder'),
+							'label' 	        => __('Link No Follow', 'cb-custom-modules'),
 							'default'       => 'no',
 							'options' 			=> array(
-								'yes' 				=> __('Yes', 'fl-builder'),
-								'no' 				=> __('No', 'fl-builder'),
+								'yes' 				=> __('Yes', 'cb-custom-modules'),
+								'no' 				=> __('No', 'cb-custom-modules'),
 							),
 							'preview'       	=> array(
 								'type'          	=> 'none'
@@ -261,25 +261,25 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
 						),
 						'btn_icon'      => array(
 							'type'          => 'icon',
-							'label'         => __('Button Icon', 'fl-builder'),
+							'label'         => __('Button Icon', 'cb-custom-modules'),
 							'show_remove'   => true
 						),
 						'btn_icon_position' => array(
 							'type'          => 'select',
-							'label'         => __('Button Icon Position', 'fl-builder'),
+							'label'         => __('Button Icon Position', 'cb-custom-modules'),
 							'default'       => 'before',
 							'options'       => array(
-								'before'        => __('Before Text', 'fl-builder'),
-								'after'         => __('After Text', 'fl-builder')
+								'before'        => __('Before Text', 'cb-custom-modules'),
+								'after'         => __('After Text', 'cb-custom-modules')
 							)
 						),
 						'btn_icon_animation' => array(
 							'type'          => 'select',
-							'label'         => __('Icon Visibility', 'fl-builder'),
+							'label'         => __('Icon Visibility', 'cb-custom-modules'),
 							'default'       => 'disable',
 							'options'       => array(
-								'disable'        => __('Always Visible', 'fl-builder'),
-								'enable'         => __('Fade In On Hover', 'fl-builder')
+								'disable'        => __('Always Visible', 'cb-custom-modules'),
+								'enable'         => __('Fade In On Hover', 'cb-custom-modules')
 							)
 						)
 					)
@@ -289,11 +289,11 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
                     'fields'        => array(
 						'cb_link_type' => array(
 							'type'          => 'select',
-							'label'         => __( 'Link Type', 'fl-builder' ),
+							'label'         => __( 'Link Type', 'cb-custom-modules' ),
 							'default'       => 'link',
 							'options'       => array(
-								'link'      => __( 'URL', 'fl-builder' ),
-								'file'      => __( 'Media Library', 'fl-builder' )
+								'link'      => __( 'URL', 'cb-custom-modules' ),
+								'file'      => __( 'Media Library', 'cb-custom-modules' )
 							),
 							'toggle'        => array(
 								'file'      => array(
@@ -311,7 +311,7 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
                     'fields'        => array(
                         'cb_link_file' => array(
                                 'type'          => 'zestsms-file',
-                                'label'         => __('File', 'fl-builder'),
+                                'label'         => __('File', 'cb-custom-modules'),
                                 'show_remove'	=> false
                         ),
                     )
@@ -321,7 +321,7 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
                     'fields'        => array(
 						'cb_link_link' => array(
 							'type'          => 'link',
-							'label'         => __('Link', 'fl-builder'),
+							'label'         => __('Link', 'cb-custom-modules'),
 							'connections'   => array( 'url' )
 						),
                     )
@@ -330,32 +330,32 @@ FLBuilder::register_settings_form('cb_button_list_form_field', array(
         ),
 
 		'button'      => array(
-			'title'         => __('Colors', 'fl-builder'),
+			'title'         => __('Colors', 'cb-custom-modules'),
 			'sections'      => array(
 				'btn_colors'     => array(
-					'title'         => __('', 'fl-builder'),
+					'title'         => __('', 'cb-custom-modules'),
 					'fields'        => array(
 						'btn_bg_color'  => array(
 							'type'          => 'color',
-							'label'         => __('Background Color', 'fl-builder'),
+							'label'         => __('Background Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true
 						),
 						'btn_bg_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Background Hover Color', 'fl-builder'),
+							'label'         => __('Background Hover Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true,
 						),
 						'btn_text_color' => array(
 							'type'          => 'color',
-							'label'         => __('Text Color', 'fl-builder'),
+							'label'         => __('Text Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true
 						),
 						'btn_text_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Text Hover Color', 'fl-builder'),
+							'label'         => __('Text Hover Color', 'cb-custom-modules'),
 							'default'       => '',
 							'show_reset'    => true,
 						)

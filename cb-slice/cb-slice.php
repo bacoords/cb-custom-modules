@@ -17,9 +17,9 @@ class CBCustomSliceModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Slice', 'fl-builder'),
-            'description'   => __('Display a gallery.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Slice', 'cb-custom-modules'),
+            'description'   => __('Display a gallery.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'icon'      => 'format-gallery.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-slice/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-slice/',
@@ -45,35 +45,35 @@ class CBCustomSliceModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomSliceModule', array(
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('General', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'options'       => array( // Section
-                'title'         => __('Design', 'fl-builder'), // Section Title
+                'title'         => __('Design', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 										'cb_slice_bg_color' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Divider Color', 'fl-builder' ),
+                        'label'         => __( 'Divider Color', 'cb-custom-modules' ),
                         'default'       => 'ffffff',
                         'show_reset'    => true
 										),
                   'cb_slice_row_limit' => array(
                       'type'          => 'text',
-                      'label'         => __( 'Images Per Row', 'fl-builder' ),
+                      'label'         => __( 'Images Per Row', 'cb-custom-modules' ),
                       'default'       => '',
                       'maxlength'     => '2',
                       'size'          => '3',
-                      'placeholder'   => __( '', 'fl-builder' ),
-                      'description'   => __( 'images', 'fl-builder' ),
-                      'help'          => __( 'If left blank or set to zero, there will be no limit.', 'fl-builder' )
+                      'placeholder'   => __( '', 'cb-custom-modules' ),
+                      'description'   => __( 'images', 'cb-custom-modules' ),
+                      'help'          => __( 'If left blank or set to zero, there will be no limit.', 'cb-custom-modules' )
                   ),
                 )
             ),
             'photos'       => array( // Section
-                'title'         => __('Select Photos', 'fl-builder'), // Section Title
+                'title'         => __('Select Photos', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_slice_multiple_photos_field' => array(
 							'type'          => 'multiple-photos',
-							'label'         => __( 'Select all photos', 'fl-builder' ),
+							'label'         => __( 'Select all photos', 'cb-custom-modules' ),
 							'connections'   => array( 'multiple-photos' )
 					),
                 )

@@ -4,7 +4,7 @@
 function zestsms_cb_pdf_field( $name, $value, $field ) { ?>
 <?php $pdf = FLBuilderPhoto::get_attachment_data($value); ?>
 <div class="fl-pdf-field fl-builder-custom-field<?php if(empty($value) || !$pdf) echo ' fl-pdf-empty'; if(isset($field['class'])) echo ' ' . $field['class']; ?>">
-	<a class="fl-pdf-select" href="javascript:void(0);" onclick="return false;"><?php _e('Select File', 'fl-builder'); ?></a>
+	<a class="fl-pdf-select" href="javascript:void(0);" onclick="return false;"><?php _e('Select File', 'cb-custom-modules'); ?></a>
 	<div class="fl-pdf-preview">
 		<?php if(!empty($value) && $pdf) : ?>
 		<div class="fl-pdf-preview-img">
@@ -18,8 +18,8 @@ function zestsms_cb_pdf_field( $name, $value, $field ) { ?>
 		<span class="fl-pdf-preview-filename"></span>
 		<?php endif; ?>
 		<br />
-		<a class="fl-pdf-replace" href="javascript:void(0);" onclick="return false;"><?php _e('Replace File', 'fl-builder'); ?></a>
-		<a class="fl-pdf-remove" href="javascript:void(0);" onclick="return false;"><?php _e('Remove File', 'fl-builder'); ?></a>
+		<a class="fl-pdf-replace" href="javascript:void(0);" onclick="return false;"><?php _e('Replace File', 'cb-custom-modules'); ?></a>
+		<a class="fl-pdf-remove" href="javascript:void(0);" onclick="return false;"><?php _e('Remove File', 'cb-custom-modules'); ?></a>
 		<div class="fl-clear"></div>
 	</div>
 	<input name="<?php echo $name; ?>" type="hidden" value='<?php echo $value; ?>' />

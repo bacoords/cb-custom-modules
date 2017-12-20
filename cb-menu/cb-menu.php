@@ -15,9 +15,9 @@ class CBCustomMenuModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'          	=> __( 'CB Advanced Menu', 'fl-builder' ),
-			'description'   	=> __( 'Default BB Menu Module but with a solid horizontal submenu.', 'fl-builder' ),
-			'category'      	=> __( 'CB Custom Modules', 'fl-builder' ),
+			'name'          	=> __( 'CB Advanced Menu', 'cb-custom-modules' ),
+			'description'   	=> __( 'Default BB Menu Module but with a solid horizontal submenu.', 'cb-custom-modules' ),
+			'category'      	=> __( 'CB Custom Modules', 'cb-custom-modules' ),
 			'partial_refresh'	=> true,
 			'editor_export' 	=> false,
 			'icon'				=> 'hamburger-menu.svg',
@@ -40,14 +40,14 @@ class CBCustomMenuModule extends FLBuilderModule {
 				echo '</div>';
 
 				if ( 'hamburger-label' == $toggle ) {
-					echo '<span class="fl-cb-menu-mobile-toggle-label">' . __( 'Menu', 'fl-builder' ) . '</span>';
+					echo '<span class="fl-cb-menu-mobile-toggle-label">' . __( 'Menu', 'cb-custom-modules' ) . '</span>';
 				}
 
 				echo '</button>';
 
 			} elseif ( 'text' == $toggle ) {
 
-				echo '<button class="fl-cb-menu-mobile-toggle text"><span class="fl-cb-menu-mobile-toggle-label">' . __( 'Menu', 'fl-builder' ) . '</span></button>';
+				echo '<button class="fl-cb-menu-mobile-toggle text"><span class="fl-cb-menu-mobile-toggle-label">' . __( 'Menu', 'cb-custom-modules' ) . '</span></button>';
 
 			}
 		}
@@ -126,7 +126,7 @@ class CBCustomMenuModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomMenuModule', array(
 	'general'       => array( // Tab
-		'title'         => __( 'General', 'fl-builder' ), // Tab title
+		'title'         => __( 'General', 'cb-custom-modules' ), // Tab title
 		'sections'      => array( // Tab Sections
 			'general'       => array( // Section
 				'title'         => '', // Section Title
@@ -134,10 +134,10 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					'menu' => FLMenuModule::_get_menus(),
 					'menu_layout' => array(
 						'type'          => 'select',
-						'label'         => __( 'Layout', 'fl-builder' ),
+						'label'         => __( 'Layout', 'cb-custom-modules' ),
 						'default'       => 'horizontal',
 						'options'       => array(
-							'horizontal'	=> __( 'Pancake', 'fl-builder' ),
+							'horizontal'	=> __( 'Pancake', 'cb-custom-modules' ),
 						),
 						'toggle'		=> array(
 							'horizontal'	=> array(
@@ -153,45 +153,45 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'submenu_hover_toggle' => array(
 						'type'          => 'select',
-						'label'         => __( 'Submenu Icon', 'fl-builder' ),
+						'label'         => __( 'Submenu Icon', 'cb-custom-modules' ),
 						'default'       => 'none',
 						'options'       => array(
-							'arrows'		=> __( 'Arrows', 'fl-builder' ),
-							'plus'			=> __( 'Plus sign', 'fl-builder' ),
-							'none'			=> __( 'None', 'fl-builder' ),
+							'arrows'		=> __( 'Arrows', 'cb-custom-modules' ),
+							'plus'			=> __( 'Plus sign', 'cb-custom-modules' ),
+							'none'			=> __( 'None', 'cb-custom-modules' ),
 						),
 					),
 					'submenu_click_toggle' => array(
 						'type'          => 'select',
-						'label'         => __( 'Submenu Icon click', 'fl-builder' ),
+						'label'         => __( 'Submenu Icon click', 'cb-custom-modules' ),
 						'default'       => 'arrows',
 						'options'       => array(
-							'arrows'		=> __( 'Arrows', 'fl-builder' ),
-							'plus'			=> __( 'Plus sign', 'fl-builder' ),
+							'arrows'		=> __( 'Arrows', 'cb-custom-modules' ),
+							'plus'			=> __( 'Plus sign', 'cb-custom-modules' ),
 						),
 					),
 					'collapse'   => array(
 						'type'          => 'select',
-						'label'         => __( 'Collapse Inactive', 'fl-builder' ),
+						'label'         => __( 'Collapse Inactive', 'cb-custom-modules' ),
 						'default'       => '1',
 						'options'       => array(
-							'1'             => __( 'Yes', 'fl-builder' ),
-							'0'             => __( 'No', 'fl-builder' ),
+							'1'             => __( 'Yes', 'cb-custom-modules' ),
+							'0'             => __( 'No', 'cb-custom-modules' ),
 						),
-						'help'          => __( 'Choosing yes will keep only one item open at a time. Choosing no will allow multiple items to be open at the same time.', 'fl-builder' ),
+						'help'          => __( 'Choosing yes will keep only one item open at a time. Choosing no will allow multiple items to be open at the same time.', 'cb-custom-modules' ),
 						'preview'       => array(
 							'type'          => 'none',
 						),
 					),
 					'persist_active'   => array(
 						'type'          => 'select',
-						'label'         => __( 'Persistent Active Submenu', 'fl-builder' ),
+						'label'         => __( 'Persistent Active Submenu', 'cb-custom-modules' ),
 						'default'       => '0',
 						'options'       => array(
-						'0'             => __( 'No', 'fl-builder' ),
-							'1'             => __( 'Yes', 'fl-builder' ),
+						'0'             => __( 'No', 'cb-custom-modules' ),
+							'1'             => __( 'Yes', 'cb-custom-modules' ),
 						),
-						'help'          => __( 'Choosing yes will always display the submenu if it contains the current page.', 'fl-builder' ),
+						'help'          => __( 'Choosing yes will always display the submenu if it contains the current page.', 'cb-custom-modules' ),
 						'preview'       => array(
 							'type'          => 'none',
 						),
@@ -199,17 +199,17 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'mobile'       => array(
-				'title'         => __( 'Responsive', 'fl-builder' ),
+				'title'         => __( 'Responsive', 'cb-custom-modules' ),
 				'fields'        => array(
 					'mobile_toggle' => array(
 						'type'          => 'select',
-						'label'         => __( 'Responsive Toggle', 'fl-builder' ),
+						'label'         => __( 'Responsive Toggle', 'cb-custom-modules' ),
 						'default'       => 'hamburger',
 						'options'       => array(
-							'hamburger'			=> __( 'Hamburger Icon', 'fl-builder' ),
-							'hamburger-label'	=> __( 'Hamburger Icon + Label', 'fl-builder' ),
-							'text'				=> __( 'Menu Button', 'fl-builder' ),
-							'expanded'			=> __( 'None', 'fl-builder' ),
+							'hamburger'			=> __( 'Hamburger Icon', 'cb-custom-modules' ),
+							'hamburger-label'	=> __( 'Hamburger Icon + Label', 'cb-custom-modules' ),
+							'text'				=> __( 'Menu Button', 'cb-custom-modules' ),
+							'expanded'			=> __( 'None', 'cb-custom-modules' ),
 						),
 						'toggle'		=> array(
 							'hamburger'	=> array(
@@ -225,12 +225,12 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'mobile_full_width' => array(
 						'type'          => 'select',
-						'label'         => __( 'Responsive Style', 'fl-builder' ),
+						'label'         => __( 'Responsive Style', 'cb-custom-modules' ),
 						'default'       => 'no',
 						'options'       => array(
-							'no'			=> __( 'Inline', 'fl-builder' ),
-							'below'			=> __( 'Below Row', 'fl-builder' ),
-							'yes'			=> __( 'Overlay', 'fl-builder' ),
+							'no'			=> __( 'Inline', 'cb-custom-modules' ),
+							'below'			=> __( 'Below Row', 'cb-custom-modules' ),
+							'yes'			=> __( 'Overlay', 'cb-custom-modules' ),
 						),
 						'toggle'		=> array(
 							'yes'	=> array(
@@ -243,12 +243,12 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'mobile_breakpoint' => array(
 						'type'          => 'select',
-						'label'         => __( 'Responsive Breakpoint', 'fl-builder' ),
+						'label'         => __( 'Responsive Breakpoint', 'cb-custom-modules' ),
 						'default'       => 'mobile',
 						'options'       => array(
-							'always'		=> __( 'Always', 'fl-builder' ),
-							'medium-mobile'	=> __( 'Medium & Small Devices Only', 'fl-builder' ),
-							'mobile'		=> __( 'Small Devices Only', 'fl-builder' ),
+							'always'		=> __( 'Always', 'cb-custom-modules' ),
+							'medium-mobile'	=> __( 'Medium & Small Devices Only', 'cb-custom-modules' ),
+							'mobile'		=> __( 'Small Devices Only', 'cb-custom-modules' ),
 						),
 					),
 				),
@@ -256,39 +256,39 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 		),
 	),
 	'stylemain'         => array( // Tab
-		'title'         => __( 'Main Styles', 'fl-builder' ), // Tab title
+		'title'         => __( 'Main Styles', 'cb-custom-modules' ), // Tab title
 		'sections'      => array( // Tab Sections
 			'general_style'    => array(
 				'title'         => '',
 				'fields'        => array(
 					'menu_align' => array(
 						'type'          => 'select',
-						'label'         => __( 'Menu Alignment', 'fl-builder' ),
+						'label'         => __( 'Menu Alignment', 'cb-custom-modules' ),
 						'default'       => 'default',
 						'options'       => array(
-							'default'		=> __( 'Default', 'fl-builder' ),
-							'left'			=> __( 'Left', 'fl-builder' ),
-							'center'		=> __( 'Center', 'fl-builder' ),
-							'right'			=> __( 'Right', 'fl-builder' ),
+							'default'		=> __( 'Default', 'cb-custom-modules' ),
+							'left'			=> __( 'Left', 'cb-custom-modules' ),
+							'center'		=> __( 'Center', 'cb-custom-modules' ),
+							'right'			=> __( 'Right', 'cb-custom-modules' ),
 						),
 					),
 					'drop_shadow' => array(
 						'type'          => 'select',
-						'label'         => __( 'Submenu Drop Shadow', 'fl-builder' ),
+						'label'         => __( 'Submenu Drop Shadow', 'cb-custom-modules' ),
 						'default'       => 'yes',
 						'options'       => array(
-							'no'			=> __( 'No', 'fl-builder' ),
-							'yes'			=> __( 'Yes', 'fl-builder' ),
+							'no'			=> __( 'No', 'cb-custom-modules' ),
+							'yes'			=> __( 'Yes', 'cb-custom-modules' ),
 						),
 					),
 				),
 			),
 			'spacing'    	=> array(
-				'title'         => __( 'Spacing', 'fl-builder' ),
+				'title'         => __( 'Spacing', 'cb-custom-modules' ),
 				'fields'        => array(
 					'horizontal_spacing' => array(
 						'type'          => 'text',
-						'label'         => __( 'Link Horizontal Spacing', 'fl-builder' ),
+						'label'         => __( 'Link Horizontal Spacing', 'cb-custom-modules' ),
 						'default'       => '14',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -311,7 +311,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'vertical_spacing' => array(
 						'type'          => 'text',
-						'label'         => __( 'Link Vertical Spacing', 'fl-builder' ),
+						'label'         => __( 'Link Vertical Spacing', 'cb-custom-modules' ),
 						'default'       => '10',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -335,11 +335,11 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'text_style'    => array(
-				'title'         => __( 'Text', 'fl-builder' ),
+				'title'         => __( 'Text', 'cb-custom-modules' ),
 				'fields'        => array(
 					'link_color'    => array(
 						'type'          => 'color',
-						'label'         => __( 'Link Color', 'fl-builder' ),
+						'label'         => __( 'Link Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -357,7 +357,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'link_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Link Hover Color', 'fl-builder' ),
+						'label'         => __( 'Link Hover Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -371,7 +371,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 							'family'		=> 'Default',
 							'weight'		=> 300,
 						),
-						'label'         => __( 'Link Font', 'fl-builder' ),
+						'label'         => __( 'Link Font', 'cb-custom-modules' ),
 						'preview'         => array(
 							'type'            => 'font',
 							'selector'        => '.menu',
@@ -379,7 +379,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'text_size' => array(
 						'type'          => 'text',
-						'label'         => __( 'Link Size', 'fl-builder' ),
+						'label'         => __( 'Link Size', 'cb-custom-modules' ),
 						'default'       => '16',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -393,13 +393,13 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'text_transform' => array(
 						'type'          => 'select',
-						'label'         => __( 'Link Format', 'fl-builder' ),
+						'label'         => __( 'Link Format', 'cb-custom-modules' ),
 						'default'       => 'none',
 						'options'       => array(
-							'none'			=> __( 'None', 'fl-builder' ),
-							'uppercase'		=> __( 'Uppercase', 'fl-builder' ),
-							'lowercase'		=> __( 'Lowercase', 'fl-builder' ),
-							'capitalize'	=> __( 'Capitalize', 'fl-builder' ),
+							'none'			=> __( 'None', 'cb-custom-modules' ),
+							'uppercase'		=> __( 'Uppercase', 'cb-custom-modules' ),
+							'lowercase'		=> __( 'Lowercase', 'cb-custom-modules' ),
+							'capitalize'	=> __( 'Capitalize', 'cb-custom-modules' ),
 						),
 						'preview'      => array(
 							'type'         => 'css',
@@ -410,11 +410,11 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'menu_style'    => array(
-				'title'         => __( 'Backgrounds', 'fl-builder' ),
+				'title'         => __( 'Backgrounds', 'cb-custom-modules' ),
 				'fields'        => array(
 					'menu_bg_color'   => array(
 						'type'          => 'color',
-						'label'         => __( 'Menu Background Color', 'fl-builder' ),
+						'label'         => __( 'Menu Background Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -424,12 +424,12 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'mobile_menu_bg'   => array(
 						'type'          => 'color',
-						'label'         => __( 'Menu Background Color (Mobile)', 'fl-builder' ),
+						'label'         => __( 'Menu Background Color (Mobile)', 'cb-custom-modules' ),
 						'show_reset'    => true,
 					),
 					'menu_bg_opacity' => array(
 						'type'          => 'text',
-						'label'         => __( 'Menu Background Opacity', 'fl-builder' ),
+						'label'         => __( 'Menu Background Opacity', 'cb-custom-modules' ),
 						'default'       => '100',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -437,7 +437,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'link_hover_bg_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Link Background Hover Color', 'fl-builder' ),
+						'label'         => __( 'Link Background Hover Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -448,15 +448,15 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'separator_style'    => array(
-				'title'         => __( 'Separator', 'fl-builder' ),
+				'title'         => __( 'Separator', 'cb-custom-modules' ),
 				'fields'        => array(
 					'show_separator' => array(
 						'type'          => 'select',
-						'label'         => __( 'Show Separators', 'fl-builder' ),
+						'label'         => __( 'Show Separators', 'cb-custom-modules' ),
 						'default'       => 'no',
 						'options'       => array(
-							'no'			=> __( 'No', 'fl-builder' ),
-							'yes'			=> __( 'Yes', 'fl-builder' ),
+							'no'			=> __( 'No', 'cb-custom-modules' ),
+							'yes'			=> __( 'Yes', 'cb-custom-modules' ),
 						),
 						'toggle'		=> array(
 							'yes'			=> array(
@@ -466,12 +466,12 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'separator_color'   => array(
 						'type'          => 'color',
-						'label'         => __( 'Separator Color', 'fl-builder' ),
+						'label'         => __( 'Separator Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 					),
 					'separator_opacity' => array(
 						'type'          => 'text',
-						'label'         => __( 'Separator Opacity', 'fl-builder' ),
+						'label'         => __( 'Separator Opacity', 'cb-custom-modules' ),
 						'default'       => '100',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -482,14 +482,14 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 		),
 	),
 	'stylesub'         => array( // Tab
-		'title'         => __( 'Sub Level Styles', 'fl-builder' ), // Tab title
+		'title'         => __( 'Sub Level Styles', 'cb-custom-modules' ), // Tab title
 		'sections'      => array( // Tab Sections
 			'spacing'    	=> array(
-				'title'         => __( 'Spacing', 'fl-builder' ),
+				'title'         => __( 'Spacing', 'cb-custom-modules' ),
 				'fields'        => array(
 					'submenu_spacing' => array(
 						'type'          => 'text',
-						'label'         => __( 'Submenu Spacing', 'fl-builder' ),
+						'label'         => __( 'Submenu Spacing', 'cb-custom-modules' ),
 						'default'       => '0',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -501,11 +501,11 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'text_style'    => array(
-				'title'         => __( 'Text', 'fl-builder' ),
+				'title'         => __( 'Text', 'cb-custom-modules' ),
 				'fields'        => array(
 					'sub_link_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Sub Menu Link Hover Color', 'fl-builder' ),
+						'label'         => __( 'Sub Menu Link Hover Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -515,7 +515,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'sub_link_hover_bg_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Sub Menu Link Background Hover Color', 'fl-builder' ),
+						'label'         => __( 'Sub Menu Link Background Hover Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'preview'      => array(
 							'type'         => 'css',
@@ -526,11 +526,11 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 				),
 			),
 			'menu_style'    => array(
-				'title'         => __( 'Backgrounds', 'fl-builder' ),
+				'title'         => __( 'Backgrounds', 'cb-custom-modules' ),
 				'fields'        => array(
 					'submenu_bg_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Submenu Background Color', 'fl-builder' ),
+						'label'         => __( 'Submenu Background Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'default'		=> 'ffffff',
 						'preview'      => array(
@@ -541,7 +541,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'submenu_bg_opacity' => array(
 						'type'          => 'text',
-						'label'         => __( 'Submenu Background Opacity', 'fl-builder' ),
+						'label'         => __( 'Submenu Background Opacity', 'cb-custom-modules' ),
 						'default'       => '100',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -549,7 +549,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'sub_submenu_bg_color' => array(
 						'type'          => 'color',
-						'label'         => __( 'Second Submenu Background Color', 'fl-builder' ),
+						'label'         => __( 'Second Submenu Background Color', 'cb-custom-modules' ),
 						'show_reset'    => true,
 						'default'		=> 'ffffff',
 						'preview'      => array(
@@ -560,7 +560,7 @@ FLBuilder::register_module('CBCustomMenuModule', array(
 					),
 					'sub_submenu_bg_opacity' => array(
 						'type'          => 'text',
-						'label'         => __( 'Second Submenu Background Opacity', 'fl-builder' ),
+						'label'         => __( 'Second Submenu Background Opacity', 'cb-custom-modules' ),
 						'default'       => '100',
 						'maxlength'     => '3',
 						'size'          => '4',

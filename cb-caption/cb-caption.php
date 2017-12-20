@@ -17,9 +17,9 @@ class CBCustomCaptionModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Legend', 'fl-builder'),
-            'description'   => __('Photo Module with a secret caption.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Legend', 'cb-custom-modules'),
+            'description'   => __('Photo Module with a secret caption.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'icon'        => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-caption/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-caption/',
@@ -35,27 +35,27 @@ class CBCustomCaptionModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomCaptionModule', array(
     'content'       => array( // Tab
-        'title'         => __('Content', 'fl-builder'), // Tab title
+        'title'         => __('Content', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'content'       => array( // Section
-                'title'         => __('Content', 'fl-builder'), // Section Title
+                'title'         => __('Content', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_caption_link_field' => array(
 							'type'          => 'link',
-							'label'         => __('Link (optional)', 'fl-builder'),
-							'help'          => __( 'Set the photo to be a link. You can also input links in the editor below.', 'fl-builder' ),
+							'label'         => __('Link (optional)', 'cb-custom-modules'),
+							'help'          => __( 'Set the photo to be a link. You can also input links in the editor below.', 'cb-custom-modules' ),
 							'connections'   => array( 'url' )
 					),
                     'cb_caption_vertical_align' => array(
                         'type'          => 'select',
-                        'label'         => __( 'Vertical Alignment', 'fl-builder' ),
+                        'label'         => __( 'Vertical Alignment', 'cb-custom-modules' ),
                         'default'       => 'center',
                         'options'       => array(
-                            'flex-start'      => __( 'Top', 'fl-builder' ),
-                            'center'      => __( 'Center', 'fl-builder' ),
-                            'flex-end'      => __( 'Bottom', 'fl-builder' )
+                            'flex-start'      => __( 'Top', 'cb-custom-modules' ),
+                            'center'      => __( 'Center', 'cb-custom-modules' ),
+                            'flex-end'      => __( 'Bottom', 'cb-custom-modules' )
                         ),
-												'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'fl-builder' )
+												'help'          => __( 'Vertical alignment is not currently supported in Internet Explorer.', 'cb-custom-modules' )
                     ),
                     'cb_caption_editor_field' => array(
 							'type'          => 'editor',
@@ -68,30 +68,30 @@ FLBuilder::register_module('CBCustomCaptionModule', array(
         )
     ),
       'design'       => array( // Tab
-        'title'         => __('Design', 'fl-builder'), // Tab title
+        'title'         => __('Design', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('Design', 'fl-builder'), // Section Title
+                'title'         => __('Design', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_caption_photo' => array(
 							'type'          => 'photo',
-							'label'         => __('Photo', 'fl-builder'),
+							'label'         => __('Photo', 'cb-custom-modules'),
 							'show_remove'	=> false,
 							'connections'   => array( 'photo' )
 					),
                     'cb_caption_photo_align' => array(
                         'type'          => 'select',
-                        'label'         => __( 'Photo Alignment', 'fl-builder' ),
+                        'label'         => __( 'Photo Alignment', 'cb-custom-modules' ),
                         'default'       => 'left',
                         'options'       => array(
-                            'left'      => __( 'Left', 'fl-builder' ),
-                            'center'      => __( 'Center', 'fl-builder' ),
-                            'right'      => __( 'Right', 'fl-builder' ),
+                            'left'      => __( 'Left', 'cb-custom-modules' ),
+                            'center'      => __( 'Center', 'cb-custom-modules' ),
+                            'right'      => __( 'Right', 'cb-custom-modules' ),
                         ),
                     ),
                     'cb_caption_color_field' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Background/Overlay Color', 'fl-builder' ),
+                        'label'         => __( 'Background/Overlay Color', 'cb-custom-modules' ),
                         'default'       => '000000',
                         'show_reset'    => true
                     ),

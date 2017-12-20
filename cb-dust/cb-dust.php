@@ -17,9 +17,9 @@ class CBCustomDustModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Dust', 'fl-builder'),
-            'description'   => __('Have fun with Particles.js.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Dust', 'cb-custom-modules'),
+            'description'   => __('Have fun with Particles.js.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-dust/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-dust/',
             'icon'          => 'star-filled.svg',
@@ -35,54 +35,54 @@ class CBCustomDustModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomDustModule', array(
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('General', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('Design', 'fl-builder'), // Section Title
+                'title'         => __('Design', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
                    'cb_dust_particles' => array(
                         'type'          => 'select',
-                        'label'         => __( 'Select a Theme', 'fl-builder' ),
+                        'label'         => __( 'Select a Theme', 'cb-custom-modules' ),
                         'default'       => 'neural',
                         'options'       => array(
-                            'neural'      => __( 'Neural', 'fl-builder' ),
-                            'rain'      => __( 'Rain', 'fl-builder' ),
-                            'snow'      => __( 'Snow', 'fl-builder' ),
-                            'stars'      => __( 'Stars', 'fl-builder' ),
-                            'bubbles'      => __( 'Bubbles', 'fl-builder' )
+                            'neural'      => __( 'Neural', 'cb-custom-modules' ),
+                            'rain'      => __( 'Rain', 'cb-custom-modules' ),
+                            'snow'      => __( 'Snow', 'cb-custom-modules' ),
+                            'stars'      => __( 'Stars', 'cb-custom-modules' ),
+                            'bubbles'      => __( 'Bubbles', 'cb-custom-modules' )
                         ),
                     ),
                    'cb_dust_mouse' => array(
                         'type'          => 'select',
-                        'label'         => __( 'Mouse Interaction', 'fl-builder' ),
+                        'label'         => __( 'Mouse Interaction', 'cb-custom-modules' ),
                         'default'       => 'bg',
                         'options'       => array(
-                            'bg'      	   => __( 'Particle Effect', 'fl-builder' ),
-                            'content'      => __( 'Content', 'fl-builder' )
+                            'bg'      	   => __( 'Particle Effect', 'cb-custom-modules' ),
+                            'content'      => __( 'Content', 'cb-custom-modules' )
                         ),
-						'help'          => __( 'Change to \'Content\' to allow links inside of this module.', 'fl-builder' )
+						'help'          => __( 'Change to \'Content\' to allow links inside of this module.', 'cb-custom-modules' )
                     ),
                     'cb_dust_bg_color' => array(
                         'type'          => 'color',
-                        'label'         => __( 'Background Color', 'fl-builder' ),
+                        'label'         => __( 'Background Color', 'cb-custom-modules' ),
                         'default'       => '494949',
                         'show_reset'    => true
                     ),
 					'cb_dust_min_height' => array(
 							'type'          => 'text',
-							'label'         => __( 'Row Height', 'fl-builder' ),
+							'label'         => __( 'Row Height', 'cb-custom-modules' ),
 							'default'       => '',
 							'maxlength'     => '4',
 							'size'          => '6',
-							'placeholder'   => __( '420', 'fl-builder' ),
+							'placeholder'   => __( '420', 'cb-custom-modules' ),
 							'class'         => 'my-css-class',
-							'description'   => __( 'px', 'fl-builder' ),
-							'help'          => __( 'Set a custom height in pixels. Default: 420px.', 'fl-builder' )
+							'description'   => __( 'px', 'cb-custom-modules' ),
+							'help'          => __( 'Set a custom height in pixels. Default: 420px.', 'cb-custom-modules' )
 					),
                 )
             ),
             'content'       => array( // Section
-                'title'         => __('Content', 'fl-builder'), // Section Title
+                'title'         => __('Content', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
                     'cb_dust_editor' => array(
 							'type'          => 'editor',

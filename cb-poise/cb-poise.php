@@ -17,10 +17,10 @@ class CBCustomPoiseModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Poise', 'fl-builder'),
-            'description'   => __('Display elements with poise.', 'fl-builder'),
+            'name'          => __('Poise', 'cb-custom-modules'),
+            'description'   => __('Display elements with poise.', 'cb-custom-modules'),
             'icon'          => 'format-gallery.svg',
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-poise/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-poise/',
             'editor_export' => true, // Defaults to true and can be omitted.
@@ -35,30 +35,30 @@ class CBCustomPoiseModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomPoiseModule', array(
     'general'       => array( // Tab
-        'title'         => __('General', 'fl-builder'), // Tab title
+        'title'         => __('General', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('Design', 'fl-builder'), // Section Title
+                'title'         => __('Design', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_poise_text_field' => array(
 							'type'          => 'text',
-							'label'         => __( 'Columns', 'fl-builder' ),
+							'label'         => __( 'Columns', 'cb-custom-modules' ),
 							'default'       => '',
 							'maxlength'     => '2',
 							'size'          => '4',
-							'placeholder'   => __( '5', 'fl-builder' ),
+							'placeholder'   => __( '5', 'cb-custom-modules' ),
 							'class'         => 'my-css-class',
-							'description'   => __( 'columns', 'fl-builder' ),
-							'help'          => __( 'Set the max number of images per row.', 'fl-builder' )
+							'description'   => __( 'columns', 'cb-custom-modules' ),
+							'help'          => __( 'Set the max number of images per row.', 'cb-custom-modules' )
 					),
                 )
             ),
             'photos'       => array( // Section
-                'title'         => __('Photos', 'fl-builder'), // Section Title
+                'title'         => __('Photos', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_poise_multiple_photos_field' => array(
 							'type'          => 'multiple-photos',
-							'label'         => __( 'Select all photos', 'fl-builder' ),
+							'label'         => __( 'Select all photos', 'cb-custom-modules' ),
 							'connections'   => array( 'multiple-photos' )
 					),
                 )

@@ -17,9 +17,9 @@ class CBCustomLinkListModule extends FLBuilderModule {
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Link List', 'fl-builder'),
-            'description'   => __('Create a list of links from URLs or Media Library files.', 'fl-builder'),
-            'category'		=> __('CB Custom Modules', 'fl-builder'),
+            'name'          => __('Link List', 'cb-custom-modules'),
+            'description'   => __('Create a list of links from URLs or Media Library files.', 'cb-custom-modules'),
+            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
             'icon'        => 'text.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-link-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-link-list/',
@@ -35,14 +35,14 @@ class CBCustomLinkListModule extends FLBuilderModule {
  */
 FLBuilder::register_module('CBCustomLinkListModule', array(
     'general'       => array( // Tab
-        'title'         => __('Assets', 'fl-builder'), // Tab title
+        'title'         => __('Assets', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'design'       => array( // Section
-                'title'         => __('', 'fl-builder'), // Section Title
+                'title'         => __('', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_link_list_form_field_repeater' => array(
 							'type'          => 'form',
-							'label'         => __('Link', 'fl-builder'),
+							'label'         => __('Link', 'cb-custom-modules'),
 							'form'          => 'cb_link_list_form_field', // ID of a registered form.
 							'preview_text'  => 'cb_link_label', // ID of a field to use for the preview text.
 							'multiple' 			=> true,
@@ -52,14 +52,14 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
         )
     ),
     'style'       => array( // Tab
-        'title'         => __('Style', 'fl-builder'), // Tab title
+        'title'         => __('Style', 'cb-custom-modules'), // Tab title
         'sections'      => array( // Tab Sections
             'settings'       => array( // Section
-                'title'         => __('', 'fl-builder'), // Section Title
+                'title'         => __('', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_link_list_icon_size'          => array(
 						'type'          => 'text',
-						'label'         => __('Icon Size', 'fl-builder'),
+						'label'         => __('Icon Size', 'cb-custom-modules'),
 						'default'       => '30',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -67,7 +67,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_list_font' => array(
 						'type'          => 'font',
-						'label'         => __( 'Font', 'fl-builder' ),
+						'label'         => __( 'Font', 'cb-custom-modules' ),
 						'default'       => array(
 							'family'        => 'Default',
 							'weight'        => 'default'
@@ -75,7 +75,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_list_line_height'          => array(
 						'type'          => 'text',
-						'label'         => __('Line Height', 'fl-builder'),
+						'label'         => __('Line Height', 'cb-custom-modules'),
 						'default'       => '1.4',
 						'maxlength'     => '4',
 						'size'          => '4',
@@ -83,7 +83,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_list_label_font_size' => array(
 						'type'          => 'text',
-						'label'         => __('Label Font Size', 'fl-builder'),
+						'label'         => __('Label Font Size', 'cb-custom-modules'),
 						'default'       => '24',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -91,7 +91,7 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_list_filesize_font_size' => array(
 						'type'          => 'text',
-						'label'         => __('Filesize Font Size', 'fl-builder'),
+						'label'         => __('Filesize Font Size', 'cb-custom-modules'),
 						'default'       => '24',
 						'maxlength'     => '3',
 						'size'          => '4',
@@ -100,16 +100,16 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
                 )
             ),
             'color'       => array( // Section
-                'title'         => __('Colors', 'fl-builder'), // Section Title
+                'title'         => __('Colors', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
 					'cb_link_icon_color'         => array(
 						'type'          => 'color',
-						'label'         => __('Icon Default Color', 'fl-builder'),
+						'label'         => __('Icon Default Color', 'cb-custom-modules'),
 						'show_reset'    => true
 					),
 					'cb_link_icon_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __('Icon Hover Default Color', 'fl-builder'),
+						'label'         => __('Icon Hover Default Color', 'cb-custom-modules'),
 						'show_reset'    => true,
 						'preview'       => array(
 							'type'          => 'none'
@@ -117,12 +117,12 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_icon_bg_color'         => array(
 						'type'          => 'color',
-						'label'         => __('Icon Default Background Color', 'fl-builder'),
+						'label'         => __('Icon Default Background Color', 'cb-custom-modules'),
 						'show_reset'    => true
 					),
 					'cb_link_icon_bg_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __('Icon Hover Default Background Color', 'fl-builder'),
+						'label'         => __('Icon Hover Default Background Color', 'cb-custom-modules'),
 						'show_reset'    => true,
 						'preview'       => array(
 							'type'          => 'none'
@@ -130,12 +130,12 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_font_color'      => array(
 						'type'          => 'color',
-						'label'         => __('Font Default Color', 'fl-builder'),
+						'label'         => __('Font Default Color', 'cb-custom-modules'),
 						'show_reset'    => true
 					),
 					'cb_link_font_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __('Font Hover Default Color', 'fl-builder'),
+						'label'         => __('Font Hover Default Color', 'cb-custom-modules'),
 						'show_reset'    => true,
 						'preview'       => array(
 							'type'          => 'none'
@@ -143,12 +143,12 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
 					),
 					'cb_link_filesize_color'      => array(
 						'type'          => 'color',
-						'label'         => __('Filesize Default Color', 'fl-builder'),
+						'label'         => __('Filesize Default Color', 'cb-custom-modules'),
 						'show_reset'    => true
 					),
 					'cb_link_filesize_hover_color' => array(
 						'type'          => 'color',
-						'label'         => __('Filesize Hover Default Color', 'fl-builder'),
+						'label'         => __('Filesize Hover Default Color', 'cb-custom-modules'),
 						'show_reset'    => true,
 						'preview'       => array(
 							'type'          => 'none'
@@ -164,23 +164,23 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
  * Register form
  */
 FLBuilder::register_settings_form('cb_link_list_form_field', array(
-    'title' => __('New Link', 'fl-builder'),
+    'title' => __('New Link', 'cb-custom-modules'),
     'tabs'  => array(
         'file'      => array(
-            'title'         => __('Link', 'fl-builder'),
+            'title'         => __('Link', 'cb-custom-modules'),
             'sections'      => array(
                 'label'       => array(
                     'title'         => 'Label',
                     'fields'        => array(
                         'cb_link_label' => array(
                                 'type'          => 'text',
-                                'label'         => __( 'Label', 'fl-builder' ),
+                                'label'         => __( 'Label', 'cb-custom-modules' ),
                                 'default'       => 'New Link',
                                 'maxlength'     => '140',
                                 'size'          => '45',
-                                'placeholder'   => __( 'Describe image here', 'fl-builder' ),
+                                'placeholder'   => __( 'Describe image here', 'cb-custom-modules' ),
                                 'class'         => 'my-css-class',
-                                'description'   => __( '', 'fl-builder' ),
+                                'description'   => __( '', 'cb-custom-modules' ),
 								'connections'   => array( 'string' )
                         ),
                     )
@@ -190,7 +190,7 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
                     'fields'        => array(
 						'cb_link_icon' => array(
 							'type'          => 'icon',
-							'label'         => __( 'Icon', 'fl-builder' ),
+							'label'         => __( 'Icon', 'cb-custom-modules' ),
 							'show_remove'   => true
 						),
                     )
@@ -200,11 +200,11 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
                     'fields'        => array(
 						'cb_link_type' => array(
 							'type'          => 'select',
-							'label'         => __( 'Link Type', 'fl-builder' ),
+							'label'         => __( 'Link Type', 'cb-custom-modules' ),
 							'default'       => 'option-1',
 							'options'       => array(
-								'file'      => __( 'Media Library', 'fl-builder' ),
-								'link'      => __( 'URL', 'fl-builder' )
+								'file'      => __( 'Media Library', 'cb-custom-modules' ),
+								'link'      => __( 'URL', 'cb-custom-modules' )
 							),
 							'toggle'        => array(
 								'file'      => array(
@@ -222,7 +222,7 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
                     'fields'        => array(
                         'cb_link_file' => array(
                                 'type'          => 'zestsms-file',
-                                'label'         => __('File', 'fl-builder'),
+                                'label'         => __('File', 'cb-custom-modules'),
                                 'show_remove'	=> false
                         ),
                     )
@@ -232,16 +232,16 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
                     'fields'        => array(
 						'cb_link_link' => array(
 							'type'          => 'link',
-							'label'         => __('Link', 'fl-builder'),
+							'label'         => __('Link', 'cb-custom-modules'),
 							'connections'   => array( 'url' )
 						),
 						'link_target'   => array(
 							'type'          => 'select',
-							'label'         => __('Link Target', 'fl-builder'),
+							'label'         => __('Link Target', 'cb-custom-modules'),
 							'default'       => '_self',
 							'options'       => array(
-								'_self'         => __('Same Window', 'fl-builder'),
-								'_blank'        => __('New Window', 'fl-builder')
+								'_self'         => __('Same Window', 'cb-custom-modules'),
+								'_blank'        => __('New Window', 'cb-custom-modules')
 							),
 							'preview'       => array(
 								'type'          => 'none'
@@ -252,19 +252,19 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
             )
         ),
         'settings'      => array(
-            'title'         => __('Settings', 'fl-builder'),
+            'title'         => __('Settings', 'cb-custom-modules'),
             'sections'      => array(
                 'general'       => array(
                     'title'         => '',
                     'fields'        => array(
 						'cb_link_icon_color'         => array(
 							'type'          => 'color',
-							'label'         => __('Icon Color', 'fl-builder'),
+							'label'         => __('Icon Color', 'cb-custom-modules'),
 							'show_reset'    => true
 						),
 						'cb_link_icon_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Icon Hover Color', 'fl-builder'),
+							'label'         => __('Icon Hover Color', 'cb-custom-modules'),
 							'show_reset'    => true,
 							'preview'       => array(
 								'type'          => 'none'
@@ -272,12 +272,12 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 						),
 						'cb_link_icon_bg_color'         => array(
 							'type'          => 'color',
-							'label'         => __('Icon Background Color', 'fl-builder'),
+							'label'         => __('Icon Background Color', 'cb-custom-modules'),
 							'show_reset'    => true
 						),
 						'cb_link_icon_bg_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Icon Hover Background Color', 'fl-builder'),
+							'label'         => __('Icon Hover Background Color', 'cb-custom-modules'),
 							'show_reset'    => true,
 							'preview'       => array(
 								'type'          => 'none'
@@ -285,12 +285,12 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 						),
 						'cb_link_font_color'      => array(
 							'type'          => 'color',
-							'label'         => __('Font Color', 'fl-builder'),
+							'label'         => __('Font Color', 'cb-custom-modules'),
 							'show_reset'    => true
 						),
 						'cb_link_font_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Font Hover Color', 'fl-builder'),
+							'label'         => __('Font Hover Color', 'cb-custom-modules'),
 							'show_reset'    => true,
 							'preview'       => array(
 								'type'          => 'none'
@@ -298,12 +298,12 @@ FLBuilder::register_settings_form('cb_link_list_form_field', array(
 						),
 						'cb_link_filesize_color'      => array(
 							'type'          => 'color',
-							'label'         => __('Filesize Color', 'fl-builder'),
+							'label'         => __('Filesize Color', 'cb-custom-modules'),
 							'show_reset'    => true
 						),
 						'cb_link_filesize_hover_color' => array(
 							'type'          => 'color',
-							'label'         => __('Filesize Hover Color', 'fl-builder'),
+							'label'         => __('Filesize Hover Color', 'cb-custom-modules'),
 							'show_reset'    => true,
 							'preview'       => array(
 								'type'          => 'none'

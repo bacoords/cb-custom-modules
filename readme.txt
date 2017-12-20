@@ -4,7 +4,7 @@ Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 3.0.1
 Tested up to: 4.9.1
-Stable tag: 5.9
+Stable tag: 6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
+= 1.5.6 =
+* Adds text domain for internationalization
+
 = 1.5.5 =
 * Bug Fix: Clears php error for Button List Module
 * Bug Fix: Hides certain modules from the Beaver Builder Lite to keep from whitescreen error.
@@ -151,6 +154,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.5.6 =
+* Adds text domain for internationalization
 
 = 1.5.5 =
 * Bug Fix: Clears php error for Button List Module
