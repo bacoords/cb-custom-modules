@@ -12,36 +12,6 @@
  */
 
 
- <?php
- /* Convert hexdec color string to rgb(a) string */
- /* http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/ */
-
-
- function converttorgba($color, $opacity = 100){
-
-   if( $color == NULL ){
-     return 'none';
-   }
-
-   if ($color[0] == '#' ) {
-     $color = substr( $color, 1 );
-   }
-   //Check if color has 6 or 3 characters and get values
-   if (strlen($color) == 6) {
-           $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-   } elseif ( strlen( $color ) == 3 ) {
-           $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
-   } else {
-           return $default;
-   }
-   //Convert hexadec to rgb
-   $rgb =  array_map('hexdec', $hex);
-   $new_opac = ($opacity / 100);
-
-   return 'rgba('.implode(",",$rgb).','. $new_opac .')';
- }
- ?>
-
  .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li{
    height: <?php echo $settings->photo_height; ?>px;
  }
@@ -56,19 +26,19 @@
 
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .caption{
   color: #<?php echo $settings->caption_text_color; ?>;
-  background-color: <?php echo converttorgba($settings->caption_bg_color, $settings->caption_bg_opacity); ?>;
+  background-color: <?php echo $module->converttorgba($settings->caption_bg_color, $settings->caption_bg_opacity); ?>;
 }
 
 
 
 .fl-node-<?php echo $id; ?> .cb-drawerfolio li:hover .caption{
-  background-color: <?php echo converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
+  background-color: <?php echo $module->converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
 }
 .fl-node-<?php echo $id; ?> .cb-drawerfolio li.show .caption{
-  background-color: <?php echo converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
+  background-color: <?php echo $module->converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
 }
 .fl-node-<?php echo $id; ?> .cb-drawerfolio li.show .caption--arrow{
-  border-top-color: <?php echo converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
+  border-top-color: <?php echo $module->converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
 }
 
 

@@ -34,6 +34,31 @@ class CBCustomDrawerfolioModule extends FLBuilderModule {
       $settings = FLBuilderModel::get_global_settings();
       return $settings->responsive_breakpoint;
     }
+
+
+    public function converttorgba($color, $opacity = 100){
+
+      if( $color == NULL ){
+        return 'none';
+      }
+
+      if ($color[0] == '#' ) {
+        $color = substr( $color, 1 );
+      }
+      //Check if color has 6 or 3 characters and get values
+      if (strlen($color) == 6) {
+              $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+      } elseif ( strlen( $color ) == 3 ) {
+              $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+      } else {
+              return $default;
+      }
+      //Convert hexadec to rgb
+      $rgb =  array_map('hexdec', $hex);
+      $new_opac = ($opacity / 100);
+
+      return 'rgba('.implode(",",$rgb).','. $new_opac .')';
+    }
 }
 
 /**
