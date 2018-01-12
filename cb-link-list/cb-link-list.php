@@ -40,13 +40,13 @@ FLBuilder::register_module('CBCustomLinkListModule', array(
             'design'       => array( // Section
                 'title'         => __('', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
-					'cb_link_list_form_field_repeater' => array(
-							'type'          => 'form',
-							'label'         => __('Link', 'cb-custom-modules'),
-							'form'          => 'cb_link_list_form_field', // ID of a registered form.
-							'preview_text'  => 'cb_link_label', // ID of a field to use for the preview text.
-							'multiple' 			=> true,
-					),
+          					'cb_link_list_form_field_repeater' => array(
+          							'type'          => 'form',
+          							'label'         => __('Link', 'cb-custom-modules'),
+          							'form'          => 'cb_link_list_form_field', // ID of a registered form.
+          							'preview_text'  => 'cb_link_label', // ID of a field to use for the preview text.
+          							'multiple' 			=> true,
+          					),
                 )
             ),
         )

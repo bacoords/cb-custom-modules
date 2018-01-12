@@ -19,7 +19,9 @@ gulp.task('css', function(){
 	gulp.watch('cb-slice/css/*.scss', ['slice']);
 	gulp.watch('cb-caption/css/*.scss', ['caption']);
 	gulp.watch('cb-simple-events/css/*.scss', ['events']);
+	gulp.watch('cb-drawerfolio/css/*.scss', ['drawerfolio']);
 });
+
 
 gulp.task('broadside', function(){
 	return gulp.src('cb-broadside/css/*.scss')
@@ -90,10 +92,24 @@ gulp.task('events', function(){
 		.pipe(gulp.dest('cb-simple-events/css'));
 });
 
+gulp.task('drawerfolio', function(){
+	return gulp.src('cb-drawerfolio/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-drawerfolio/css'));
+});
+
 
 
 gulp.task('zip', function () {
-  return gulp.src(['./**/*', '!./node_modules/**/*', '!./grid/**/*', '!./cb-posts/**/*'])
+  return gulp.src([
+		'./**/*',
+    '!./{node_modules,node_modules/**/*}', 
+    '!./gulpfile.js',
+    '!./package.json',
+		'!./package-lock.json'
+		])
     .pipe(zip('cb-custom-modules.zip'))
     .pipe(gulp.dest('./../'));
 });

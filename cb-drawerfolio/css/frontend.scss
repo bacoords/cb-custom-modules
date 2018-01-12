@@ -1,0 +1,82 @@
+.cb-drawerfolio{
+  > ul{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    list-style-type:none;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    > li{
+      overflow:hidden;
+      transition: margin 0.3s ease;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 350px;
+      &.show{
+        .drawer{
+           display:block;
+        }
+      }
+      .inner{
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: cover;;
+        background-position: center;
+        position: relative;
+        overflow:hidden;
+      }
+      .caption{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        text-align: left;
+        line-height: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 10px 5px;
+        transition: all 300ms ease;
+
+        &--title{
+          font-size: 1.3em;
+          margin-bottom:5px;
+        }
+        &--subtitle{
+          font-size: 1em;
+        }
+      }
+      .drawer{
+        overflow: hidden;
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        margin: 0;
+        letter-spacing: normal;
+        transition: all .3s ease;
+        padding: 25px 15px;
+        &--title{
+          width:90%;
+          float:left;
+          font-size:1.3em;
+        }
+        &--close{
+          width: 10%;
+          float:left;
+          font-size:30px;
+        }
+        &--content{
+          width:100%;
+          column-count: 2;
+          font-size:1em;
+        }
+      }
+    }
+  }
+
+}
