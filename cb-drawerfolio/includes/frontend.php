@@ -24,6 +24,9 @@
           <div class="caption">
               <div class="caption--title"><?php echo $repeat->title_text; ?></div>
               <div class="caption--subtitle"><?php echo $repeat->subtitle_text; ?></div>
+              <div class="caption--arrow"></div>
+
+
           </div>
         </div>
         <div class="drawer">
