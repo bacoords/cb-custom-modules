@@ -16,10 +16,43 @@
 <?php $repeater =  $settings->drawer_repeater; ?>
 
 <?php if( $repeater ) : ?>
+
 <div class="cb-drawerfolio">
+  <?php
+  if( isset($settings->filter_repeater) && ($settings->show_filters=='top') ){
+    echo '<div class="tag-list">';
+    echo '<div class="tag-list--column" data-cb-df-column="cb-df-all"><div class="tag-list--title">All</div></div>';
+    foreach( $settings->filter_repeater as $filters ){
+      echo '<div class="tag-list--column" data-cb-df-column="'.$filters->title.'">';
+      if( '' != $filters->title ){
+        echo '<span class="tag-list--title">' . $filters->title . '</span>';
+      }
+      echo '<ul>';
+      foreach($filters->tags as $tag ){
+        if( '' != $tag ){
+          echo '<li class="tag-list--tag" data-cb-df-filter="' . $tag . '">' . $tag . '</li>';
+        }
+      }
+      echo '</ul>';
+      echo '</div>';
+    }
+    echo '</div>';
+  }
+
+   ?>
   <ul>
     <?php foreach ($repeater as $repeat) : ?>
-      <li>
+      <?php
+      $class_list = '';
+      if( $repeat->tags ){
+        foreach ($repeat->tags as $tag) {
+          if($tag != ''){
+            $class_list .= ' cb-df-filter-' . $tag;
+          }
+        }
+      }
+      ?>
+      <li class="cb-df-filter <?php echo $class_list; ?> filtered">
         <div class="inner" style="background-image:url(<?php echo $repeat->inner_photo_src; ?>)">
           <div class="caption">
               <div class="caption--title"><?php echo $repeat->title_text; ?></div>
@@ -43,5 +76,27 @@
       </li>
     <?php endforeach; ?>
   </ul>
+  <?php
+  if( isset($settings->filter_repeater) && ($settings->show_filters=='bottom') ){
+    echo '<div class="tag-list">';
+    echo '<div class="tag-list--column" data-cb-df-column="cb-df-all"><div class="tag-list--title">All</div></div>';
+    foreach( $settings->filter_repeater as $filters ){
+      echo '<div class="tag-list--column" data-cb-df-column="'.$filters->title.'">';
+      if( '' != $filters->title ){
+        echo '<span class="tag-list--title">' . $filters->title . '</span>';
+      }
+      echo '<ul>';
+      foreach($filters->tags as $tag ){
+        if( '' != $tag ){
+          echo '<li class="tag-list--tag" data-cb-df-filter="' . $tag . '">' . $tag . '</li>';
+        }
+      }
+      echo '</ul>';
+      echo '</div>';
+    }
+    echo '</div>';
+  }
+
+   ?>
 </div>
 <?php endif; ?>

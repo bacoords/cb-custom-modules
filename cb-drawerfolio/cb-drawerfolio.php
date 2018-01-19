@@ -107,6 +107,14 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                     'size'          => '3',
                     'description'   => __( 'px', 'cb-custom-modules' )
                 ),
+                'photo_spacing' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Spacing', 'cb-custom-modules' ),
+                    'default'       => '0',
+                    'maxlength'     => '3',
+                    'size'          => '3',
+                    'description'   => __( 'px', 'cb-custom-modules' )
+                ),
               )
           ),
           'caption'       => array( // Section
@@ -162,6 +170,74 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
           ),
       )
     ),
+    'filters'       => array( // Tab
+      'title'         => __('Tags', 'cb-custom-modules'), // Tab title
+      'sections'      => array( // Tab Sections
+          'general'       => array( // Section
+              'title'         => __('', 'cb-custom-modules'), // Section Title
+              'fields'        => array( // Section Fields
+                'show_filters' => array(
+                    'type'          => 'select',
+                    'label'         => __( 'Show Tag Filters', 'cb-custom-modules' ),
+                    'default'       => 'top',
+                    'options'       => array(
+                        'top'      => __( 'Top', 'cb-custom-modules' ),
+                        'bottom'      => __( 'Bottom', 'cb-custom-modules' ),
+                        'none'      => __( 'Nowhere', 'cb-custom-modules' )
+                    ),
+                ),
+                'filter_repeater' => array(
+                    'type'          => 'form',
+                    'label'         => __('Tag Group', 'cb-custom-modules'),
+                    'form'          => 'cb_drawerfolio_filters_form', // ID of a registered form.
+                    'preview_text'  => 'title', // ID of a field to use for the preview text.
+                    'multiple' 			=> true,
+                ),
+              )
+          ),
+          'filter_colors'       => array( // Section
+              'title'         => __('Tag Styles', 'cb-custom-modules'), // Section Title
+              'fields'        => array( // Section Fields
+                'filter_text_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Text Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_text_hover_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Text Hover Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_bg_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Background Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_bg_opacity' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Background Opacity', 'cb-custom-modules' ),
+                    'default'       => '100',
+                    'maxlength'     => '3',
+                    'size'          => '3',
+                    'description'   => __( '%', 'cb-custom-modules' )
+                ),
+                'filter_bg_hover_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Background Hover Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_bg_hover_opacity' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Background Hover Opacity', 'cb-custom-modules' ),
+                    'default'       => '100',
+                    'maxlength'     => '3',
+                    'size'          => '3',
+                    'description'   => __( '%', 'cb-custom-modules' )
+                ),
+              )
+          ),
+      )
+    ),
     'type'       => array( // Tab
       'title'         => __('Fonts', 'cb-custom-modules'), // Tab title
       'sections'      => array( // Tab Sections
@@ -170,7 +246,7 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
               'fields'        => array( // Section Fields
                 'caption_title_font' => array(
                     'type'          => 'font',
-                    'label'         => __( 'Title Font', 'fl-builder' ),
+                    'label'         => __( 'Title Font', 'cb-custom-modules' ),
                     'default'       => array(
                         'family'        => 'Helvetica',
                         'weight'        => 300
@@ -178,15 +254,15 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                 ),
                 'caption_title_size' => array(
                     'type'          => 'text',
-                    'label'         => __( 'Title Font Size', 'fl-builder' ),
+                    'label'         => __( 'Title Font Size', 'cb-custom-modules' ),
                     'default'       => '',
                     'maxlength'     => '2',
                     'size'          => '3',
-                    'description'   => __( 'px', 'fl-builder' )
+                    'description'   => __( 'px', 'cb-custom-modules' )
                 ),
                 'caption_subtitle_font' => array(
                     'type'          => 'font',
-                    'label'         => __( 'Subtitle Font', 'fl-builder' ),
+                    'label'         => __( 'Subtitle Font', 'cb-custom-modules' ),
                     'default'       => array(
                         'family'        => 'Helvetica',
                         'weight'        => 300
@@ -194,11 +270,11 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                 ),
                 'caption_subtitle_size' => array(
                     'type'          => 'text',
-                    'label'         => __( 'Subtitle Font Size', 'fl-builder' ),
+                    'label'         => __( 'Subtitle Font Size', 'cb-custom-modules' ),
                     'default'       => '',
                     'maxlength'     => '2',
                     'size'          => '3',
-                    'description'   => __( 'px', 'fl-builder' )
+                    'description'   => __( 'px', 'cb-custom-modules' )
                 ),
               )
           ),
@@ -207,7 +283,7 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
               'fields'        => array( // Section Fields
                 'drawer_title_font' => array(
                     'type'          => 'font',
-                    'label'         => __( 'Title Font', 'fl-builder' ),
+                    'label'         => __( 'Title Font', 'cb-custom-modules' ),
                     'default'       => array(
                         'family'        => 'Helvetica',
                         'weight'        => 300
@@ -215,15 +291,15 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                 ),
                 'drawer_title_size' => array(
                     'type'          => 'text',
-                    'label'         => __( 'Title Font Size', 'fl-builder' ),
+                    'label'         => __( 'Title Font Size', 'cb-custom-modules' ),
                     'default'       => '',
                     'maxlength'     => '2',
                     'size'          => '3',
-                    'description'   => __( 'px', 'fl-builder' )
+                    'description'   => __( 'px', 'cb-custom-modules' )
                 ),
                 'drawer_content_font' => array(
                     'type'          => 'font',
-                    'label'         => __( 'Content Font', 'fl-builder' ),
+                    'label'         => __( 'Content Font', 'cb-custom-modules' ),
                     'default'       => array(
                         'family'        => 'Helvetica',
                         'weight'        => 300
@@ -231,11 +307,48 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                 ),
                 'drawer_content_size' => array(
                     'type'          => 'text',
-                    'label'         => __( 'Content Font Size', 'fl-builder' ),
+                    'label'         => __( 'Content Font Size', 'cb-custom-modules' ),
                     'default'       => '',
                     'maxlength'     => '2',
                     'size'          => '3',
-                    'description'   => __( 'px', 'fl-builder' )
+                    'description'   => __( 'px', 'cb-custom-modules' )
+                ),
+              )
+          ),
+          'filters'       => array( // Section
+              'title'         => __('Tags', 'cb-custom-modules'), // Section Title
+              'fields'        => array( // Section Fields
+                'tag_heading_font' => array(
+                    'type'          => 'font',
+                    'label'         => __( 'Tag Group Heading Font', 'cb-custom-modules' ),
+                    'default'       => array(
+                        'family'        => 'Helvetica',
+                        'weight'        => 300
+                    )
+                ),
+                'tag_heading_size' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Tag Group Heading Font Size', 'cb-custom-modules' ),
+                    'default'       => '',
+                    'maxlength'     => '2',
+                    'size'          => '3',
+                    'description'   => __( 'px', 'cb-custom-modules' )
+                ),
+                'tag_filter_font' => array(
+                    'type'          => 'font',
+                    'label'         => __( 'Tag Font', 'cb-custom-modules' ),
+                    'default'       => array(
+                        'family'        => 'Helvetica',
+                        'weight'        => 300
+                    )
+                ),
+                'tag_filter_size' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Tag Font Size', 'cb-custom-modules' ),
+                    'default'       => '',
+                    'maxlength'     => '2',
+                    'size'          => '3',
+                    'description'   => __( 'px', 'cb-custom-modules' )
                 ),
               )
           ),
@@ -289,6 +402,55 @@ FLBuilder::register_settings_form('cb_drawerfolio_form', array(
                     )
                 )
             )
-        )
+        ),
+        'filters'       => array( // Tab
+          'title'         => __('Tags', 'cb-custom-modules'), // Tab title
+          'sections'      => array( // Tab Sections
+              'general'       => array( // Section
+                  'title'         => __('', 'cb-custom-modules'), // Section Title
+                  'fields'        => array( // Section Fields
+                    'tags' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Tags', 'cb-custom-modules' ),
+                        'default'       => '',
+                        'help'   => __( 'Re-use the same tag words across portfolio items to take advantage of the filters. Be sure to set up your tag word categories in the main module settings.', 'cb-custom-modules' ),
+                        'multiple'      => true
+                    ),
+                  )
+              ),
+          )
+        ),
+    )
+));
+
+
+/**
+ * Register a settings form to use in the "form" field type above.
+ */
+FLBuilder::register_settings_form('cb_drawerfolio_filters_form', array(
+    'title' => __('Tag Groups', 'cb-custom-modules'),
+    'tabs'  => array(
+        'filters'       => array( // Tab
+          'title'         => __('Settings', 'cb-custom-modules'), // Tab title
+          'sections'      => array( // Tab Sections
+              'general'       => array( // Section
+                  'title'         => __('', 'cb-custom-modules'), // Section Title
+                  'fields'        => array( // Section Fields
+                    'title' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Tag Group Heading', 'cb-custom-modules' ),
+                        'default'       => '',
+                    ),
+                    'tags' => array(
+                        'type'          => 'text',
+                        'label'         => __( 'Tags', 'cb-custom-modules' ),
+                        'default'       => '',
+                        'help'   => __( 'Any tag words added here will be added on the front end. Re-use the same tag words across portfolio items to take advantage of the filters.', 'cb-custom-modules' ),
+                        'multiple'      => true
+                    ),
+                  )
+              ),
+          )
+        ),
     )
 ));

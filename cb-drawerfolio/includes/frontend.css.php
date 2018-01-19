@@ -20,7 +20,12 @@
    height: <?php echo $settings->photo_height; ?>px;
  }
 
-
+   .fl-node-<?php echo $id; ?> .cb-drawerfolio ul > li{
+     padding: <?php echo ($settings->photo_spacing / 2); ?>px;
+   }
+   .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li .inner{
+     height: <?php echo ($settings->photo_height - $settings->photo_spacing); ?>px;
+   }
 
 
 
@@ -40,6 +45,35 @@
 .fl-node-<?php echo $id; ?> .cb-drawerfolio li.show .caption--arrow{
   border-top-color: <?php echo $module->converttorgba($settings->caption_bg_hover_color, $settings->caption_bg_hover_opacity); ?>;
 }
+
+
+
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list li.tag-list--tag{
+  color: #<?php echo $settings->filter_text_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_color, $settings->filter_bg_opacity); ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list li.tag-list--tag:hover{
+  color: #<?php echo $settings->filter_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-drawerfolio  .tag-list li.tag-list--tag.active{
+  color: #<?php echo $settings->filter_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+}
+
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title{
+  color: #<?php echo $settings->filter_text_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_color, $settings->filter_bg_opacity); ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title:hover{
+  color: #<?php echo $settings->filter_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+}
+.fl-node-<?php echo $id; ?> .cb-drawerfolio  .tag-list .tag-list--title.active{
+  color: #<?php echo $settings->filter_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+}
+
 
 
 
@@ -83,6 +117,21 @@
   }
 <?php } ?>
 
+<?php if( isset($settings->tag_heading_font)) { $font = $settings->tag_heading_font; ?>
+  .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--title{
+    font-family: <?php echo $font['family']; ?>;
+    font-weight: <?php echo $font['weight']; ?>;
+  }
+<?php } ?>
+
+
+<?php if( isset($settings->tag_filter_font)) { $font = $settings->tag_filter_font; ?>
+  .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--tag {
+    font-family: <?php echo $font['family']; ?>;
+    font-weight: <?php echo $font['weight']; ?>;
+  }
+<?php } ?>
+
 
 
 
@@ -108,6 +157,21 @@
 <?php if( isset($settings->drawer_content_size)) { ?>
   .fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer--content *{
     font-size: <?php echo $settings->drawer_content_size; ?>px;
+  }
+<?php } ?>
+
+<?php if( isset($settings->tag_heading_size)) { ?>
+  .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--title{
+    font-size: <?php echo $settings->tag_heading_size; ?>px;
+  }
+  .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--trigger{
+    font-size: <?php echo $settings->tag_heading_size; ?>px;
+  }
+<?php } ?>
+
+<?php if( isset($settings->tag_filter_size)) { ?>
+  .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--tag{
+    font-size: <?php echo $settings->tag_filter_size; ?>px;
   }
 <?php } ?>
 
