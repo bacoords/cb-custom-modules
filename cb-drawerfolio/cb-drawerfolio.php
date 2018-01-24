@@ -396,8 +396,17 @@ FLBuilder::register_settings_form('cb_drawerfolio_form', array(
                         ),
                         'drawer_content'       => array(
                            'type'          => 'editor',
+                           'label'         => __('Drawer Content Left Column', 'cb-custom-modules'),
                            'media_buttons' => true,
-                           'rows'          => 10
+                           'rows'          => 10,
+                           'help'          => 'On larger screens, drawers show two columns. On smaller screens, they flow into one'
+                        ),
+                        'drawer_content_right'       => array(
+                           'type'          => 'editor',
+                           'label'         => __('Drawer Content Right Column', 'cb-custom-modules'),
+                           'media_buttons' => true,
+                           'rows'          => 10,
+                           'help'          => 'On larger screens, drawers show two columns. On smaller screens, they flow into one'
                         ),
                     )
                 )

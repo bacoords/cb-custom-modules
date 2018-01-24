@@ -63,14 +63,25 @@
           </div>
         </div>
         <div class="drawer">
-          <div class="drawer--title">
-            <?php echo $repeat->drawer_title; ?>
-          </div>
-          <div class="drawer--close">
-            &times;
-          </div>
-          <div class="drawer--content">
-            <?php echo $repeat->drawer_content; ?>
+          <div class="drawer--inner">
+            <div class="drawer--title">
+              <?php echo $repeat->drawer_title; ?>
+            </div>
+            <div class="drawer--close">
+              &times;
+            </div>
+            <div class="drawer--content">
+              <div class="row">
+                <div class="col-sm-12 col-md-4">
+
+                  <?php echo $repeat->drawer_content; ?>
+                </div>
+                <div class="col-sm-12 col-md-8">
+
+                  <?php echo $repeat->drawer_content_right; ?>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </li>

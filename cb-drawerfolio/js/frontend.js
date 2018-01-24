@@ -1,3 +1,69 @@
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    $.fn.overlaps = function(selector) {
+        return this.pushStack(filterOverlaps(this, selector && $(selector)));
+    };
+
+    function filterOverlaps(collection1, collection2) {
+        var dims1  = getDims(collection1),
+            dims2  = !collection2 ? dims1 : getDims(collection2),
+            stack  = [],
+            index1 = 0,
+            index2 = 0,
+            length1 = dims1.length,
+            length2 = !collection2 ? dims1.length : dims2.length;
+
+        if (!collection2) { collection2 = collection1; }
+
+        for (; index1 < length1; index1++) {
+            for (index2 = 0; index2 < length2; index2++) {
+                if (collection1[index1] === collection2[index2]) {
+                    continue;
+                } else if (checkOverlap(dims1[index1], dims2[index2])) {
+                    stack.push( (length1 > length2) ?
+                        collection1[index1] :
+                        collection2[index2]);
+                }
+            }
+        }
+
+        return $.unique(stack);
+    }
+
+    function getDims(elems) {
+        var dims = [], i = 0, offset, elem;
+
+        while ((elem = elems[i++])) {
+            offset = $(elem).offset();
+            dims.push([
+                offset.top,
+                offset.left,
+                elem.offsetWidth,
+                elem.offsetHeight
+            ]);
+        }
+
+        return dims;
+    }
+
+    function checkOverlap(dims1, dims2) {
+        var x1 = dims1[1], y1 = dims1[0],
+            w1 = dims1[2], h1 = dims1[3],
+            x2 = dims2[1], y2 = dims2[0],
+            w2 = dims2[2], h2 = dims2[3];
+        return !(y2 + h2 <= y1 || y1 + h1 <= y2 || x2 + w2 <= x1 || x1 + w1 <= x2);
+    }
+
+}));
+
 jQuery.fn.extend({
     hasClasses: function (classArray) {
         var self = this;
@@ -42,8 +108,9 @@ jQuery(document).ready(function(){
   });
 
   jQuery('.drawer--close').click(function(){
-    var drawer = jQuery(this).parent(),
-        container = drawer.parent('li');
+
+    var drawer = jQuery(this).parent('.drawer--inner').parent('.drawer'),
+      container = drawer.parent('li');
     container.removeClass("show");
     container.css('margin-bottom', 0);
   });
@@ -57,16 +124,34 @@ jQuery(document).ready(function(){
 
     // Click on Title
     jQuery('.tag-list--title').click(function(){
-      var column = jQuery(this).parent('.tag-list--column')
-      column.toggleClass('open');
+      var column = jQuery(this).parent('.tag-list--column'),
+      container = column.parent('.tag-list');
+
+
+      column.addClass('open');
+
+      var height = jQuery('ul', column).outerHeight();
+
       jQuery('.tag-list--title').not(this).parent('.tag-list--column').removeClass('open');
       if('cb-df-all' == column.data("cb-df-column")){
 
         jQuery('.tag-list--tag').removeClass('active');
         // showhide all the filters
         jQuery('.cb-df-filter').show("slow");
+        // jQuery('.tag-list--column').css('margin-bottom', 0);
+        container.css('margin-bottom', 0);
+
       } else{
 
+        jQuery('.tag-list--column').not(column).css('margin-bottom', 0);
+        jQuery('.tag-list--column').not(column).children('ul').css('margin-top', 0);
+
+        container.css('margin-bottom', height);
+        var conBottom = container.offset().top + container.innerHeight();
+        var ulTop = jQuery('ul', column).offset().top;
+        var offset = conBottom - ulTop;
+        console.log(conBottom, ulTop);
+        jQuery('ul', column).css('margin-top', offset );
         var filterClasses = jQuery('.tag-list--tag', column).map(function(){
           return 'cb-df-filter-' + jQuery(this).data('cb-df-filter');
         }).get();

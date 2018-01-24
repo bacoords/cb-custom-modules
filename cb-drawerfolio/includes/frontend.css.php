@@ -11,7 +11,7 @@
  * Example:
  */
 
-
+<?php if( isset($settings->photo_height )): ?>
  .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li{
    height: <?php echo $settings->photo_height; ?>px;
  }
@@ -19,14 +19,18 @@
  .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li .inner{
    height: <?php echo $settings->photo_height; ?>px;
  }
+<?php endif; ?>
 
-   .fl-node-<?php echo $id; ?> .cb-drawerfolio ul > li{
-     padding: <?php echo ($settings->photo_spacing / 2); ?>px;
-   }
-   .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li .inner{
-     height: <?php echo ($settings->photo_height - $settings->photo_spacing); ?>px;
-   }
-
+ .fl-node-<?php echo $id; ?> .cb-drawerfolio ul > li{
+   padding: <?php echo ($settings->photo_spacing / 2); ?>px;
+ }
+ .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li .inner{
+   height: <?php echo ($settings->photo_height - $settings->photo_spacing); ?>px;
+ }
+ .fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer{
+   padding-left: <?php echo ($settings->photo_spacing / 2); ?>px;
+   padding-right: <?php echo ($settings->photo_spacing / 2); ?>px;
+ }
 
 
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .caption{
@@ -55,10 +59,12 @@
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list li.tag-list--tag:hover{
   color: #<?php echo $settings->filter_text_hover_color; ?>;
   background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
 }
 .fl-node-<?php echo $id; ?> .cb-drawerfolio  .tag-list li.tag-list--tag.active{
   color: #<?php echo $settings->filter_text_hover_color; ?>;
   background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
 }
 
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title{
@@ -68,20 +74,22 @@
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title:hover{
   color: #<?php echo $settings->filter_text_hover_color; ?>;
   background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
 }
-.fl-node-<?php echo $id; ?> .cb-drawerfolio  .tag-list .tag-list--title.active{
+.fl-node-<?php echo $id; ?> .cb-drawerfolio  .tag-list--column.open .tag-list--title{
   color: #<?php echo $settings->filter_text_hover_color; ?>;
   background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
 }
 
 
 
 
 
-.fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer{
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer--inner{
   background-color: #<?php echo $settings->drawer_bg_color; ?>;
 }
-.fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer * {
+.fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer--inner * {
   color: #<?php echo $settings->drawer_text_color; ?>;
 }
 
@@ -182,10 +190,6 @@
 @media(min-width:<?php echo $module->responsive_breakpoint(); ?>px){
   .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li{
     width: 33.333333333%;
-  }
-  .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li .drawer--content{
-    column-count: 2;
-    column-gap:40px;
   }
 }
 @media(min-width:1080px){

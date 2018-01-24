@@ -1,13 +1,14 @@
 .cb-drawerfolio{
   .tag-list{
-    margin:20px auto 60px;
+    margin:20px auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     position: relative;
     &--column{
       float:left;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
       text-align: center;
       ul{
         position: absolute;
@@ -17,6 +18,7 @@
         padding: 0;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         li{
           list-style-type: none;
         }
@@ -39,7 +41,6 @@
       padding: 5px 10px;
       text-align: center;
       margin:5px 20px;
-      border-radius: 3px;
       cursor: pointer;
     }
   }
@@ -127,7 +128,9 @@
         margin: 0;
         letter-spacing: normal;
         transition: all .3s ease;
-        padding: 25px 15px;
+        &--inner{
+          padding: 25px 15px;
+        }
         &--title{
           width:90%;
           float:left;
@@ -138,6 +141,7 @@
           float:left;
           font-size:30px;
           text-align: right;
+          cursor: pointer;
         }
         &--content{
           width:100%;
