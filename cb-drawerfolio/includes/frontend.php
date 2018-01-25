@@ -72,14 +72,22 @@
             </div>
             <div class="drawer--content">
               <div class="row">
-                <div class="col-sm-12 col-md-4">
-
-                  <?php echo $repeat->drawer_content; ?>
-                </div>
-                <div class="col-sm-12 col-md-8">
-
-                  <?php echo $repeat->drawer_content_right; ?>
-                </div>
+                <?php if($repeat->drawer_layout == 'two-col') : ?>
+                  <div class="col-sm-12 col-md-4">
+                    <?php echo $repeat->drawer_content; ?>
+                  </div>
+                  <div class="col-sm-12 col-md-8">
+                    <?php echo $repeat->drawer_content_right; ?>
+                  </div>
+                <?php elseif ($repeat->drawer_layout == 'two-col-auto') : ?>
+                    <div class="col-sm-12 col-md-12  drawer--reflow">
+                      <?php echo $repeat->drawer_content; ?>
+                    </div>
+                <?php else : ?>
+                    <div class="col-sm-12 col-md-12">
+                      <?php echo $repeat->drawer_content; ?>
+                    </div>
+              <?php endif; ?>
               </div>
             </div>
           </div>

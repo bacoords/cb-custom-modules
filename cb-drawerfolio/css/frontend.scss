@@ -35,6 +35,7 @@
       padding: 5px 10px;
       display: block;
       cursor: pointer;
+      border-bottom:1px solid transparent;
     }
     &--tag{
       display:none;
@@ -42,6 +43,7 @@
       text-align: center;
       margin:5px 20px;
       cursor: pointer;
+      border-bottom:1px solid transparent;
     }
   }
   > ul{
@@ -146,6 +148,10 @@
         &--content{
           width:100%;
           font-size:1em;
+        }
+        &--reflow{
+          column-count: 2;
+          column-gap: 40px;
         }
       }
     }

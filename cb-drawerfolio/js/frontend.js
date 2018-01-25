@@ -150,7 +150,6 @@ jQuery(document).ready(function(){
         var conBottom = container.offset().top + container.innerHeight();
         var ulTop = jQuery('ul', column).offset().top;
         var offset = conBottom - ulTop;
-        console.log(conBottom, ulTop);
         jQuery('ul', column).css('margin-top', offset );
         var filterClasses = jQuery('.tag-list--tag', column).map(function(){
           return 'cb-df-filter-' + jQuery(this).data('cb-df-filter');

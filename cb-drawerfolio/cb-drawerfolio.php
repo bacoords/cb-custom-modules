@@ -394,12 +394,26 @@ FLBuilder::register_settings_form('cb_drawerfolio_form', array(
                             'label'         => __('Drawer Title', 'cb-custom-modules'),
                             'default'       => 'Some example text'
                         ),
+                        'drawer_layout' => array(
+                            'type'          => 'select',
+                            'label'         => __( 'Drawer Layout', 'fl-builder' ),
+                            'default'       => 'one-col',
+                            'options'       => array(
+                                'one-col'      => __( 'One Column', 'fl-builder' ),
+                                'two-col-auto'      => __( 'Two Columns (Auto)', 'fl-builder' ),
+                                'two-col'      => __( 'Two Columns (Custom)', 'fl-builder' )
+                            ),
+                            'toggle'        => array(
+                                'two-col'      => array(
+                                    'fields'        => array( 'drawer_content_right' )
+                                ),
+                            )
+                        ),
                         'drawer_content'       => array(
                            'type'          => 'editor',
-                           'label'         => __('Drawer Content Left Column', 'cb-custom-modules'),
+                           'label'         => __('Drawer Content Column', 'cb-custom-modules'),
                            'media_buttons' => true,
                            'rows'          => 10,
-                           'help'          => 'On larger screens, drawers show two columns. On smaller screens, they flow into one'
                         ),
                         'drawer_content_right'       => array(
                            'type'          => 'editor',
