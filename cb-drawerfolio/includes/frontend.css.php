@@ -68,18 +68,18 @@
 }
 
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title{
-  color: #<?php echo $settings->filter_text_color; ?>;
-  background-color: <?php echo $module->converttorgba($settings->filter_bg_color, $settings->filter_bg_opacity); ?>;
+  color: #<?php echo $settings->filter_header_text_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_header_bg_color, $settings->filter_header_bg_opacity); ?>;
 }
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list .tag-list--title:hover{
-  color: #<?php echo $settings->filter_text_hover_color; ?>;
-  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
-  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
+  color: #<?php echo $settings->filter_header_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_header_bg_hover_color, $settings->filter_header_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_header_text_hover_color; ?>;
 }
 .fl-node-<?php echo $id; ?> .cb-drawerfolio .tag-list--column.open .tag-list--title{
-  color: #<?php echo $settings->filter_text_hover_color; ?>;
-  background-color: <?php echo $module->converttorgba($settings->filter_bg_hover_color, $settings->filter_bg_hover_opacity); ?>;
-  border-bottom:1px solid #<?php echo $settings->filter_text_hover_color; ?>;
+  color: #<?php echo $settings->filter_header_text_hover_color; ?>;
+  background-color: <?php echo $module->converttorgba($settings->filter_header_bg_hover_color, $settings->filter_header_bg_hover_opacity); ?>;
+  border-bottom:1px solid #<?php echo $settings->filter_header_text_hover_color; ?>;
 }
 
 
@@ -191,8 +191,6 @@
   .fl-node-<?php echo $id; ?> .cb-drawerfolio > ul > li{
     width: 33.333333333%;
   }
-}
-@media(min-width:<?php echo $module->responsive_breakpoint(); ?>px){
   .fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer--reflow{
       column-count: 2;
       column-gap: 40px;

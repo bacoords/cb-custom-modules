@@ -107,14 +107,6 @@ jQuery(document).ready(function(){
     }
   });
 
-  jQuery('.drawer--close').click(function(){
-
-    var drawer = jQuery(this).parent('.drawer--inner').parent('.drawer'),
-      container = drawer.parent('li');
-    container.removeClass("show");
-    container.css('margin-bottom', 0);
-  });
-
   if( jQuery('.tag-list') ){
 
     // Get all Filters

@@ -67,9 +67,6 @@
             <div class="drawer--title">
               <?php echo $repeat->drawer_title; ?>
             </div>
-            <div class="drawer--close">
-              &times;
-            </div>
             <div class="drawer--content">
               <div class="row">
                 <?php if($repeat->drawer_layout == 'two-col') : ?>

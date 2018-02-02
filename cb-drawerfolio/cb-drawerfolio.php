@@ -195,6 +195,47 @@ FLBuilder::register_module('CBCustomDrawerfolioModule', array(
                 ),
               )
           ),
+          'filter_heading_colors'       => array( // Section
+              'title'         => __('Tag Group Header Styles', 'cb-custom-modules'), // Section Title
+              'fields'        => array( // Section Fields
+                'filter_header_text_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Text Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_header_text_hover_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Text Hover Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_header_bg_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Background Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_header_bg_opacity' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Background Opacity', 'cb-custom-modules' ),
+                    'default'       => '100',
+                    'maxlength'     => '3',
+                    'size'          => '3',
+                    'description'   => __( '%', 'cb-custom-modules' )
+                ),
+                'filter_header_bg_hover_color'         => array(
+                  'type'          => 'color',
+                  'label'         => __('Background Hover Color', 'cb-custom-modules'),
+                  'show_reset'    => true
+                ),
+                'filter_header_bg_hover_opacity' => array(
+                    'type'          => 'text',
+                    'label'         => __( 'Background Hover Opacity', 'cb-custom-modules' ),
+                    'default'       => '100',
+                    'maxlength'     => '3',
+                    'size'          => '3',
+                    'description'   => __( '%', 'cb-custom-modules' )
+                ),
+              )
+          ),
           'filter_colors'       => array( // Section
               'title'         => __('Tag Styles', 'cb-custom-modules'), // Section Title
               'fields'        => array( // Section Fields
