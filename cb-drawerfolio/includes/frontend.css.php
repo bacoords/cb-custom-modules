@@ -192,8 +192,7 @@
     width: 33.333333333%;
   }
   .fl-node-<?php echo $id; ?> .cb-drawerfolio .drawer--reflow{
-      column-count: 2;
-      column-gap: 40px;
+      columns: 2 40px;
   }
 }
 @media(min-width:1080px){
