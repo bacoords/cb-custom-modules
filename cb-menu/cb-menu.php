@@ -17,7 +17,8 @@ class CBCustomMenuModule extends FLBuilderModule {
 		parent::__construct(array(
 			'name'          	=> __( 'CB Advanced Menu', 'cb-custom-modules' ),
 			'description'   	=> __( 'Default BB Menu Module but with a solid horizontal submenu.', 'cb-custom-modules' ),
-			'category'      	=> __( 'CB Custom Modules', 'cb-custom-modules' ),
+			'group'      	=> __( 'CB Custom Modules', 'cb-custom-modules' ),
+			'category'      	=> __( 'Menus', 'cb-custom-modules' ),
 			'partial_refresh'	=> true,
 			'editor_export' 	=> false,
 			'icon'				=> 'hamburger-menu.svg',

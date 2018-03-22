@@ -19,7 +19,8 @@ class CBCustomSpotlightModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Spotlight', 'cb-custom-modules'),
             'description'   => __('Let your viewer spotlight an image.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Galleries', 'cb-custom-modules'),
             'icon'      => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-spotlight/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-spotlight/',

@@ -19,7 +19,8 @@ class CBCustomSimpleEventsModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Simple Events', 'cb-custom-modules'),
             'description'   => __('Simple events listing module.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Info Lists', 'cb-custom-modules'),
             'icon'      => 'megaphone.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-simple-events/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-simple-events/',

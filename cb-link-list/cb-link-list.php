@@ -19,7 +19,8 @@ class CBCustomLinkListModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Link List', 'cb-custom-modules'),
             'description'   => __('Create a list of links from URLs or Media Library files.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Info Lists', 'cb-custom-modules'),
             'icon'        => 'text.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-link-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-link-list/',

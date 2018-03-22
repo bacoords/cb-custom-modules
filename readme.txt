@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 4.6
-Tested up to: 4.9.1
-Stable tag: 6.0
+Tested up to: 4.9.4
+Stable tag: 6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ Crafty Beaver Custom Modules is a free suite of elegant custom modules for for B
 * Button List - Create of list of files/links, displayed as buttons with a custom icon and color scheme. +
 * Simple Events - Create a simple list of events with great responsive styling options and no need for an extensive plugin.
 * CB Advanced Menu - Playing on the default BB Menu Module, this horizontal menu style is called... the Pancake Menu. +
+* Drawerfolio - Custom photo portfolios with dropdown content areas.
 
 For more information and module demos, visit [Crafty Beavers](https://www.cbcustommodules.com).
 
@@ -91,6 +92,10 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
+= 1.5.7 =
+* New Module: Drawerfolio
+* Dust Update: Set the color of the particles
+
 = 1.5.6 =
 * Adds text domain for internationalization
 
@@ -152,63 +157,3 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 = 1.0 =
 * Initial Version
-
-== Upgrade Notice ==
-
-= 1.5.6 =
-* Adds text domain for internationalization
-
-= 1.5.5 =
-* Bug Fix: Clears php error for Button List Module
-* Bug Fix: Hides certain modules from the Beaver Builder Lite to keep from whitescreen error.
-
-= 1.5.4 =
-* New Module: CB Advanced Menu
-
-= 1.5.3 =
-* Bug fix: fixes an issue with Events Calendar
-
-= 1.5.2 =
-* New Modules: Simple Events
-* Updated with more BB 2.0 support
-
-= 1.5 =
-* Adds Support for Beaver Themer
-
-= 1.4.3 =
-* Adds "Link Target" option to Link List Module
-
-= 1.4.2 =
-* Adds support for WP Retina 2x
-
-= 1.4.1 =
-* Fixes conflict with beaverlodge
-
-= 1.4 =
-* New Module: Link List
-* New Module: Button List
-* New Feature: Use links inside of Dust
-
-= 1.3.3 =
-* Update to fix bugs with new module: Legend
-
-= 1.3 =
-* Update to reveal new branding and new 'Legend' custom module
-
-= 1.2.2 =
-* Update to fix bug with Scout Module caching admin bar override
-
-= 1.2.1 =
-* Update to fix bug that may cause conflicts with other custom modules
-
-= 1.2.0 =
-Upgrade to 1.2.0 for a new module and a new design in the Dust module.
-
-= 1.1.1 =
-Upgrade to 1.1.1 for new, much-requested setting in the Scout module.
-
-= 1.1.0 =
-Upgrade to 1.1.0 for two new modules and upgrades to existing modules.
-
-= 1.0 =
-Upgrade to initial version.

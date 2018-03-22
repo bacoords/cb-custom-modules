@@ -19,7 +19,8 @@ class CBCustomShadeModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Shade', 'cb-custom-modules'),
             'description'   => __('Throw some custom shade.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Photos', 'cb-custom-modules'),
             'icon'        => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-shade/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-shade/',

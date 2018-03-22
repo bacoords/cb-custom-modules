@@ -19,7 +19,8 @@ class CBCustomSliceModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Slice', 'cb-custom-modules'),
             'description'   => __('Display a gallery.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Galleries', 'cb-custom-modules'),
             'icon'      => 'format-gallery.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-slice/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-slice/',

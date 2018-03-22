@@ -19,7 +19,8 @@ class CBCustomButtonListModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Button List', 'cb-custom-modules'),
             'description'   => __('Create a list of buttons linking to URLs or any file from your Media Library.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Info Lists', 'cb-custom-modules'),
             'icon'      => 'button.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-button-list/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-button-list/',

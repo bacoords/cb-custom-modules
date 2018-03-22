@@ -19,7 +19,8 @@ class CBCustomDrawerfolioModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Drawerfolio', 'cb-custom-modules'),
             'description'   => __('Portfolio gallery with hidden drawers of text.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Galleries', 'cb-custom-modules'),
             'icon'        => 'format-gallery.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-drawerfolio/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-drawerfolio/',

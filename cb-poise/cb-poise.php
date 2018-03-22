@@ -20,7 +20,8 @@ class CBCustomPoiseModule extends FLBuilderModule {
             'name'          => __('Poise', 'cb-custom-modules'),
             'description'   => __('Display elements with poise.', 'cb-custom-modules'),
             'icon'          => 'format-gallery.svg',
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Galleries', 'cb-custom-modules'),
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-poise/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-poise/',
             'editor_export' => true, // Defaults to true and can be omitted.

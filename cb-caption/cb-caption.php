@@ -19,7 +19,8 @@ class CBCustomCaptionModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Legend', 'cb-custom-modules'),
             'description'   => __('Photo Module with a secret caption.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Photos', 'cb-custom-modules'),
             'icon'        => 'format-image.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-caption/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-caption/',

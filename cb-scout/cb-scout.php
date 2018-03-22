@@ -19,7 +19,8 @@ class CBCustomScoutModule extends FLBuilderModule {
         parent::__construct(array(
             'name'          => __('Scout', 'cb-custom-modules'),
             'description'   => __('Sticky Navbar.', 'cb-custom-modules'),
-            'category'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'group'		=> __('CB Custom Modules', 'cb-custom-modules'),
+            'category'		=> __('Menus', 'cb-custom-modules'),
             'icon'        => 'hamburger-menu.svg',
             'dir'           => CB_CUSTOM_MODULE_DIR . 'cb-scout/',
             'url'           => CB_CUSTOM_MODULE_URL . 'cb-scout/',
