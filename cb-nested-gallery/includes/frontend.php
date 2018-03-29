@@ -37,15 +37,20 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <?php if( $item_gallery = json_decode( $item->cb_nested_gallery_gallery) ) : ?>
-                <div class="row cb-nested-gallery--gallery">
-                  <?php foreach( $item_gallery as $photo ) : ?>
-                    <div class="col-sm-6 col-md-4">
-                      <?php $src = wp_get_attachment_image_src($photo, 'full'); ?>
-                      <a href="<?php echo $src[0]; ?>">
-                        <?php echo wp_get_attachment_image($photo, 'medium', false, array('class'=>'cb-nested-gallery--photo')); ?>
-                      </a>
-                    </div>
-                  <?php endforeach; ?>
+                <div class="cb-nested-gallery--gallery">
+                  <div class="row">
+                    <?php $ii = 0; ?>
+                    <?php foreach( $item_gallery as $photo ) : ?>
+                      <div class="col-sm-6 col-md-4">
+                        <?php $src = wp_get_attachment_image_src($photo, 'full'); ?>
+                        <a href="<?php echo $src[0]; ?>">
+                          <?php echo wp_get_attachment_image($photo, 'medium', false, array('class'=>'cb-nested-gallery--photo')); ?>
+                        </a>
+                      </div>
+                      <?php $ii++; ?>
+                      <?php if( $ii > 2 ){ $ii = 0; echo '</div><BR><div class="row">'; } ?>
+                    <?php endforeach; ?>
+                  </div>
                 </div>
               <?php endif; ?>
             </div>
