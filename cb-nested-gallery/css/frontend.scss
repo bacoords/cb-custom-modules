@@ -1,0 +1,25 @@
+.cb-nested-gallery{
+  &--photo{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &--sub{
+    display: none;
+    padding: 15px;
+    padding-top: 0px;
+  }
+  &--toggle{
+    font-size: 1.2em;
+  }
+}
+
+
+body.mfp-zoom-out-cur{
+  .fl-module-cb-nested-gallery{
+    .bx-controls{
+      opacity: 0;
+    }
+  }
+}

@@ -92,6 +92,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
+= 1.5.8 =
+* New Module: Nested Gallery
+
 = 1.5.7 =
 * New Module: Drawerfolio
 * Dust Update: Set the color of the particles

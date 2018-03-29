@@ -20,6 +20,7 @@ gulp.task('css', function(){
 	gulp.watch('cb-caption/css/*.scss', ['caption']);
 	gulp.watch('cb-simple-events/css/*.scss', ['events']);
 	gulp.watch('cb-drawerfolio/css/*.scss', ['drawerfolio']);
+	gulp.watch('cb-nested-gallery/css/*.scss', ['nestedgallery']);
 });
 
 
@@ -101,11 +102,20 @@ gulp.task('drawerfolio', function(){
 });
 
 
+gulp.task('nestedgallery', function(){
+	return gulp.src('cb-nested-gallery/css/*.scss')
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(minifycss())
+		.pipe(gulp.dest('cb-nested-gallery/css'));
+});
+
+
 
 gulp.task('zip', function () {
   return gulp.src([
 		'./**/*',
-    '!./{node_modules,node_modules/**/*}', 
+    '!./{node_modules,node_modules/**/*}',
     '!./gulpfile.js',
     '!./package.json',
 		'!./package-lock.json'

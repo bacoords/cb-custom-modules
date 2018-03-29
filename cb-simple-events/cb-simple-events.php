@@ -41,16 +41,16 @@ FLBuilder::register_module('CBCustomSimpleEventsModule', array(
             'design'       => array( // Section
                 'title'         => __('', 'cb-custom-modules'), // Section Title
                 'fields'        => array( // Section Fields
-					'cb_simple_events_form_field_repeater' => array(
-							'type'          => 'form',
-							'label'         => __('Event', 'cb-custom-modules'),
-							'form'          => 'cb_simple_events_form_field', // ID of a registered form.
-							'preview_text'  => 'cb_simple_event_label', // ID of a field to use for the preview text.
-							'multiple' 			=> true,
-					),
+          					'cb_simple_events_form_field_repeater' => array(
+          							'type'          => 'form',
+          							'label'         => __('Event', 'cb-custom-modules'),
+          							'form'          => 'cb_simple_events_form_field', // ID of a registered form.
+          							'preview_text'  => 'cb_simple_event_label', // ID of a field to use for the preview text.
+          							'multiple' 			=> true,
+  					        ),
+                )
+            )
         )
-      )
-      )
     ),
     'styles'       => array( // Tab
         'title'         => __('Styles', 'cb-custom-modules'), // Tab title
