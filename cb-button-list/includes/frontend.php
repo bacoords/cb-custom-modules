@@ -35,25 +35,25 @@
 			$btn_bg_opacity = isset($button->btn_bg_opacity) ? $button->btn_bg_opacity : '0';
 
 			$btn_settings = array(
-				'align'							=> $module->filter_value( $button, 'btn_align' ),
-				'bg_color'          => $module->filter_value( $button, 'btn_bg_color' ),
-				'bg_hover_color'    => $module->filter_value( $button, 'btn_bg_hover_color' ),
+				'align'							=> $module->filter_btn_value( $button, 'btn_align' ),
+				'bg_color'          => $module->filter_btn_value( $button, 'btn_bg_color' ),
+				'bg_hover_color'    => $module->filter_btn_value( $button, 'btn_bg_hover_color' ),
 				'bg_opacity'        => $btn_bg_opacity,
-				'border_radius'     => $module->filter_value( $button, 'btn_border_radius' ),
-				'border_size'       => $module->filter_value( $button, 'btn_border_size' ),
-				'font_size'         => $module->filter_value( $button, 'btn_font_size' ),
+				'border_radius'     => $module->filter_btn_value( $button, 'btn_border_radius' ),
+				'border_size'       => $module->filter_btn_value( $button, 'btn_border_size' ),
+				'font_size'         => $module->filter_btn_value( $button, 'btn_font_size' ),
 				'icon'              => $button->btn_icon,
 				'icon_position'     => $button->btn_icon_position,
 				'icon_animation'		=> $button->btn_icon_animation,
 				'link'              => $button_url,
 				'link_nofollow' 		=> $button->btn_link_nofollow,
 				'link_target'       => $button->btn_link_target,
-				'padding'           => $module->filter_value( $button, 'btn_padding' ),
-				'style'             => $module->filter_value( $button, 'btn_style' ),
+				'padding'           => $module->filter_btn_value( $button, 'btn_padding' ),
+				'style'             => $module->filter_btn_value( $button, 'btn_style' ),
 				'text'              => $button_text,
-				'text_color'        => $module->filter_value( $button, 'btn_text_color' ),
-				'text_hover_color'  => $module->filter_value( $button, 'btn_text_hover_color' ),
-				'width'             => $module->filter_value( $button, 'btn_width' )
+				'text_color'        => $module->filter_btn_value( $button, 'btn_text_color' ),
+				'text_hover_color'  => $module->filter_btn_value( $button, 'btn_text_hover_color' ),
+				'width'             => $module->filter_btn_value( $button, 'btn_width' )
 			);
 
 			FLBuilder::render_module_html('button', $btn_settings);

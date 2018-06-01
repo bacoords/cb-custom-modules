@@ -37,17 +37,14 @@ class CBCustomButtonListModule extends FLBuilderModule {
 	 */
 
 
-	public function filter_value($button, $field){
-
+	public function filter_btn_value($button, $field){
 		if( !empty( $button->$field ) ) {
 			return $button->$field;
 		}
-
 		if( !empty( $this->settings->$field ) ) {
 			return $this->settings->$field;
 		}
-
-		return $button->$field;
+  	return $this->settings->$field;
 
 	}
 
@@ -189,27 +186,21 @@ FLBuilder::register_module('CBCustomButtonListModule', array(
 							)
 						),
 						'btn_font_size' => array(
-							'type'          => 'text',
+							'type'          => 'unit',
 							'label'         => __('Font Size', 'cb-custom-modules'),
 							'default'       => '16',
-							'maxlength'     => '3',
-							'size'          => '4',
 							'description'   => 'px'
 						),
 						'btn_padding'   => array(
-							'type'          => 'text',
+							'type'          => 'unit',
 							'label'         => __('Padding', 'cb-custom-modules'),
 							'default'       => '12',
-							'maxlength'     => '3',
-							'size'          => '4',
 							'description'   => 'px'
 						),
 						'btn_border_radius' => array(
-							'type'          => 'text',
+							'type'          => 'unit',
 							'label'         => __('Round Corners', 'cb-custom-modules'),
 							'default'       => '4',
-							'maxlength'     => '3',
-							'size'          => '4',
 							'description'   => 'px'
 						)
 					)

@@ -3,16 +3,16 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 4.6
-Tested up to: 4.9.4
-Stable tag: 6.1
+Tested up to: 4.9.6
+Stable tag: 6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Free suite of custom modules for Beaver Builder that highlight content photography with smooth animations, interactions, and hover effects from Crafty Beaver.
+Free suite of custom modules for Beaver Builder that highlight content and photography with smooth animations, interactions, and hover effects from Crafty Beaver.
 
 == Description ==
 
-Crafty Beaver Custom Modules is a free suite of elegant custom modules for for Beaver Builder that highlight photography with smooth animations, interactions, and hover effects. This is an extension of the Beaver Builder page builder plugin.
+Crafty Beaver Custom Modules is custom Beaver Builder development shop and this is our free suite of elegant custom modules for for Beaver Builder. These modules come from client requests and typically highlight photography with smooth animations, interactions, and hover effects. This is an extension of the Beaver Builder page builder plugin.
 
 **Current Modules**
 
@@ -91,6 +91,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 10. CB Advanced Menu
 
 == Changelog ==
+
+= 1.5.8 =
+* Bug fix: Fixes button styles not loading on Button List module
 
 = 1.5.7 =
 * New Module: Drawerfolio
