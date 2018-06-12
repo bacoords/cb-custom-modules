@@ -92,6 +92,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
+= 1.5.8.1 =
+* Bug fix: Fixes button styles not loading on Button List module with multiple buttons
+
 = 1.5.8 =
 * Bug fix: Fixes button styles not loading on Button List module
 

@@ -36,8 +36,8 @@ foreach($settings->cb_button_list_form_field_repeater as $button) :
 	}
 	$btn_bg_opacity = isset($button->btn_bg_opacity) ? $button->btn_bg_opacity : '0';
 
-  $id = $id . ' .cb-button-list--button-' . $i;
-  FLBuilder::render_module_css('button', $id, array(
+  $button_id = $id . ' .cb-button-list--button-' . $i;
+  FLBuilder::render_module_css('button', $button_id, array(
   	'align'             => $module->filter_btn_value( $button, 'btn_align' ),
   	'bg_color'          => $module->filter_btn_value( $button, 'btn_bg_color' ),
   	'bg_hover_color'    => $module->filter_btn_value( $button, 'btn_bg_hover_color' ),
