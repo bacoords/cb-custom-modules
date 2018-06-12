@@ -4,7 +4,7 @@ Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 4.6
 Tested up to: 4.9.6
-Stable tag: 6.2
+Stable tag: 6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,7 +92,7 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 
 == Changelog ==
 
-= 1.5.8.1 =
+= 1.5.9 =
 * Bug fix: Fixes button styles not loading on Button List module with multiple buttons
 
 = 1.5.8 =
