@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 4.6
-Tested up to: 4.9.6
-Stable tag: 6.3
+Tested up to: 4.9.8
+Stable tag: 6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ Crafty Beaver Custom Modules is custom Beaver Builder development shop and this 
 * Spotlight - Create your own list of custom links on one side that each replaces the 'spotlight' photo on the other. Customize column sizes and more.
 * Broadside - Horizontal slider to showcase design work, posters, photography, and more. Responsive and responds to touch on mobile. Clicking on images opens them in the beautiful default BB lightbox.
 * Scout - Sticky navbar that fixes to the top of the screen when it gets there, allowing smooth scrolling to other elements on the page.
-* Dust - Utilizing the popular Particles.js library, this module helps you make custom heros with cool interactive, animated backgrounds.
+* Dust - Utilizing the popular Particles.js library, this module helps you make custom heroes with cool interactive, animated backgrounds.
 * Slice - Animated photo gallery with stacked, 'sliding cards' effect. Integrates with the default Beaver Builder lightbox.
 * Legend - Standard photo module but with a twist- hidden content is revealed on hover.
 * Link List - Create a list of files/links for users, displayed in rows with a custom icon and color scheme. +
@@ -29,6 +29,9 @@ Crafty Beaver Custom Modules is custom Beaver Builder development shop and this 
 * Simple Events - Create a simple list of events with great responsive styling options and no need for an extensive plugin.
 * CB Advanced Menu - Playing on the default BB Menu Module, this horizontal menu style is called... the Pancake Menu. +
 * Drawerfolio - Custom photo portfolios with dropdown content areas.
+
+**Layout Settings**
+* Dust - The "Dust" module is now available as a row background in addition to being it's own module. (Utilizing the popular Particles.js library, this module helps you make custom heroes with cool interactive, animated backgrounds.)
 
 For more information and module demos, visit [Crafty Beavers](https://www.cbcustommodules.com).
 
@@ -76,7 +79,6 @@ Of course! Visit our [website](https://www.cbcustommodules.com/request-module) t
 
 Yes! Most modules have Beaver Field Connections where appropriate.
 
-
 == Screenshots ==
 
 1. Poise
@@ -91,6 +93,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 10. CB Advanced Menu
 
 == Changelog ==
+
+= 1.6.0 =
+* New Feature: Dust is now available as a row background
 
 = 1.5.9 =
 * Bug fix: Fixes button styles not loading on Button List module with multiple buttons

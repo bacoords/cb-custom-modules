@@ -2,14 +2,16 @@
 /**
  * Plugin Name: CB Custom Beaver Builder Modules
  * Plugin URI: https://www.cbcustommodules.com
- * Description: Custom modules for Beaver Builder from Crafty Beaver Custom Modules. Building custom on-demand modules.
- * Version: 1.5.9
+ * Description: Custom modules for Beaver Builder from Crafty Beaver. Building custom on-demand modules.
+ * Version: 1.6.0
  * Author: Crafty Beavers
  * Author URI: https://www.cbcustommodules.com
  * Text Domain: cb-custom-modules
  */
 define( 'CB_CUSTOM_MODULE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CB_CUSTOM_MODULE_URL', plugins_url( '/', __FILE__ ) );
+
+require_once 'includes/cb-dust-row.php';
 
 /**
  * Custom modules
@@ -21,6 +23,7 @@ function fl_load_module_cb_custom_modules() {
     require_once 'includes/BB-PDF-field-modified/zestsms-pdf.php';
     require_once 'includes/BB-date-Field-master/bb_date_field.php';
     require_once 'includes/responsive-borders-helper.php';
+
 
 		require_once 'cb-shade/cb-shade.php';
 		require_once 'cb-poise/cb-poise.php';
