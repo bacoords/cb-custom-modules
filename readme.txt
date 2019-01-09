@@ -3,8 +3,8 @@ Contributors: bacoords
 Donate link: http://www.cbcustommodules.com/
 Tags: beaver builder, page builder, beaver builder custom module, builder, drag and drop, photography,
 Requires at least: 4.6
-Tested up to: 4.9.8
-Stable tag: 6.4
+Tested up to: 5.0.2
+Stable tag: 6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,9 @@ Yes! Most modules have Beaver Field Connections where appropriate.
 10. CB Advanced Menu
 
 == Changelog ==
+
+= 1.6.1 =
+* Bug Fix: Link list now compatible with BB 2.2+
 
 = 1.6.0 =
 * New Feature: Dust is now available as a row background
